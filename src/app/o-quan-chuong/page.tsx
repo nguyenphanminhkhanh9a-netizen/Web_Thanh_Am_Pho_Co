@@ -4,6 +4,7 @@ import AudioPlayer from '@/components/ui/AudioPlayer';
 import MemoryForm from '@/components/ui/MemoryForm';
 import LocationBanner from '@/components/ui/LocationBanner';
 import FactsCallout from '@/components/ui/FactsCallout';
+import ScrollRevealWrapper from '@/components/ui/ScrollRevealWrapper';
 
 export default function OQuanChuong() {
   const images = [
@@ -37,8 +38,8 @@ export default function OQuanChuong() {
         align="center"
       />
 
-      <section className="py-20 bg-surface-container-low border-y border-outline-variant">
-        <div className="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="py-20 bg-surface-container-low border-y border-outline-variant overflow-hidden">
+        <ScrollRevealWrapper delay={100} className="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Audio Player: Left Side */}
             <div className="lg:col-span-5 space-y-8">
                 <div className="space-y-4">
@@ -65,11 +66,11 @@ export default function OQuanChuong() {
                     <HeritageStage images={images} autoPlayInterval={5000} />
                 </div>
             </div>
-        </div>
+        </ScrollRevealWrapper>
       </section>
 
-      <section className="py-20 px-margin-desktop max-w-container-max mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <section className="py-20 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+        <ScrollRevealWrapper delay={200} className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
             <div className="md:col-span-8 space-y-8">
                 <h2 className="font-headline-lg text-headline-lg text-primary border-b border-outline-variant pb-4">Vết Tích Thời Gian</h2>
                 <div className="prose prose-stone max-w-none">
@@ -84,11 +85,11 @@ export default function OQuanChuong() {
             <div className="md:col-span-4 bg-surface-container mt-12 md:mt-0 p-2 vintage-shadow">
                 <FactsCallout title="Bạn có biết?" facts={facts} />
             </div>
-        </div>
+        </ScrollRevealWrapper>
       </section>
 
-      <section className="bg-surface-container-high py-16 px-margin-mobile md:px-margin-desktop">
-        <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+      <section className="bg-surface-container-high py-16 px-margin-mobile md:px-margin-desktop overflow-hidden">
+        <ScrollRevealWrapper delay={150} className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
             <div>
                 <h2 className="font-headline-lg text-headline-lg text-primary mb-6">Vị Trí Trong Lòng Phố</h2>
                 <p className="text-on-surface-variant mb-8">Nằm ở đầu phố Hàng Chiếu, cửa ô này như một nút thắt nối liền quá khứ giao thương nhộn nhịp của bến sông Hồng với sự trầm mặc của khu phố cổ.</p>
@@ -103,25 +104,36 @@ export default function OQuanChuong() {
                     </div>
                 </div>
             </div>
-            <div className="h-80 mt-12 md:mt-0 ink-border overflow-hidden bg-surface-dim relative">
+            <div className="h-80 mt-12 md:mt-0 ink-border overflow-hidden bg-surface-dim relative group cursor-crosshair">
                 <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/pinstriped-suit.png')]"></div>
                 <div 
-                  className="w-full h-full bg-cover bg-center grayscale-[20%]" 
+                  className="w-full h-full bg-cover bg-center grayscale-[20%] transition-transform duration-1000 group-hover:scale-105" 
                   style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuUZ6H28Oq03YkBp3ESX4nhhjyxamqnDCnSAqb0vM60lcKXu5nQmAF2usCRrPAx_Tg_QwuabGYTWhCTAGsk2i26OxNpvzJ8p151VrBcm1WEsqDfX7PiXJJEzsWAT79NsLji0z_JKcZNq1nb3QThsiv5owKwDQmaZ9CLAU1Ja-u-FRqiH2dUwyetw0dFne9tcbVcp2-0JzfVuTr7SyrOB3r9FV6qPZGd1ZtdAfMOucbYS_KFWFCB-VV')" }}
                 ></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-primary/20 rounded-full animate-ping"></div>
-                    <div className="absolute w-4 h-4 bg-primary rounded-full border-2 border-white shadow-lg"></div>
+                    <div className="relative">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full animate-ping absolute -top-4 -left-4"></div>
+                      <div className="w-4 h-4 bg-primary rounded-full border-2 border-white shadow-lg relative z-10"></div>
+                      
+                      {/* Tooltip */}
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 bg-surface-container-highest text-on-surface p-4 border border-outline-variant shadow-lg w-48 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+                         <h4 className="font-label-sm uppercase text-primary mb-1">Ô Quan Chưởng</h4>
+                         <p className="font-body-md text-sm">Cửa ô duy nhất còn sót lại của Hà Nội.</p>
+                         <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-surface-container-highest"></div>
+                      </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </ScrollRevealWrapper>
       </section>
 
-      <MemoryForm 
-        title="Viết câu chuyện của bạn"
-        subtitle="Chia sẻ những ký ức hoặc cảm nhận của bạn khi đứng dưới vòm cổng này."
-        fields={['name', 'story']}
-      />
+      <ScrollRevealWrapper delay={200}>
+        <MemoryForm 
+          title="Viết câu chuyện của bạn"
+          subtitle="Chia sẻ những ký ức hoặc cảm nhận của bạn khi đứng dưới vòm cổng này."
+          fields={['name', 'story']}
+        />
+      </ScrollRevealWrapper>
     </>
   );
 }

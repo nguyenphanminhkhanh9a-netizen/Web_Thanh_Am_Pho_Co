@@ -24,8 +24,17 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Thanh Âm Phố Cổ - Hồn Cốt Hà Nội Xưa",
-  description: "Dự án bảo tồn văn hóa, số hóa âm thanh và ký ức về phố cổ Hà Nội.",
+  title: "Thanh Âm Phố Cổ - Lưu Giữ Ký Ức Hà Nội",
+  description: "Trải nghiệm hình ảnh và âm thanh sống động về phố cổ Hà Nội. Gửi gắm và lưu giữ những ký ức đẹp về một thời đã qua.",
+  keywords: ["Hà Nội", "Phố Cổ", "Thanh Âm Phố Cổ", "Ký Ức", "Lịch Sử", "Hoàn Kiếm"],
+  openGraph: {
+    title: "Thanh Âm Phố Cổ",
+    description: "Lưu giữ ký ức và thanh âm của 36 phố phường Hà Nội.",
+    url: "https://web-thanh-am-pho-co.vercel.app",
+    siteName: "Thanh Âm Phố Cổ",
+    locale: "vi_VN",
+    type: "website",
+  }
 };
 
 export default function RootLayout({
