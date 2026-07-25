@@ -2,10 +2,9 @@
 
 import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
-import { useAudioPlayer } from '@/hooks/useAudioPlayer';
+import AudioPlayer from '@/components/ui/AudioPlayer';
 
 export default function HangDao() {
-  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg");
   return (
     <>
       <main className="pt-0">
@@ -43,52 +42,14 @@ export default function HangDao() {
               </div>
 
               {/* Synchronized Audio Player */}
-              <div className="p-10 border-2 border-outline bg-surface-container-low shadow-sm relative overflow-hidden flex flex-col md:flex-row items-center gap-10">
-                <div className="flex-shrink-0">
-                  <div className="w-32 h-32 decorative-frame bg-surface-container flex items-center justify-center">
-                    <span className="material-symbols-outlined text-6xl text-primary/40 animate-pulse" id="pulse-icon">graphic_eq</span>
-                  </div>
-                </div>
-                <div className="flex-grow w-full">
-                  <div className="mb-6">
-                    <span className="font-label-sm text-secondary tracking-widest uppercase mb-1 block">Hành trình âm thanh</span>
-                    <h2 className="font-headline-lg text-headline-lg text-primary">Tiếng vọng Hàng Đào</h2>
-                    <p className="text-on-surface-variant italic">Kéo thanh trượt để du hành qua các mốc thời gian của con phố.</p>
-                  </div>
-                  
-                  <div className="bg-surface-container-high/50 p-6 rounded-none border border-outline-variant">
-                    <div className="flex items-center gap-4 mb-4">
-                      <button onClick={togglePlay} className="w-14 h-14 flex items-center justify-center bg-primary text-on-primary border border-primary hover:bg-transparent hover:text-primary transition-all active:scale-90 z-20" id="play-btn">
-                        <span className="material-symbols-outlined text-2xl">{isPlaying ? 'pause' : 'play_arrow'}</span>
-                      </button>
-                      <div className="flex-grow h-2 bg-outline-variant relative group cursor-pointer" id="seek-bar-container">
-                        <div id="seek-bar-progress" className="absolute inset-y-0 left-0 bg-primary transition-all duration-300" style={{ width: `${progress}%` }}></div>
-                        <input 
-                          type="range" 
-                          min="0" 
-                          max="100" 
-                          value={duration ? (currentTime / duration) * 100 : 0}
-                          onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
-                          className="absolute inset-0 opacity-0 cursor-pointer w-full z-10" 
-                          id="audio-seeker" 
-                        />
-                        <div id="seek-bar-handle" className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-primary border-2 border-background rounded-full transition-all duration-300 shadow-md pointer-events-none" style={{ left: `${progress}%` }}></div>
-                      </div>
-                      <span className="font-label-sm text-on-surface-variant w-24 text-right" id="time-display">{formatTime(currentTime)} / {formatTime(duration)}</span>
-                    </div>
-                    <div className="flex justify-between items-center text-on-surface-variant">
-                      <div className="flex gap-6">
-                        <button className="hover:text-primary transition-colors"><span className="material-symbols-outlined">shuffle</span></button>
-                        <button className="hover:text-primary transition-colors"><span className="material-symbols-outlined">repeat</span></button>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <span className="material-symbols-outlined text-sm">volume_up</span>
-                        <div className="w-24 h-1 bg-outline-variant">
-                          <div className="h-full bg-secondary w-3/4"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div className="flex justify-center mt-8">
+                <div className="w-full max-w-3xl">
+                  <AudioPlayer 
+                    audioSrc="https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg"
+                    trackTitle="Tiếng vọng Hàng Đào"
+                    description="Kéo thanh trượt để du hành qua các mốc thời gian của con phố."
+                    albumArt="https://upload.wikimedia.org/wikipedia/commons/6/65/Khu_pho_co_Ha_Noi.png"
+                  />
                 </div>
               </div>
             </div>

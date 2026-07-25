@@ -2,10 +2,9 @@
 
 import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
-import { useAudioPlayer } from '@/hooks/useAudioPlayer';
+import AudioPlayer from '@/components/ui/AudioPlayer';
 
 export default function BoHo() {
-  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg");
   return (
     <>
       <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
@@ -42,52 +41,14 @@ export default function BoHo() {
           </div>
 
           {/* Integrated Audio Controls */}
-          <div className="bg-surface-container p-8 md:p-12 ink-border relative overflow-hidden -mt-20 mx-4 md:mx-12 z-10 shadow-xl">
-            <div className="max-w-2xl mx-auto space-y-8">
-              <div className="text-center space-y-2">
-                <h2 id="current-track-title" className="font-headline-lg text-headline-lg text-primary transition-all">Thanh Âm Bờ Hồ: Tiếng chuông xe điện</h2>
-                <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Đang trình chiếu • Ký ức 1925</p>
-              </div>
-
-              <div className="flex items-center gap-8">
-                <button onClick={togglePlay} id="master-play-btn" className="w-20 h-20 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-all shadow-lg active:scale-95 group relative z-20">
-                  <div className={`absolute inset-0 rounded-full border-4 border-primary/30 transition-transform ${isPlaying ? 'scale-110 animate-ping' : 'group-hover:scale-110'}`}></div>
-                  <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>{isPlaying ? 'pause' : 'play_arrow'}</span>
-                </button>
-
-                <div className="flex-1 space-y-4">
-                  <div className="relative h-12 flex items-center">
-                    <input 
-                      type="range" 
-                      className="w-full audio-slider appearance-none bg-transparent cursor-pointer relative z-10" 
-                      value={duration ? (currentTime / duration) * 100 : 0} 
-                      max="100" 
-                      onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
-                    />
-                    <div id="audio-progress-fill" className="absolute left-0 h-[2px] bg-primary pointer-events-none" style={{ width: `${progress}%` }}></div>
-                    <div className="absolute w-full h-[2px] bg-outline-variant pointer-events-none"></div>
-                  </div>
-                  <div className="flex justify-between font-label-sm text-on-surface-variant">
-                    <span id="audio-current-time">{formatTime(currentTime)}</span>
-                    <span id="audio-total-time">{formatTime(duration)}</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex justify-center gap-12 border-t border-outline-variant pt-8">
-                <div className="flex flex-col items-center gap-2 group cursor-help transition-all hover:scale-105">
-                  <span className="material-symbols-outlined text-secondary transition-transform group-hover:rotate-12">waves</span>
-                  <span className="font-label-sm text-secondary-fixed-dim">Tiếng Sóng</span>
-                </div>
-                <div className="flex flex-col items-center gap-2 group cursor-help transition-all hover:scale-105">
-                  <span className="material-symbols-outlined text-secondary transition-transform group-hover:-rotate-12">notifications_active</span>
-                  <span className="font-label-sm text-secondary-fixed-dim">Xe Điện</span>
-                </div>
-                <div className="flex flex-col items-center gap-2 group cursor-help transition-all hover:scale-105">
-                  <span className="material-symbols-outlined text-secondary transition-transform group-hover:scale-110">groups</span>
-                  <span className="font-label-sm text-secondary-fixed-dim">Phố Thị</span>
-                </div>
-              </div>
+          <div className="relative -mt-20 mx-4 md:mx-12 z-10 flex justify-center">
+            <div className="max-w-3xl w-full">
+              <AudioPlayer 
+                audioSrc="https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg"
+                trackTitle="Thanh Âm Bờ Hồ: Tiếng chuông xe điện"
+                subtitle="Đang trình chiếu • Ký ức 1925"
+                albumArt="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hano%C3%AF_-_Rue_des_Pavillons_Noirs.jpg"
+              />
             </div>
           </div>
         </section>

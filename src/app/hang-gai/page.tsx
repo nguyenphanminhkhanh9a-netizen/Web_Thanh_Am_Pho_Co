@@ -2,10 +2,9 @@
 
 import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
-import { useAudioPlayer } from '@/hooks/useAudioPlayer';
+import AudioPlayer from '@/components/ui/AudioPlayer';
 
 export default function HangGai() {
-  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg");
   return (
     <>
       <main className="pt-0">
@@ -42,43 +41,12 @@ export default function HangGai() {
                 </div>
 
                 {/* Synchronized Audio Player */}
-                <div className="ink-bleed-border p-8 bg-background relative overflow-hidden group">
-                  <div className="flex flex-col gap-6">
-                    <div className="flex items-center gap-6">
-                      <button onClick={togglePlay} id="master-play" className="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all shadow-lg btn-active z-20">
-                        <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>{isPlaying ? 'pause' : 'play_arrow'}</span>
-                      </button>
-                      <div>
-                        <h3 id="current-track-title" className="font-headline-lg text-primary text-xl">Tiếng khung cửi &amp; Tiếng rao trưa</h3>
-                        <div className="audio-wave mt-2 opacity-60">
-                          <div className="wave-bar" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="wave-bar" style={{ animationDelay: '0.3s' }}></div>
-                          <div className="wave-bar" style={{ animationDelay: '0.5s' }}></div>
-                          <div className="wave-bar" style={{ animationDelay: '0.2s' }}></div>
-                          <div className="wave-bar" style={{ animationDelay: '0.4s' }}></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex-grow h-1.5 bg-outline-variant relative cursor-pointer" id="progress-bar">
-                        <div className="absolute top-0 left-0 h-full bg-primary transition-all duration-300 pointer-events-none" id="progress-fill" style={{ width: `${progress}%` }}></div>
-                        <input 
-                          type="range" 
-                          min="0" 
-                          max="100" 
-                          value={duration ? (currentTime / duration) * 100 : 0}
-                          onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
-                          className="absolute inset-0 opacity-0 cursor-pointer w-full z-10" 
-                        />
-                        <div className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full border-2 border-background shadow-md pointer-events-none transition-all duration-300" id="progress-knob" style={{ left: `${progress}%` }}></div>
-                      </div>
-                      <div className="flex justify-between font-label-sm text-on-surface-variant text-[10px]">
-                        <span id="time-current">{formatTime(currentTime)}</span>
-                        <span id="time-total">{formatTime(duration)}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <AudioPlayer 
+                  audioSrc="https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg"
+                  trackTitle="Tiếng khung cửi & Tiếng rao trưa"
+                  description="Giai điệu của lụa - âm thanh làm nên thương hiệu của phố Hàng Gai"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/d/da/Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg"
+                />
 
                 <div className="decorative-frame p-6 bg-surface-container-low">
                   <h4 className="font-label-sm text-primary mb-4 border-b border-outline-variant pb-2">CHÚ THÍCH HIỆN TẠI</h4>

@@ -2,10 +2,9 @@
 
 import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
-import { useAudioPlayer } from '@/hooks/useAudioPlayer';
+import AudioPlayer from '@/components/ui/AudioPlayer';
 
 export default function OQuanChuong() {
-  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg");
   return (
     <>
       <main className="pt-0">
@@ -37,47 +36,13 @@ export default function OQuanChuong() {
                 <h2 className="font-headline-lg text-headline-lg text-primary italic">Sân Khấu Ký Ức</h2>
                 <p className="text-on-surface-variant">Lắng nghe và quan sát những hình ảnh lịch sử hiện dần qua từng nhịp thở của thời gian. Mỗi âm thanh là một cánh cửa mở vào quá khứ.</p>
               </div>
-              <div className="bg-background p-8 border border-outline-variant shadow-sm relative overflow-hidden group">
-                <div className="absolute -right-12 -top-12 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
-                <h3 className="font-label-sm uppercase text-secondary mb-8 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>volume_up</span>
-                  Bản Ghi Di Sản
-                </h3>
-                <div className="flex flex-col items-center gap-8">
-                  <div className="relative">
-                    <div className={`w-32 h-32 rounded-full bg-primary-container flex items-center justify-center ring-8 ring-surface-container-high overflow-hidden shadow-inner ${isPlaying ? 'animate-spin-slow' : ''}`} id="record-player">
-                      <div className="w-6 h-6 bg-background rounded-full z-10 border border-outline-variant"></div>
-                      <div className="absolute inset-0 opacity-50 bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/a/aa/%C3%94_Quan_Ch%C6%B0%E1%BB%9Fng.jpg')" }}></div>
-                    </div>
-                    <div className={`absolute -right-4 top-0 w-2 h-16 bg-outline origin-top transition-transform duration-500 ${isPlaying ? 'rotate-12' : '-rotate-12'}`} id="stylus"></div>
-                  </div>
-                  <div className="w-full text-center">
-                    <p className="font-headline-lg text-2xl text-primary italic mb-6 min-h-[40px]" id="track-title">Hà Nội nghìn năm văn vật</p>
-                    <div className="flex items-center gap-4 text-on-surface-variant font-label-sm mb-6">
-                      <span id="current-time">{formatTime(currentTime)}</span>
-                      <div className="flex-1 h-1 bg-outline-variant relative cursor-pointer group/progress" id="progress-container">
-                        <div className="absolute inset-y-0 left-0 bg-primary transition-all duration-300 pointer-events-none" id="progress-bar" style={{ width: `${progress}%` }}></div>
-                        <input 
-                          type="range" 
-                          min="0" 
-                          max="100" 
-                          value={duration ? (currentTime / duration) * 100 : 0}
-                          onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
-                          className="absolute inset-0 opacity-0 cursor-pointer w-full z-10" 
-                        />
-                        <div className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-primary border-2 border-background rounded-full shadow-lg opacity-0 group-hover/progress:opacity-100 transition-all pointer-events-none" id="progress-knob" style={{ left: `${progress}%` }}></div>
-                      </div>
-                      <span>{formatTime(duration)}</span>
-                    </div>
-                    <div className="flex justify-center gap-8">
-                      <button className="hover:text-primary transition-colors active:scale-90" id="prev-btn"><span className="material-symbols-outlined text-4xl">skip_previous</span></button>
-                      <button onClick={togglePlay} className="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center hover:bg-primary-container transition-all shadow-md active:scale-95 z-20" id="play-btn">
-                        <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>{isPlaying ? 'pause' : 'play_arrow'}</span>
-                      </button>
-                      <button className="hover:text-primary transition-colors active:scale-90" id="next-btn"><span className="material-symbols-outlined text-4xl">skip_next</span></button>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex-1 w-full">
+                <AudioPlayer 
+                  audioSrc="https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg"
+                  trackTitle="Hà Nội nghìn năm văn vật"
+                  description="Bản Ghi Di Sản"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/a/aa/%C3%94_Quan_Ch%C6%B0%E1%BB%9Fng.jpg"
+                />
               </div>
               <div className="italic text-on-surface-variant text-sm border-l-2 border-primary pl-4 py-2 bg-background/50">
                 &quot;Mỗi đoạn âm thanh mở ra một góc nhìn mới về Ô Quan Chưởng...&quot;

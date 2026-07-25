@@ -2,10 +2,9 @@
 
 import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
-import { useAudioPlayer } from '@/hooks/useAudioPlayer';
+import AudioPlayer from '@/components/ui/AudioPlayer';
 
 export default function HangBac() {
-  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg");
   return (
     <>
       <main className="pt-0 md:pt-0">
@@ -44,54 +43,17 @@ export default function HangBac() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-              {/* Audio Controls & Context (Left) */}
-              <div className="lg:col-span-4 space-y-8 order-2 lg:order-1">
-                <div className="p-8 bg-surface-container/50 border border-outline-variant/30 backdrop-blur-sm">
-                  <h3 className="font-headline-lg text-2xl text-primary mb-4" id="audio-title">Tiếng chạm khắc kim hoàn</h3>
-                  <p className="text-on-surface-variant leading-loose mb-6" id="audio-desc">
-                    Hãy nhắm mắt và lắng nghe nhịp điệu của lịch sử. Tiếng búa gõ nhỏ giọt trên đe đồng, tiếng mũi ve lướt nhẹ trên mặt bạc, tạo nên những đường vân mây, sóng nước tinh xảo.
-                  </p>
-                  <div className="flex flex-col gap-6">
-                    <div className="flex items-center gap-6">
-                      <button onClick={togglePlay} id="play-btn" className="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg hover:scale-105 transition-transform active:scale-95 z-20">
-                        <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>{isPlaying ? 'pause' : 'play_arrow'}</span>
-                      </button>
-                      <div className="flex-1 space-y-2">
-                        <div className="relative h-6 flex items-center w-full">
-                          <input 
-                            type="range" 
-                            className="w-full absolute inset-0 opacity-0 cursor-pointer z-10" 
-                            value={duration ? (currentTime / duration) * 100 : 0} 
-                            max="100" 
-                            onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
-                          />
-                          <div className="relative h-[2px] bg-outline-variant w-full">
-                            <div id="progress-bar" className="absolute top-0 left-0 h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }}></div>
-                          </div>
-                        </div>
-                        <div className="flex justify-between font-label-sm text-on-surface-variant text-[10px]">
-                          <span id="current-time">{formatTime(currentTime)}</span>
-                          <span id="total-time">{formatTime(duration)}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Playback Indicator */}
-                <div className="flex items-center gap-4 opacity-40">
-                  <div className="flex gap-1 h-8 items-end">
-                    <div className="w-1 bg-primary animate-[bounce_1.2s_infinite]" style={{ height: '40%' }}></div>
-                    <div className="w-1 bg-primary animate-[bounce_1.5s_infinite]" style={{ height: '80%' }}></div>
-                    <div className="w-1 bg-primary animate-[bounce_1s_infinite]" style={{ height: '60%' }}></div>
-                    <div className="w-1 bg-primary animate-[bounce_1.3s_infinite]" style={{ height: '30%' }}></div>
-                  </div>
-                  <span className="font-label-sm text-xs italic">Âm thanh đang được tái hiện...</span>
-                </div>
+              <div className="lg:col-span-5 order-2 lg:order-1 flex items-center">
+                <AudioPlayer 
+                  audioSrc="https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg"
+                  trackTitle="Tiếng chạm khắc kim hoàn"
+                  description="Hãy nhắm mắt và lắng nghe nhịp điệu của lịch sử. Tiếng búa gõ nhỏ giọt trên đe đồng, tiếng mũi ve lướt nhẹ trên mặt bạc, tạo nên những đường vân mây, sóng nước tinh xảo."
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/b/bf/H%C3%A0ng_%C4%90%C3%A0o%2C_one_of_36_streets_of_HaNoi.jpg"
+                />
               </div>
 
               {/* The Central 'Stage' Area (Right/Center) */}
-              <div className="lg:col-span-8 order-1 lg:order-2">
+              <div className="lg:col-span-7 order-1 lg:order-2">
                 <div className="relative w-full aspect-[4/3] vintage-frame bg-surface-dim overflow-hidden shadow-2xl">
                   {/* Image Layers (Synchronized via JS) */}
                   <div id="stage-viewport" className="relative w-full h-full">
