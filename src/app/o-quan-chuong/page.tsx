@@ -22,18 +22,9 @@ export default function OQuanChuong() {
   ];
 
   const facts = [
-    {
-      title: "Giao thương",
-      description: "Cửa ô này từng là nơi kiểm soát hàng hóa từ sông Hồng vào chợ Đồng Xuân."
-    },
-    {
-      title: "Bia đá 1881",
-      description: "Một tấm bia đá năm 1881 vẫn còn gắn trên tường cổng, cấm quân lính không được nhũng nhiễu dân."
-    },
-    {
-      title: "Vọng lâu",
-      description: "Kiến trúc vọng lâu phía trên từng là nơi lính canh quan sát toàn bộ khu vực phía Đông."
-    }
+    "Cửa ô này từng là nơi kiểm soát hàng hóa từ sông Hồng vào chợ Đồng Xuân.",
+    "Một tấm bia đá năm 1881 vẫn còn gắn trên tường cổng, cấm quân lính không được nhũng nhiễu dân.",
+    "Kiến trúc vọng lâu phía trên từng là nơi lính canh quan sát toàn bộ khu vực phía Đông."
   ];
 
   return (
