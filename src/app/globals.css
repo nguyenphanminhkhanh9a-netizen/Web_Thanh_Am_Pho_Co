@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #fcf9f8;
+  --color-surface: #fcf9f8;
+  --color-surface-variant: #e5e2e1;
+  --color-surface-container: #f0eded;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container-highest: #e5e2e1;
+  --color-on-background: #1c1b1b;
+  --color-on-surface: #1c1b1b;
+  --color-on-surface-variant: #5a403c;
+  
+  --color-primary: #610000;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #8b0000;
+  --color-on-primary-container: #ff907f;
+  
+  --color-secondary: #7b5800;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fdc34d;
+  --color-on-secondary-container: #715000;
+  
+  --color-tertiary: #3b290c;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #543f20;
+  --color-on-tertiary-container: #c8aa83;
+  
+  --color-outline: #8e706b;
+  --color-outline-variant: #e3beb8;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --font-display-lg: var(--font-eb-garamond);
+  --font-headline-lg: var(--font-eb-garamond);
+  --font-body-md: var(--font-literata);
+  --font-label-sm: var(--font-work-sans);
+
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 16px;
+  --spacing-gutter: 24px;
+  --spacing-unit: 4px;
+  --spacing-container-max: 1120px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .text-display-lg {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  .text-headline-lg {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+  .text-headline-lg-mobile {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+  }
+  .text-body-md {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+  .text-label-sm {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
   }
 }
 
+.parchment-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+}
+.ink-border {
+  border: 1px solid #5a403c;
+}
+.ink-border-double {
+  border: 3px double #5a403c;
+}
+.vintage-shadow {
+  box-shadow: 10px 10px 30px rgba(97, 0, 0, 0.05);
+}
+@keyframes subtle-drift {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+.grain-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+/* Base styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
 }
