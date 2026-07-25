@@ -86,9 +86,7 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/#ban-do" className="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors pb-1">
-            Bản Đồ
-          </Link>
+
           <Link href="/#ky-uc" className="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors pb-1">
             Ký Ức
           </Link>
@@ -123,7 +121,7 @@ export default function Header() {
                   ))}
                </div>
             </div>
-            <Link href="/#ban-do" className="font-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors">Bản Đồ</Link>
+
             <Link href="/#ky-uc" className="font-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors">Ký Ức</Link>
             <Link href="/#luu-tru" className="font-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors">Lưu Trữ</Link>
          </div>

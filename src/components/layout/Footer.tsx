@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-8 font-body-md text-on-surface-variant">
           <Link href="/#hanh-trinh" className="hover:text-primary transition-colors">Về chúng tôi</Link>
           <Link href="/#luu-tru" className="hover:text-primary transition-colors">Liên hệ</Link>
-          <Link href="/#ban-do" className="hover:text-primary transition-colors">Bản đồ</Link>
+
           <Link href="/#ky-uc" className="hover:text-primary transition-colors">Ký ức</Link>
         </div>
         <p className="font-body-md text-on-surface-variant text-sm text-center md:text-right">

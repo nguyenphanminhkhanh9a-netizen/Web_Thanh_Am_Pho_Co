@@ -161,15 +161,6 @@ export default function Home() {
           </Link>
         </div>
         
-        <div id="ban-do" className="mt-16 flex flex-col items-center">
-          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl text-center mb-10 italic">
-            Khám phá mỗi góc phố, mỗi con đường qua những âm thanh đặc trưng đã làm nên bản sắc của Thăng Long - Hà Nội.
-          </p>
-          <Link href="/#hanh-trinh" className="group flex items-center gap-4 px-12 py-5 bg-primary text-background ink-border-double transition-all hover:scale-105 active:scale-95 vintage-shadow">
-            <span className="font-label-sm text-label-sm uppercase tracking-[0.4em] font-bold">Khám Phá Bản Đồ Âm Thanh</span>
-            <span className="material-symbols-outlined group-hover:-translate-y-2 transition-transform">arrow_upward</span>
-          </Link>
-        </div>
       </section>
 
       {/* Newsletter / Contact Callout */}
