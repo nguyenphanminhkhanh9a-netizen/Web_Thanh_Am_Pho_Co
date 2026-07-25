@@ -1,115 +1,175 @@
-import HeroSection from '@/components/ui/HeroSection';
-import HeritageStage from '@/components/ui/HeritageStage';
-import AudioPlayer from '@/components/ui/AudioPlayer';
 import MemoryForm from '@/components/ui/MemoryForm';
-import LocationBanner from '@/components/ui/LocationBanner';
 
 export default function HangGai() {
-  const images = [
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBsl1VgcUhi2i4-mOptgFg6lR8tf4wGYqtC-sb5avGmAexH2yjmfQ7Q6OujIXONwEaM07lMBbX7hcqnHoSCi1Nd6-ZiAyCHVquPA94W0Eo0Cgx2dwIPrDvsEwDGGZN8w2dMwuFLz22gL2aS6MSonn_7D09GDpwTBCELRDuvtmxhqnfoeadE1tLZpiqrWYcDzGuR0WNTW_tYI8XNbv2z7Vvuk8UZQy5xP6xnLpCZ__m9Kzge9ohNNdbc",
-      caption: "Khung cảnh nhộn nhịp của phố Hàng Gai những năm 1920, nơi tơ lụa phủ kín các cửa hàng."
-    },
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuC0wBCP0n4xlbL7hTuuhqSUytKWW-5jerD5gU7J4k_PA6JpaMt9seCgJfKZRJHSwPtInbRQJ1p9CuAXmCrUhZ8JRuaCFbEBgf_pODc4vQTBV4jT6IQDQwA2Wvnez9jXOKHYaz3NmFzbgWs4JwL5fbRFGC5DNCfqAd0vbxpzq5wXzWhLAhDvtmhubvehqxIFCPIMUqWWNJSzxWZJBX9D-jkZbTvgWgBOCXjJite5KHVoovSSk2zH1pdV",
-      caption: "Bàn tay người thợ dệt tỉ mỉ bên khung cửi, tạo nên những thước lụa tinh xảo gánh vác danh tiếng kinh kỳ."
-    },
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCyeZ7mJi6zsdYF6rZFDCyeYSqZ48XriOmwrO0cCFWUvcxamMaNg74VahI5k17JCqqxWPbFMTqLl2DDwexnuYOqe7XtDWBhC6RtNMLByq5L96-jsfXe8iIshdiCcRuP6jJ6Y4iEu8citQa_Fmh9r51nDLaMQGCjIngTu98cXmWv2uN9a-rmvtNkAqd2qRUi44bMk5HGEJDfdos9HvdBWhfELzRW18JUkiHyXcJO9WyLhQU-GoNe3lmc",
-      caption: "Chi tiết thêu tay phượng hoàng trên nền gấm đỏ, minh chứng cho sự xa hoa và khéo léo của nghệ nhân xưa."
-    },
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAafWE843qGtXQmZ_qTmYN-xN9zuqJRvuIgd3HsomjaopNZUj51NfC6P-g1v9_LXGOhNejiED29XE2JtT0qEBsCrA04oYl_CFlLrwWSMtyZnobv22mSBgs-9WIvQeopWKJ40M7-fklKXeePainw6zVVq0Gxxz4nXriIAWBYj1BFMi82F3Kn95ZzD5lH8nnOqx919oznezfGhcfWupmIR_8eaBohV8OETpwN2iK1SmlOeYlWGIwl70uX",
-      caption: "Chân dung một tiểu thư Hà thành trong trang phục lụa Hàng Gai, toát lên vẻ đài các của một thời đã qua."
-    }
-  ];
-
   return (
     <>
-      <HeroSection 
-        title="Tiếng Lụa Là Vóc Vạc"
-        subtitle='"Nhịp thoi đưa lách cách hòa cùng tiếng cười nói xôn xao, vẽ nên bức tranh phồn hoa của phố thị kinh kỳ..."'
-        categoryLabel="Ký Ức Đời Sống"
-        backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuC60uYn8R8KkG_V2L86W8qF5eQ9tSvx9iNfL-5kK3W8t3wXlC7h0dY1qHqK5fF-fU2tqN0L5l5M7vP4k6vG7d9v5q9G6d9z6m5G6k9y0M3u5v9I2n4T8m4H7r9L6l1C5f7x6g5t9G3v1A2y4K5u7O8N9z3G1J7E0m5v1I8o7p5u6r9N6v5M8j8I4M3N8w4F9l9y9C5G6m5"
-        align="left"
-      />
+      <main className="pt-0">
+        {/* Immersive Header Section */}
+        <section className="relative w-full h-[716px] overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJQEKQkiaTaRLz2V0RoouOXF9hJGI15NRF_n4QIeRlOdI1xAGWATzOBoerV0YN4IKMW_LnuSBl_RVzO0Sn6bpvWZLiBlI3IkRy-7iwWAYOqrZbW1Yn0VXIaFZ7wIimAA9Erz5xbK8WWPPIZj452MRPLSiZ7ylc27FWfnE1AAn9RwfpipxfQXzGdAPeMazJX1Cc8Riy1YtNqkHgq4I9EdcjQD3rSxiqI0b5PejHA77QrDLMmrfF7xjY')" }}></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+          </div>
+          <div className="relative z-10 h-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col justify-end pb-16">
+            <span className="font-label-sm text-primary mb-2 tracking-[0.2em] uppercase">Di Sản Thăng Long</span>
+            <h1 className="font-display-lg text-display-lg md:text-[64px] text-primary max-w-2xl leading-tight mb-4 italic">
+              Phố Hàng Gai: <br/>Nơi Dệt Tình Hà Nội
+            </h1>
+            <p className="font-body-md text-on-surface-variant max-w-xl text-lg italic">
+              &quot;Tiếng thoi đưa lách cách đêm trường, đánh thức những ký ức rực rỡ của kinh kỳ xưa cũ.&quot;
+            </p>
+          </div>
+        </section>
 
-      <section className="bg-surface-container-low py-24 border-y border-outline-variant overflow-hidden">
-        <div className="max-w-container-max mx-auto px-margin-desktop">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                {/* Audio Controls & Context (Left) */}
-                <div className="lg:col-span-4 space-y-8 order-2 lg:order-1">
-                    <div className="text-left mb-8">
-                        <span className="font-label-sm text-primary tracking-widest uppercase mb-2 block">Thanh Âm Đang Phát</span>
-                        <h2 className="font-headline-lg text-primary text-4xl mb-4">Giai Điệu Của Lụa</h2>
-                        <p className="font-body-md text-on-surface-variant italic leading-relaxed">
-                            Lắng nghe nhịp điệu của lịch sử. Các hình ảnh bên cạnh sẽ tự động hiện diện theo từng chương hồi của âm thanh.
-                        </p>
-                    </div>
-                    
-                    <div className="ink-border p-6 bg-surface-container">
-                        <AudioPlayer 
-                          src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" 
-                          title="Tiếng khung cửi & Tiếng rao trưa" 
-                          variant="standard" 
-                        />
-                    </div>
+        {/* Synchronized Stage Area */}
+        <section className="bg-surface-container py-20 overflow-hidden">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+              
+              {/* Left: Audio Controls & Context */}
+              <div className="lg:col-span-5 space-y-8">
+                <div className="space-y-4">
+                  <span className="font-label-sm text-primary tracking-widest uppercase">Thanh Âm Đang Phát</span>
+                  <h2 className="font-headline-lg text-primary leading-tight">Giai Điệu Của Lụa</h2>
+                  <p className="font-body-md text-on-surface-variant italic">
+                    Lắng nghe nhịp điệu của lịch sử. Các hình ảnh bên cạnh sẽ tự động hiện diện theo từng chương hồi của âm thanh.
+                  </p>
                 </div>
 
-                {/* The Central 'Stage' Area (Right) */}
-                <div className="lg:col-span-8 order-1 lg:order-2">
-                    <HeritageStage images={images} autoPlayInterval={7000} />
+                {/* Synchronized Audio Player */}
+                <div className="ink-bleed-border p-8 bg-background relative overflow-hidden group">
+                  <div className="flex flex-col gap-6">
+                    <div className="flex items-center gap-6">
+                      <button id="master-play" className="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all shadow-lg btn-active">
+                        <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                      </button>
+                      <div>
+                        <h3 id="current-track-title" className="font-headline-lg text-primary text-xl">Tiếng khung cửi &amp; Tiếng rao trưa</h3>
+                        <div className="audio-wave mt-2 opacity-60">
+                          <div className="wave-bar" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="wave-bar" style={{ animationDelay: '0.3s' }}></div>
+                          <div className="wave-bar" style={{ animationDelay: '0.5s' }}></div>
+                          <div className="wave-bar" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="wave-bar" style={{ animationDelay: '0.4s' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex-grow h-1.5 bg-outline-variant relative cursor-pointer" id="progress-bar">
+                        <div className="absolute top-0 left-0 h-full w-[15%] bg-primary transition-all duration-300" id="progress-fill"></div>
+                        <div className="absolute top-1/2 left-[15%] -translate-y-1/2 w-4 h-4 bg-primary rounded-full border-2 border-background shadow-md" id="progress-knob"></div>
+                      </div>
+                      <div className="flex justify-between font-label-sm text-on-surface-variant text-[10px]">
+                        <span id="time-current">00:45</span>
+                        <span id="time-total">04:20</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <div className="decorative-frame p-6 bg-surface-container-low">
+                  <h4 className="font-label-sm text-primary mb-4 border-b border-outline-variant pb-2">CHÚ THÍCH HIỆN TẠI</h4>
+                  <p id="image-caption" className="font-body-md text-on-surface-variant italic text-sm transition-all duration-500">
+                    &quot;Khung cảnh nhộn nhịp của phố Hàng Gai những năm 1920, nơi tơ lụa phủ kín các cửa hàng.&quot;
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: Stage Images */}
+              <div className="lg:col-span-7">
+                <div id="heritage-stage" className="relative aspect-[4/3] decorative-frame bg-surface-dim overflow-hidden shadow-2xl">
+                  {/* Image Layers */}
+                  <div className="stage-image active" data-time="0" data-caption="Khung cảnh nhộn nhịp của phố Hàng Gai những năm 1920, nơi tơ lụa phủ kín các cửa hàng.">
+                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsl1VgcUhi2i4-mOptgFg6lR8tf4wGYqtC-sb5avGmAexH2yjmfQ7Q6OujIXONwEaM07lMBbX7hcqnHoSCi1Nd6-ZiAyCHVquPA94W0Eo0Cgx2dwIPrDvsEwDGGZN8w2dMwuFLz22gL2aS6MSonn_7D09GDpwTBCELRDuvtmxhqnfoeadE1tLZpiqrWYcDzGuR0WNTW_tYI8XNbv2z7Vvuk8UZQy5xP6xnLpCZ__m9Kzge9ohNNdbc')" }}></div>
+                    <div className="reveal-sweep"></div>
+                  </div>
+                  
+                  <div className="stage-overlay absolute inset-0 z-30"></div>
+                  
+                  {/* Navigation dots */}
+                  <div className="absolute bottom-6 left-6 z-40 flex gap-2">
+                    <div className="w-2 h-2 rounded-full bg-primary"></div>
+                    <div className="w-2 h-2 rounded-full bg-white/30"></div>
+                    <div className="w-2 h-2 rounded-full bg-white/30"></div>
+                    <div className="w-2 h-2 rounded-full bg-white/30"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-      </section>
-
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
-        <div className="md:col-span-7 space-y-8">
-          <div className="prose prose-stone prose-lg text-on-surface-variant italic leading-relaxed">
-            <p>
-              Nằm giữa lòng phố cổ, Hàng Gai không chỉ là trung tâm của tơ lụa và gấm vóc, mà còn là bản giao hưởng của những thanh âm lao động bình dị. Từ thuở xưa, nơi đây vang vọng tiếng khung cửi lách cách từ những xưởng dệt gia đình, hòa quyện với tiếng rao trưa ngọt ngào của những gánh hàng rong len lỏi qua từng con ngõ nhỏ.
-            </p>
-            <p>
-              Mỗi mét lụa Hàng Gai không chỉ mang sắc màu của thiên nhiên, mà còn chứa đựng cả hơi thở của thời gian và tâm hồn người thợ dệt Hà thành hào hoa, tinh tế.
-            </p>
           </div>
-        </div>
-        <div className="md:col-span-5 space-y-6">
-          <div className="ink-border-double p-6 bg-surface">
-            <h4 className="font-label-sm text-primary mb-4 border-b border-outline-variant pb-2">THÔNG TIN DI SẢN</h4>
-            <dl className="space-y-4">
-              <div>
-                <dt className="font-label-sm text-on-surface-variant uppercase text-xs">Tên gọi khác</dt>
-                <dd className="font-body-md text-primary">Phố Tơ Lụa (Silk Street)</dd>
-              </div>
-              <div>
-                <dt className="font-label-sm text-on-surface-variant uppercase text-xs">Thời kỳ hưng thịnh</dt>
-                <dd className="font-body-md text-primary">Cuối thế kỷ XIX - Đầu thế kỷ XX</dd>
-              </div>
-              <div>
-                <dt className="font-label-sm text-on-surface-variant uppercase text-xs">Sản vật đặc trưng</dt>
-                <dd className="font-body-md text-primary">Lụa tơ tằm, Gấm hoa, Đồ thêu tay</dd>
-              </div>
-              <div>
-                <dt className="font-label-sm text-on-surface-variant uppercase text-xs">Vị trí</dt>
-                <dd className="font-body-md text-primary flex items-center gap-2">
-                  <span className="material-symbols-outlined text-sm">location_on</span>
-                  Quận Hoàn Kiếm, Hà Nội
-                </dd>
-              </div>
-            </dl>
+        </section>
+
+        {/* Story Section */}
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+          <div className="md:col-span-7 space-y-8">
+            <div className="prose prose-stone prose-lg text-on-surface-variant italic leading-relaxed">
+              <p>
+                Nằm giữa lòng phố cổ, Hàng Gai không chỉ là trung tâm của tơ lụa và gấm vóc, mà còn là bản giao hưởng của những thanh âm lao động bình dị. Từ thuở xưa, nơi đây vang vọng tiếng khung cửi lách cách từ những xưởng dệt gia đình, hòa quyện với tiếng rao trưa ngọt ngào của những gánh hàng rong len lỏi qua từng con ngõ nhỏ.
+              </p>
+              <p>
+                Mỗi mét lụa Hàng Gai không chỉ mang sắc màu của thiên nhiên, mà còn chứa đựng cả hơi thở của thời gian và tâm hồn người thợ dệt Hà thành hào hoa, tinh tế.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+          
+          {/* Side Card: Information */}
+          <div className="md:col-span-5 space-y-6">
+            <div className="decorative-frame p-6 bg-surface">
+              <h4 className="font-label-sm text-primary mb-4 border-b border-outline-variant pb-2">THÔNG TIN DI SẢN</h4>
+              <dl className="space-y-4">
+                <div>
+                  <dt className="font-label-sm text-on-surface-variant uppercase text-[10px]">Tên gọi khác</dt>
+                  <dd className="font-body-md text-primary">Phố Tơ Lụa (Silk Street)</dd>
+                </div>
+                <div>
+                  <dt className="font-label-sm text-on-surface-variant uppercase text-[10px]">Thời kỳ hưng thịnh</dt>
+                  <dd className="font-body-md text-primary">Cuối thế kỷ XIX - Đầu thế kỷ XX</dd>
+                </div>
+                <div>
+                  <dt className="font-label-sm text-on-surface-variant uppercase text-[10px]">Sản vật đặc trưng</dt>
+                  <dd className="font-body-md text-primary">Lụa tơ tằm, Gấm hoa, Đồ thêu tay</dd>
+                </div>
+                <div>
+                  <dt className="font-label-sm text-on-surface-variant uppercase text-[10px]">Vị trí</dt>
+                  <dd className="font-body-md text-primary flex items-center gap-2">
+                    <span className="material-symbols-outlined text-sm">location_on</span>
+                    Quận Hoàn Kiếm, Hà Nội
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
 
-      <MemoryForm 
-        title="Gửi Ký Ức"
-        subtitle="Bạn có câu chuyện hay kỷ niệm nào về con phố này không? Hãy chia sẻ cùng chúng tôi để di sản này mãi luôn sống động."
-        fields={['name', 'timePeriod', 'story']}
-      />
+        {/* Memories Feedback Form */}
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24">
+          <div className="max-w-3xl mx-auto border-t border-outline-variant pt-16 relative">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-background px-4 text-primary italic font-headline-lg">
+              Gửi Ký Ức
+            </div>
+            <div className="text-center mt-8 mb-12">
+              <p className="font-body-md text-on-surface-variant italic">
+                Bạn có câu chuyện hay kỷ niệm nào về con phố này không? Hãy chia sẻ cùng chúng tôi để di sản này mãi luôn sống động.
+              </p>
+            </div>
+            <MemoryForm />
+          </div>
+        </section>
 
-      <LocationBanner location="Phố Hàng Gai" district="Quận Hoàn Kiếm, Hà Nội" />
+        {/* Footer Shell */}
+        <section className="bg-surface-container-low py-12 border-t border-outline-variant">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center space-y-4">
+            <div className="flex items-center gap-2 text-primary">
+              <span className="material-symbols-outlined text-2xl">location_on</span>
+              <span className="font-label-sm uppercase tracking-[0.2em]">Vị trí di sản</span>
+            </div>
+            <h3 className="font-display-lg text-3xl md:text-4xl text-on-surface italic">
+              Phố Hàng Gai, Quận Hoàn Kiếm, Hà Nội
+            </h3>
+            <div className="w-24 h-px bg-outline-variant mt-4"></div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }
