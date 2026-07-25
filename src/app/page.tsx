@@ -16,7 +16,7 @@ export default function Home() {
       subtitle: 'Tiếng tàu điện leng keng',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuChs_tBMYdX_i20ak6pGGN_GEyJytx-U5Pvj4C5MDwzeIRdiw5W1ex370Q6TK7VcGnXqhaQdyaK0lwt3pQNd1230ZUmQkA5C1VnTYrcWnor0a89den9aLpCcT-3xvcA8o1mGzQSZb7UvLclHDlYNVTbkeRptq7FQFklwy3tVRnhhkyXraMW0YxjpEU06qdA00B0FHBn6HkB55EKDvtk7HLnY1x0p4QCiy3Jtvs_71x-nZqCG6cAVk28',
       href: '/bo-ho',
-      colSpan: 2
+      colSpan: 2 as const
     },
     {
       id: 'o-quan-chuong',
