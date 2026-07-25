@@ -11,6 +11,7 @@ export default function VintagePhotoFrame({ src, alt, caption, className = '' }:
   return (
     <div className={`relative ${className}`}>
       <div className="ink-border-double p-4 bg-background vintage-shadow group cursor-pointer transition-transform duration-500 hover:-translate-y-2">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img 
           src={src} 
           alt={alt} 

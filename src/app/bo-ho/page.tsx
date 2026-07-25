@@ -58,12 +58,12 @@ export default function BoHo() {
           </div>
           <div className="md:col-span-7 space-y-6">
               <div className="ink-border p-6 bg-surface-container-low vintage-shadow">
-                  <h3 className="font-headline-lg text-primary mb-4 text-2xl">Về dự án "Thanh Âm Phố Cổ"</h3>
+                  <h3 className="font-headline-lg text-primary mb-4 text-2xl">Về dự án &quot;Thanh Âm Phố Cổ&quot;</h3>
                   <p className="font-body-md text-on-surface-variant italic mb-4">
-                      "Khi âm thanh vang lên, bức tranh quá khứ sẽ tự hiện hình."
+                      &quot;Khi âm thanh vang lên, bức tranh quá khứ sẽ tự hiện hình.&quot;
                   </p>
                   <p className="font-body-md text-on-surface">
-                      Chúng tôi kết hợp những bản thu âm tiếng động thực địa tái tạo lại không gian xưa với những tấm ảnh quý hiếm từ kho lưu trữ. Khi bạn nhấn 'Nghe', hành trình thị giác sẽ tự động đồng bộ theo từng nốt nhạc của ký ức.
+                      Chúng tôi kết hợp những bản thu âm tiếng động thực địa tái tạo lại không gian xưa với những tấm ảnh quý hiếm từ kho lưu trữ. Khi bạn nhấn &apos;Nghe&apos;, hành trình thị giác sẽ tự động đồng bộ theo từng nốt nhạc của ký ức.
                   </p>
               </div>
           </div>

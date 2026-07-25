@@ -47,8 +47,8 @@ export default function HangDao() {
                  variant="standard" 
                />
                <div className="mt-8 p-6 border-l-4 border-primary bg-surface-container-low italic text-on-surface-variant text-lg leading-relaxed">
-                    "Qua Hàng Đào ngắm lụa hồng,<br/>
-                    Tiếng guốc khua vang một góc lòng..."
+                    &quot;Qua Hàng Đào ngắm lụa hồng,<br/>
+                    Tiếng guốc khua vang một góc lòng...&quot;
                </div>
             </div>
         </div>
@@ -66,6 +66,7 @@ export default function HangDao() {
         </div>
         <div className="md:col-span-7 flex items-center justify-center">
             <div className="relative w-full max-w-lg decorative-frame p-2 bg-surface-container-high shadow-lg">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuA09aLT9xfsgUjCST4uiAqnAfWmfb2BAHfhhd7o58XPjxLTR4ONsn-SdSpsF2QNULepvvMUuYwx0xsqMtdkKakrLzpaKp9WbExD5o0JKewDD3MrvAvGUdDZj47vYN3MVvbkfd-OtnWFQ5iRRoOFRnxcicviHcDK0N3IpCmPKpfvqKEqxRiWOokhbN-UW5ykxbCPSMeihDeKY2arup8l0ykMSC6n2VuXbjIqZfEF1_G6K1WJd4q29Le1" 
                   alt="Tram tracks" 

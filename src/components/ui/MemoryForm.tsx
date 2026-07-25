@@ -48,6 +48,7 @@ export default function MemoryForm({
         setMessage(result.message || 'Đã có lỗi xảy ra.');
       }
     } catch (error) {
+      console.error(error);
       setStatus('error');
       setMessage('Không thể kết nối đến máy chủ.');
     }

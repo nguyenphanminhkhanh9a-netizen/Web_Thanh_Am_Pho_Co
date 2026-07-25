@@ -1,6 +1,5 @@
 import HeroSection from '@/components/ui/HeroSection';
 import BentoGrid from '@/components/ui/BentoGrid';
-import MemoryForm from '@/components/ui/MemoryForm';
 
 export default function Home() {
   const bentoItems = [
@@ -40,7 +39,7 @@ export default function Home() {
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAHLsyd4gV0xwqnjmuVOyNRp2wM_-enG1bqlvrdTGy0pWA-QLetJSpjZVpV6dbUVpSa5ilmmZzQHO00W6rwuDS5pTvYvalqVvfo2p4IpaFlu__c93mmRSQnUjxNX77tgiMb5HhUVOe_wfbFXcqRObX9dotSyY8tkc1k6GTmUkyqSqJdAQevJUYi486m4jRmLHmwsTO50MHceeT6NOeySFWwAq1GUeaCkBnlJ89fMNT8rUf26bJQQjSZ',
       href: '/hang-bac',
     }
-  ] as any;
+  ];
 
   return (
     <>
@@ -62,6 +61,7 @@ export default function Home() {
         <div className="max-w-container-max mx-auto grid md:grid-cols-12 gap-gutter items-center">
           <div className="md:col-span-5 relative">
             <div className="ink-border-double p-4 bg-background vintage-shadow hover:-translate-y-2 transition-transform duration-500">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 className="w-full h-[500px] object-cover grayscale brightness-90 hover:grayscale-0 hover:brightness-100 transition-all duration-700" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDizgqlXcEMF0pyvrEtgnz2vdYQd_FxuwBi3UPfTLQz0sYsqmkjm2FanOe-G7HZoGLWR34YD1QbJ7vOwyw-66C6EaQ-lwO5_xcgh3XPMuBWYSc1UnRQexnVJE1sGgnWwVo2FNrK_1ZP4Ult3B92i17bs4carjS3pT2qU6S27uVFCLFUPaqCq2SQX1ZHEnqWkM997omP6nfmZtNa3UTNhP5cvBtt3w3xS5eDxOjtlrBEfqhZFCkcQrH" 

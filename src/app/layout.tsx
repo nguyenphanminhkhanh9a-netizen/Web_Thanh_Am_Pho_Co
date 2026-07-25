@@ -44,12 +44,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={`${ebGaramond.variable} ${literata.variable} ${workSans.variable}`}>
-      <head>
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
-          rel="stylesheet" 
-        />
-      </head>
       <body className="parchment-texture min-h-screen overflow-x-hidden selection:bg-[#ffdad4] selection:text-[#410000] flex flex-col">
         <div className="grain-overlay"></div>
         <Header />

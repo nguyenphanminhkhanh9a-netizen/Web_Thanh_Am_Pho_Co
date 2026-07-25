@@ -12,6 +12,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, message: "Ký ức của bạn đã được lưu giữ thành công!" }, { status: 200 });
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ success: false, message: "Đã có lỗi xảy ra, vui lòng thử lại sau." }, { status: 500 });
   }
 }

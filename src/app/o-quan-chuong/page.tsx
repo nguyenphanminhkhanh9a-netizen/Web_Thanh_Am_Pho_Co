@@ -2,7 +2,6 @@ import HeroSection from '@/components/ui/HeroSection';
 import HeritageStage from '@/components/ui/HeritageStage';
 import AudioPlayer from '@/components/ui/AudioPlayer';
 import MemoryForm from '@/components/ui/MemoryForm';
-import LocationBanner from '@/components/ui/LocationBanner';
 import FactsCallout from '@/components/ui/FactsCallout';
 import ScrollRevealWrapper from '@/components/ui/ScrollRevealWrapper';
 
@@ -56,7 +55,7 @@ export default function OQuanChuong() {
                     />
                 </div>
                 <div className="italic text-on-surface-variant text-sm border-l-2 border-primary pl-4 py-2 bg-background/50">
-                    "Mỗi đoạn âm thanh mở ra một góc nhìn mới về Ô Quan Chưởng..."
+                    &quot;Mỗi đoạn âm thanh mở ra một góc nhìn mới về Ô Quan Chưởng...&quot;
                 </div>
             </div>
             
@@ -78,7 +77,7 @@ export default function OQuanChuong() {
                         Ô Quan Chưởng hay còn gọi là cửa Đông Hà, là một cửa ô của Hà Nội xưa, nằm ở phía Đông của kinh thành Thăng Long. Đây là cửa ô duy nhất còn sót lại nguyên vẹn cho đến ngày nay. Được xây dựng vào năm Cảnh Hưng thứ 10 (1749), công trình mang đậm dấu ấn kiến trúc thời Lê với vọng lâu và mái vòm cuốn đặc trưng.
                     </p>
                     <p className="text-on-surface-variant leading-relaxed mt-4">
-                        Tên gọi "Quan Chưởng" được đặt để tưởng nhớ một viên quan Chưởng vệ cùng các binh sĩ đã anh dũng hy sinh tại đây trong cuộc chiến đấu chống quân Pháp vào năm 1873. Sự hy sinh đó không chỉ bảo vệ cửa ngõ thủ đô mà còn khắc sâu vào lòng người dân Hà Nội một biểu tượng của lòng yêu nước.
+                        Tên gọi &quot;Quan Chưởng&quot; được đặt để tưởng nhớ một viên quan Chưởng vệ cùng các binh sĩ đã anh dũng hy sinh tại đây trong cuộc chiến đấu chống quân Pháp vào năm 1873. Sự hy sinh đó không chỉ bảo vệ cửa ngõ thủ đô mà còn khắc sâu vào lòng người dân Hà Nội một biểu tượng của lòng yêu nước.
                     </p>
                 </div>
             </div>
