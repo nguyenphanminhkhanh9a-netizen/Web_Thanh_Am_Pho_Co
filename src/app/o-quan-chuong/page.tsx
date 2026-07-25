@@ -1,6 +1,11 @@
+"use client";
+
+import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
+import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 
 export default function OQuanChuong() {
+  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg");
   return (
     <>
       <main className="pt-0">
@@ -10,7 +15,7 @@ export default function OQuanChuong() {
             <div 
               className="w-full h-full bg-cover bg-center grayscale-[30%] brightness-[85%] transition-transform duration-[20s] ease-linear" 
               id="hero-image" 
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCf64wHwcADOimWOSq3I0f88y9MDCVcxNp2acw49mVhi4-s1e5rdNGGMiQQDZe8k_r1ttuTYS3ie0Cs4xiJuy7g19h07TZLbzscZvvVJNGTqCaOJzRpioDjLyRIA1zpae9Uuk7YMQzsCvoCDpdsjfcw7mwtV4pcY9o452TfpR4HBFXIUqKcwMJOciRw0imucA4o6rfrU5e_l6xlS1hdU7YiOpGYj5UFgC8AtFpaHXYBHQd8qecgnwbU')" }}
+              style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/2/27/Tonkin_-_Hano%C3%AF_-_Ph%E1%BB%91_H%C3%A0ng_M%E1%BA%AFm.jpg')" }}
             ></div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
@@ -40,26 +45,34 @@ export default function OQuanChuong() {
                 </h3>
                 <div className="flex flex-col items-center gap-8">
                   <div className="relative">
-                    <div className="w-32 h-32 rounded-full bg-primary-container flex items-center justify-center animate-spin-slow ring-8 ring-surface-container-high overflow-hidden shadow-inner" id="record-player">
+                    <div className={`w-32 h-32 rounded-full bg-primary-container flex items-center justify-center ring-8 ring-surface-container-high overflow-hidden shadow-inner ${isPlaying ? 'animate-spin-slow' : ''}`} id="record-player">
                       <div className="w-6 h-6 bg-background rounded-full z-10 border border-outline-variant"></div>
-                      <div className="absolute inset-0 opacity-50 bg-cover bg-center" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlBB2kPmNxdkpu4oju9ljllx1RtFvGJUVWX-hbN-C4M1vC1kprk40mtjYqJpec3gzYChA0HQhfVChKaJFVwjGjMwHjmcVsCGC0KLC8952KCZFOw_Yq4HloQJV6bJHaUHBH1-zf5CZ-JzyCFUkVT08YEzkODp4sWuvQBdGDwfdKjj5fmJ5LIMlZsq4YgYJIKDn8h5EwelYwTULHIoFCDp7ss_XkxCsV1_C15Ox-vBdnqZ4xthWeyE8Z')" }}></div>
+                      <div className="absolute inset-0 opacity-50 bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/a/aa/%C3%94_Quan_Ch%C6%B0%E1%BB%9Fng.jpg')" }}></div>
                     </div>
-                    <div className="absolute -right-4 top-0 w-2 h-16 bg-outline origin-top rotate-12 transition-transform duration-500" id="stylus"></div>
+                    <div className={`absolute -right-4 top-0 w-2 h-16 bg-outline origin-top transition-transform duration-500 ${isPlaying ? 'rotate-12' : '-rotate-12'}`} id="stylus"></div>
                   </div>
                   <div className="w-full text-center">
                     <p className="font-headline-lg text-2xl text-primary italic mb-6 min-h-[40px]" id="track-title">Hà Nội nghìn năm văn vật</p>
                     <div className="flex items-center gap-4 text-on-surface-variant font-label-sm mb-6">
-                      <span id="current-time">00:00</span>
+                      <span id="current-time">{formatTime(currentTime)}</span>
                       <div className="flex-1 h-1 bg-outline-variant relative cursor-pointer group/progress" id="progress-container">
-                        <div className="absolute inset-y-0 left-0 w-0 bg-primary transition-all duration-300" id="progress-bar"></div>
-                        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-4 h-4 bg-primary border-2 border-background rounded-full shadow-lg opacity-0 group-hover/progress:opacity-100 transition-opacity" id="progress-knob"></div>
+                        <div className="absolute inset-y-0 left-0 bg-primary transition-all duration-300 pointer-events-none" id="progress-bar" style={{ width: `${progress}%` }}></div>
+                        <input 
+                          type="range" 
+                          min="0" 
+                          max="100" 
+                          value={duration ? (currentTime / duration) * 100 : 0}
+                          onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
+                          className="absolute inset-0 opacity-0 cursor-pointer w-full z-10" 
+                        />
+                        <div className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-primary border-2 border-background rounded-full shadow-lg opacity-0 group-hover/progress:opacity-100 transition-all pointer-events-none" id="progress-knob" style={{ left: `${progress}%` }}></div>
                       </div>
-                      <span>03:15</span>
+                      <span>{formatTime(duration)}</span>
                     </div>
                     <div className="flex justify-center gap-8">
                       <button className="hover:text-primary transition-colors active:scale-90" id="prev-btn"><span className="material-symbols-outlined text-4xl">skip_previous</span></button>
-                      <button className="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center hover:bg-primary-container transition-all shadow-md active:scale-95" id="play-btn">
-                        <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                      <button onClick={togglePlay} className="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center hover:bg-primary-container transition-all shadow-md active:scale-95 z-20" id="play-btn">
+                        <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>{isPlaying ? 'pause' : 'play_arrow'}</span>
                       </button>
                       <button className="hover:text-primary transition-colors active:scale-90" id="next-btn"><span className="material-symbols-outlined text-4xl">skip_next</span></button>
                     </div>
@@ -79,7 +92,7 @@ export default function OQuanChuong() {
                   {/* Placeholder for dynamic images */}
                   <div className="relative w-full h-full" id="stage-content">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className="stage-image active absolute inset-0 w-full h-full object-cover reveal-sweep" id="img-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv1GzSqsgHb2qsPe0_aXdmnPqVR6mrYylHJ9j0UWTgW40rcrQSRYGN8hv6XIdTS8V2U9MyCTWdrviXailrODmMuBmvqwO2zXd48-PlMU5ganTwMDn2doRjurmNeZSNZs4NnCceMdrMsaFsPZsH7gLJJaC6hXVK-ABY3y-73b8Rw1NJw6eaOVnZOt8QPPZEf5AUY7Se4Cf9lbBJTNcoGBZDs8BJHXQLiS3V1qxS9wuA1nmmBLJ_TqUc" alt="Image 0"/>
+                    <img className="stage-image active absolute inset-0 w-full h-full object-cover reveal-sweep" id="img-0" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Chi%E1%BA%BFc_c%E1%BB%95ng_c%E1%BB%95_k%C3%ADnh_c%E1%BB%A7a_ng%C3%B4i_nh%C3%A0_s%E1%BB%91_29_ph%E1%BB%91_L%C3%AA_Ng%E1%BB%8Dc_H%C3%A2n_%28tr%C6%B0%E1%BB%9Bc_kia_l%C3%A0_ph%E1%BB%91_L%E1%BB%AF_Gia%29%2C_qu%E1%BA%ADn_Hai_B%C3%A0_Tr%C6%B0ng%2C_H%C3%A0_N%E1%BB%99i_%2802%29.jpg" alt="Image 0"/>
                   </div>
                   {/* Feedback overlay */}
                   <div className="absolute inset-0 pointer-events-none border-[12px] border-primary/5 opacity-0 group-[.active]:opacity-100 transition-opacity duration-1000"></div>
@@ -144,7 +157,7 @@ export default function OQuanChuong() {
             </div>
             <div className="h-80 ink-bleed-border overflow-hidden bg-surface-dim relative">
               <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/pinstriped-suit.png')]"></div>
-              <div className="w-full h-full bg-cover bg-center grayscale-[20%]" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuUZ6H28Oq03YkBp3ESX4nhhjyxamqnDCnSAqb0vM60lcKXu5nQmAF2usCRrPAx_Tg_QwuabGYTWhCTAGsk2i26OxNpvzJ8p151VrBcm1WEsqDfX7PiXJJEzsWAT79NsLji0z_JKcZNq1nb3QThsiv5owKwDQmaZ9CLAU1Ja-u-FRqiH2dUwyetw0dFne9tcbVcp2-0JzfVuTr7SyrOB3r9FV6qPZGd1ZtdAfMOucbYS_KFWFCB-VV')" }}></div>
+              <div className="w-full h-full bg-cover bg-center grayscale-[20%]" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/5/54/Den_Bach_Ma.jpg')" }}></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-12 h-12 bg-primary/20 rounded-full animate-ping"></div>
                 <div className="absolute w-4 h-4 bg-primary rounded-full border-2 border-white shadow-lg"></div>
@@ -158,7 +171,7 @@ export default function OQuanChuong() {
           <span className="material-symbols-outlined text-primary text-5xl mb-4" style={{ fontVariationSettings: "'FILL' 0" }}>edit_note</span>
           <h2 className="font-display-lg text-display-lg text-primary mb-2 italic">Viết câu chuyện của bạn</h2>
           <p className="text-on-surface-variant mb-12 italic">Chia sẻ những ký ức hoặc cảm nhận của bạn khi đứng dưới vòm cổng này.</p>
-          <MemoryForm />
+          <MemoryForm locationId="o-quan-chuong" showPhotoUpload={true} />
         </section>
       </main>
     </>

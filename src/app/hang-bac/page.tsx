@@ -1,6 +1,11 @@
+"use client";
+
+import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
+import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 
 export default function HangBac() {
+  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg");
   return (
     <>
       <main className="pt-0 md:pt-0">
@@ -9,7 +14,7 @@ export default function HangBac() {
           <div className="absolute inset-0 bg-primary/20 z-10"></div>
           <div 
             className="w-full h-full bg-cover bg-center scale-105 transform hover:scale-100 transition-transform duration-[10s]" 
-            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1Q9ueSqXnRJHrA3L254Sj1Q33JAOq5W6GKnxBTn72IwEnVuyeuJvs2sELRly-tRxc4iH7CVA8cjvmnrEddxjuMA8KNrV_GsyXKZyfYWgxmwDxjWK0vPfGf0qx7H5RvJSnhcUzYCyLho7mXmitThsvHpme7NfcRfBLas76x0k-XMEjb-pWoe5JCF-0D5abVKhIGe8AXkAb-HTccmfLDp98VCdgcdSJQ4UZT9DimcajFTqRvupYwHzx')" }}
+            style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/5/50/Hano%C3%AF_-_Rue_des_Radeaux.jpg')" }}
           ></div>
           <div className="absolute inset-0 z-20 flex flex-col justify-end items-center pb-24 px-margin-mobile text-center">
             <span className="font-label-sm text-on-primary tracking-[0.3em] uppercase mb-4 opacity-80">Phố Nghề Ngàn Năm</span>
@@ -48,16 +53,25 @@ export default function HangBac() {
                   </p>
                   <div className="flex flex-col gap-6">
                     <div className="flex items-center gap-6">
-                      <button id="play-btn" className="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg hover:scale-105 transition-transform active:scale-95">
-                        <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                      <button onClick={togglePlay} id="play-btn" className="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg hover:scale-105 transition-transform active:scale-95 z-20">
+                        <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>{isPlaying ? 'pause' : 'play_arrow'}</span>
                       </button>
                       <div className="flex-1 space-y-2">
-                        <div className="relative h-[2px] bg-outline-variant w-full">
-                          <div id="progress-bar" className="absolute top-0 left-0 h-full bg-primary w-[0%] transition-all duration-300"></div>
+                        <div className="relative h-6 flex items-center w-full">
+                          <input 
+                            type="range" 
+                            className="w-full absolute inset-0 opacity-0 cursor-pointer z-10" 
+                            value={duration ? (currentTime / duration) * 100 : 0} 
+                            max="100" 
+                            onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
+                          />
+                          <div className="relative h-[2px] bg-outline-variant w-full">
+                            <div id="progress-bar" className="absolute top-0 left-0 h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }}></div>
+                          </div>
                         </div>
                         <div className="flex justify-between font-label-sm text-on-surface-variant text-[10px]">
-                          <span id="current-time">00:00</span>
-                          <span id="total-time">03:45</span>
+                          <span id="current-time">{formatTime(currentTime)}</span>
+                          <span id="total-time">{formatTime(duration)}</span>
                         </div>
                       </div>
                     </div>
@@ -82,7 +96,7 @@ export default function HangBac() {
                   {/* Image Layers (Synchronized via JS) */}
                   <div id="stage-viewport" className="relative w-full h-full">
                     {/* Image 1 */}
-                    <div className="stage-image absolute inset-0 opacity-100 scale-100 stage-image-transition" style={{ background: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAloQk6jBtglrCveJUfLvdWD9ZYvR6rE4cdJHJCD-rWrr74G5uFxDOKlXMBj9dh6EYBxhWi-Z12nhsrY3u20J679VluPBakZzlErCKz22d1PsLdTW3PEf620QnLRaIQfN8SbE2YQ7p4CRv-9SJexAeyIzr-Lxl_TIgZGBay9PFlbUQtVYg7uUqI5B48B0kL8vU7Me1oMeoac_e8YXYR9R6ERYcHN84tDOrUYzbMldw6_jTlUhiw9fuk') center/cover no-repeat" }}>
+                    <div className="stage-image absolute inset-0 opacity-100 scale-100 stage-image-transition" style={{ background: "url('https://upload.wikimedia.org/wikipedia/commons/b/bf/H%C3%A0ng_%C4%90%C3%A0o%2C_one_of_36_streets_of_HaNoi.jpg') center/cover no-repeat" }}>
                       <div className="absolute inset-0 revealed-glow bg-primary/5"></div>
                     </div>
                   </div>
@@ -115,7 +129,7 @@ export default function HangBac() {
               <h2 className="font-headline-lg text-headline-lg text-primary">Gửi gắm ký ức</h2>
               <p className="mt-4 text-on-surface-variant">Chia sẻ câu chuyện hoặc cảm xúc của bạn về tiếng chuông, tiếng gõ của Hàng Bạc để cùng chúng tôi bồi đắp kho tàng di sản này.</p>
             </div>
-            <MemoryForm />
+            <MemoryForm locationId="hang-bac" showPhotoUpload={true} />
           </div>
         </section>
       </main>

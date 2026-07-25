@@ -1,11 +1,16 @@
+"use client";
+
+import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
+import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 
 export default function HangDao() {
+  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg");
   return (
     <>
       <main className="pt-0">
         <section className="relative w-full h-[716px] overflow-hidden">
-          <div id="hero-img" className="w-full h-full bg-cover bg-center transition-transform duration-[10000ms]" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWDY9g7kxLea-Pf3GgghMvB4-r44N5_gnvuGthoDxfLcwHnhgpUi5YlMXKB9rw3Ag8Rk2U-QhyZqrrJMwViABxgERjxnDDJhOs5bexWouYC5MW3bsVHIJrCaX8snq0MRLgf5jy7VHFi2ElWBlRA7y9EwpgvMpHROi1Pnl8om835vN7uJqlgyz_90_x4J3eilEc6tMtkFWQ1Tg1uzpGADwYnjCX5ZbgCYVF62aCnUOTG_pna91X6FyL')" }}></div>
+          <div id="hero-img" className="w-full h-full bg-cover bg-center transition-transform duration-[10000ms]" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/0/0d/H%C3%B4tel_de_la_Paix%2C_Hanoi.jpg')" }}></div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
           <div className="absolute bottom-12 left-margin-desktop right-margin-desktop max-w-container-max mx-auto">
             <h1 className="font-display-lg text-display-lg text-primary mb-2 drop-shadow-sm">Phố Hàng Đào</h1>
@@ -26,7 +31,7 @@ export default function HangDao() {
                 {/* Dynamic Illustrations (Stage) */}
                 <div id="stage-images" className="absolute inset-0">
                   {/* Image 1: Default/Start */}
-                  <div className="stage-reveal active absolute inset-0 bg-cover bg-center flex items-end p-8" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNt5u9bE_pzHdJgAkjqX0yzW9XxO3YheYigDrpBarkm_CFe3WsCDwCFSxBDUyvzv3zrfIl69kuNnLiSk0fLjRgQ0JbiqSp0SKIZFql-AmIJshT72bWvln9bKvKscTQL1c6A1_Gaoy-krChFJBw4fXE2BE96mKJxCLAFT5UDAKmKdwMVn5rH8znosntoZAFirPo_82gAWuQ3HySrsIZ7C_zffBpcFIVYV9LOZz_2J7XWvJkeg6CkcAo')" }}>
+                  <div className="stage-reveal active absolute inset-0 bg-cover bg-center flex items-end p-8" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/6/65/Khu_pho_co_Ha_Noi.png')" }}>
                     <div className="bg-black/40 backdrop-blur-sm p-4 border-l-4 border-primary">
                       <p className="text-white font-label-sm uppercase tracking-widest">Tiếng guốc mộc và lụa hồng</p>
                     </div>
@@ -53,15 +58,23 @@ export default function HangDao() {
                   
                   <div className="bg-surface-container-high/50 p-6 rounded-none border border-outline-variant">
                     <div className="flex items-center gap-4 mb-4">
-                      <button className="w-14 h-14 flex items-center justify-center bg-primary text-on-primary border border-primary hover:bg-transparent hover:text-primary transition-all active:scale-90" id="play-btn">
-                        <span className="material-symbols-outlined text-2xl">play_arrow</span>
+                      <button onClick={togglePlay} className="w-14 h-14 flex items-center justify-center bg-primary text-on-primary border border-primary hover:bg-transparent hover:text-primary transition-all active:scale-90 z-20" id="play-btn">
+                        <span className="material-symbols-outlined text-2xl">{isPlaying ? 'pause' : 'play_arrow'}</span>
                       </button>
                       <div className="flex-grow h-2 bg-outline-variant relative group cursor-pointer" id="seek-bar-container">
-                        <div id="seek-bar-progress" className="absolute inset-y-0 left-0 bg-primary w-0 transition-all duration-300"></div>
-                        <input type="range" min="0" max="100" defaultValue="0" className="absolute inset-0 opacity-0 cursor-pointer w-full" id="audio-seeker" />
-                        <div id="seek-bar-handle" className="absolute top-1/2 -translate-y-1/2 left-0 w-4 h-4 bg-primary border-2 border-background rounded-full transition-all duration-300 shadow-md"></div>
+                        <div id="seek-bar-progress" className="absolute inset-y-0 left-0 bg-primary transition-all duration-300" style={{ width: `${progress}%` }}></div>
+                        <input 
+                          type="range" 
+                          min="0" 
+                          max="100" 
+                          value={duration ? (currentTime / duration) * 100 : 0}
+                          onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
+                          className="absolute inset-0 opacity-0 cursor-pointer w-full z-10" 
+                          id="audio-seeker" 
+                        />
+                        <div id="seek-bar-handle" className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-primary border-2 border-background rounded-full transition-all duration-300 shadow-md pointer-events-none" style={{ left: `${progress}%` }}></div>
                       </div>
-                      <span className="font-label-sm text-on-surface-variant w-24 text-right" id="time-display">00:00 / 03:00</span>
+                      <span className="font-label-sm text-on-surface-variant w-24 text-right" id="time-display">{formatTime(currentTime)} / {formatTime(duration)}</span>
                     </div>
                     <div className="flex justify-between items-center text-on-surface-variant">
                       <div className="flex gap-6">
@@ -99,7 +112,7 @@ export default function HangDao() {
             <div className="md:col-span-7 flex items-center justify-center">
               <div className="relative w-full max-w-lg decorative-frame p-2 bg-surface-container-high shadow-lg">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA09aLT9xfsgUjCST4uiAqnAfWmfb2BAHfhhd7o58XPjxLTR4ONsn-SdSpsF2QNULepvvMUuYwx0xsqMtdkKakrLzpaKp9WbExD5o0JKewDD3MrvAvGUdDZj47vYN3MVvbkfd-OtnWFQ5iRRoOFRnxcicviHcDK0N3IpCmPKpfvqKEqxRiWOokhbN-UW5ykxbCPSMeihDeKY2arup8l0ykMSC6n2VuXbjIqZfEF1_G6K1WJd4q29Le1" alt="Tram tracks" className="grayscale hover:grayscale-0 transition-all duration-1000 w-full h-auto" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Old_Quarter%2C_Hanoi_%2814%29_%2838464498712%29.jpg" alt="Tram tracks" className="grayscale hover:grayscale-0 transition-all duration-1000 w-full h-auto" />
                 <p className="mt-2 text-center font-label-sm text-[10px] uppercase tracking-tighter opacity-60">Tiếng tàu điện vang bóng một thời</p>
               </div>
             </div>
@@ -114,7 +127,7 @@ export default function HangDao() {
               <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Viết câu chuyện của bạn</h2>
               <p className="text-on-surface-variant italic">Gửi gắm những mảnh ký ức còn sót lại về tiếng guốc, về phố cũ trong tim bạn.</p>
             </div>
-            <MemoryForm />
+            <MemoryForm locationId="hang-dao" showPhotoUpload={true} />
           </section>
         </div>
       </main>

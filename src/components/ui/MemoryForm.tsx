@@ -6,15 +6,17 @@ interface MemoryFormProps {
   subtitle?: string;
   fields?: ('name' | 'email' | 'timePeriod' | 'story')[];
   showPhotoUpload?: boolean;
+  locationId?: string;
 }
 
 export default function MemoryForm({
   title = "Gửi Lại Một Mảnh Ký Ức",
   subtitle = "Có những câu chuyện chỉ còn đọng lại trong trí nhớ. Hãy kể cho chúng tôi nghe...",
   fields = ['name', 'timePeriod', 'story'],
-  showPhotoUpload = false
+  showPhotoUpload = false,
+  locationId = 'general'
 }: MemoryFormProps) {
-  const [formData, setFormData] = useState<Record<string, string>>({});
+  const [formData, setFormData] = useState<Record<string, string | File>>({ locationId });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
@@ -29,12 +31,15 @@ export default function MemoryForm({
     setMessage('');
 
     try {
+      // Use FormData to support file uploads
+      const data = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        if (value) data.append(key, value);
+      });
+
       const response = await fetch('/api/memory', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: data,
       });
 
       const result = await response.json();
@@ -42,7 +47,7 @@ export default function MemoryForm({
       if (response.ok) {
         setStatus('success');
         setMessage(result.message || 'Thành công!');
-        setFormData({});
+        setFormData({ locationId });
       } else {
         setStatus('error');
         setMessage(result.message || 'Đã có lỗi xảy ra.');
@@ -69,7 +74,7 @@ export default function MemoryForm({
               <input 
                 type="text" 
                 name="name"
-                value={formData.name || ''}
+                value={(formData.name as string) || ''}
                 onChange={handleInputChange}
                 required
                 className="bg-transparent border-b-2 border-outline-variant focus:border-primary outline-none py-2 font-body-md transition-colors"
@@ -84,7 +89,7 @@ export default function MemoryForm({
               <input 
                 type="email" 
                 name="email"
-                value={formData.email || ''}
+                value={(formData.email as string) || ''}
                 onChange={handleInputChange}
                 className="bg-transparent border-b-2 border-outline-variant focus:border-primary outline-none py-2 font-body-md transition-colors"
                 placeholder="Email để nhận phản hồi" 
@@ -98,7 +103,7 @@ export default function MemoryForm({
               <input 
                 type="text" 
                 name="timePeriod"
-                value={formData.timePeriod || ''}
+                value={(formData.timePeriod as string) || ''}
                 onChange={handleInputChange}
                 className="bg-transparent border-b-2 border-outline-variant focus:border-primary outline-none py-2 font-body-md transition-colors"
                 placeholder="Ví dụ: Những năm 1990" 
@@ -113,7 +118,7 @@ export default function MemoryForm({
             <textarea 
               name="story"
               rows={5}
-              value={formData.story || ''}
+              value={(formData.story as string) || ''}
               onChange={handleInputChange}
               required
               className="bg-transparent border-b-2 border-outline-variant focus:border-primary outline-none py-2 font-body-md transition-colors resize-none leading-loose"
@@ -130,9 +135,18 @@ export default function MemoryForm({
         {showPhotoUpload && (
           <div className="flex flex-col mt-4">
             <label className="font-label-sm uppercase tracking-widest text-on-surface-variant mb-4">Đính kèm ảnh (Nếu có)</label>
-            <div className="border-2 border-dashed border-outline-variant p-8 text-center cursor-pointer hover:bg-surface-variant/30 transition-colors">
+            <div className="relative border-2 border-dashed border-outline-variant p-8 text-center cursor-pointer hover:bg-surface-variant/30 transition-colors">
+              <input 
+                type="file" 
+                name="photo"
+                accept="image/*"
+                onChange={(e) => setFormData(prev => ({ ...prev, photo: e.target.files?.[0] || '' }))}
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+              />
               <span className="material-symbols-outlined text-4xl text-outline mb-2">add_a_photo</span>
-              <p className="font-body-md text-on-surface-variant">Nhấn để tải ảnh lên, hoặc kéo thả vào đây</p>
+              <p className="font-body-md text-on-surface-variant">
+                {(formData.photo instanceof File) ? formData.photo.name : 'Nhấn để tải ảnh lên, hoặc kéo thả vào đây'}
+              </p>
             </div>
           </div>
         )}

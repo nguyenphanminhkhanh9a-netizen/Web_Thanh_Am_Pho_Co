@@ -1,6 +1,11 @@
+"use client";
+
+import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
+import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 
 export default function BoHo() {
+  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg");
   return (
     <>
       <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
@@ -19,7 +24,7 @@ export default function BoHo() {
               <img 
                 id="stage-image" 
                 className="w-full h-full object-cover grayscale brightness-90 transition-all duration-1000 reveal-active" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa7fiwG2W9q42n-jvgWZtraQ6GFnxKCoZJxrErXi9-kEtnnVfA1caOiY0weNcSS0TLaETwgGFANjj2vURwQHc0qED9QyNE40920T2AiivdtxbQAvF_gHt0jjVLfmy7pzErdcUR9UHjPiWCF8Cor1NC1K8McPgoQTDg0PdIuJ8OjdzGb4MsuhuVHUcDArTcFuxGj14sSsH2BZUOELY0U3G13RcqZvOCD7G3zXa9hyFaMU-Tvk2nDzsf" 
+                src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hano%C3%AF_-_Rue_des_Pavillons_Noirs.jpg" 
                 alt="Hồ Gươm sương sớm" 
               />
               
@@ -45,20 +50,26 @@ export default function BoHo() {
               </div>
 
               <div className="flex items-center gap-8">
-                <button id="master-play-btn" className="w-20 h-20 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-all shadow-lg active:scale-95 group relative">
-                  <div className="absolute inset-0 rounded-full border-4 border-primary/30 group-hover:scale-110 transition-transform"></div>
-                  <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                <button onClick={togglePlay} id="master-play-btn" className="w-20 h-20 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-all shadow-lg active:scale-95 group relative z-20">
+                  <div className={`absolute inset-0 rounded-full border-4 border-primary/30 transition-transform ${isPlaying ? 'scale-110 animate-ping' : 'group-hover:scale-110'}`}></div>
+                  <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>{isPlaying ? 'pause' : 'play_arrow'}</span>
                 </button>
 
                 <div className="flex-1 space-y-4">
                   <div className="relative h-12 flex items-center">
-                    <input type="range" className="w-full audio-slider appearance-none bg-transparent cursor-pointer relative z-10" defaultValue="0" max="100" />
-                    <div id="audio-progress-fill" className="absolute left-0 h-[2px] bg-primary pointer-events-none" style={{ width: '0%' }}></div>
+                    <input 
+                      type="range" 
+                      className="w-full audio-slider appearance-none bg-transparent cursor-pointer relative z-10" 
+                      value={duration ? (currentTime / duration) * 100 : 0} 
+                      max="100" 
+                      onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
+                    />
+                    <div id="audio-progress-fill" className="absolute left-0 h-[2px] bg-primary pointer-events-none" style={{ width: `${progress}%` }}></div>
                     <div className="absolute w-full h-[2px] bg-outline-variant pointer-events-none"></div>
                   </div>
                   <div className="flex justify-between font-label-sm text-on-surface-variant">
-                    <span id="time-current">00:00</span>
-                    <span id="time-total">05:30</span>
+                    <span id="audio-current-time">{formatTime(currentTime)}</span>
+                    <span id="audio-total-time">{formatTime(duration)}</span>
                   </div>
                 </div>
               </div>
@@ -114,7 +125,7 @@ export default function BoHo() {
             <h2 className="font-headline-lg text-headline-lg text-primary">Gửi lại một mảnh ký ức</h2>
             <p className="font-body-md text-on-surface-variant mt-4 italic">&quot;Mỗi câu chuyện bạn chia sẻ là một viên gạch xây nên ngôi đền di sản của chúng ta.&quot;</p>
           </div>
-          <MemoryForm />
+          <MemoryForm locationId="bo-ho" showPhotoUpload={true} />
         </section>
       </main>
       

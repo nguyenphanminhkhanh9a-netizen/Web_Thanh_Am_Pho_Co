@@ -9,7 +9,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div 
             className="w-full h-full bg-cover bg-center grayscale contrast-125 opacity-40 mix-blend-multiply" 
-            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcQ0tnRYfejgG_WmPKFcKCaf4NHbNIZXAbxEFm9wk_nwu6YNcIuAYE8QHZPUpKlBo_Wwfpg9EBue9JUCEb1P6DKK01Z8hnQo67HoSd_766FJ2ZCAOD1wmYUH4hGWC5lNEuZQsDY0PynFgAG7I8IBNLJPYB8K4BCV02NphXlaEEp3pJ8J0RBuwlygfNW6G-FGuX2Hhe-GlCAz2d2zlDAyEDbU_lRsDrQy6OcPf1t_38N8PH4S1Ey9Qva8m6EXnBwo-5vQ')" }}
+            style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/9/99/Chi%E1%BA%BFc_c%E1%BB%95ng_c%E1%BB%95_k%C3%ADnh_c%E1%BB%A7a_ng%C3%B4i_nh%C3%A0_s%E1%BB%91_29_ph%E1%BB%91_L%C3%AA_Ng%E1%BB%8Dc_H%C3%A2n_%28tr%C6%B0%E1%BB%9Bc_kia_l%C3%A0_ph%E1%BB%91_L%E1%BB%AF_Gia%29%2C_qu%E1%BA%ADn_Hai_B%C3%A0_Tr%C6%B0ng%2C_H%C3%A0_N%E1%BB%99i_%2802%29.jpg')" }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
         </div>
@@ -43,7 +43,7 @@ export default function Home() {
               <img 
                 className="w-full h-[500px] object-cover grayscale brightness-90" 
                 alt="A vintage, sepia-toned high-resolution photograph of an old Hanoi street scene" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDizgqlXcEMF0pyvrEtgnz2vdYQd_FxuwBi3UPfTLQz0sYsqmkjm2FanOe-G7HZoGLWR34YD1QbJ7vOwyw-66C6EaQ-lwO5_xcgh3XPMuBWYSc1UnRQexnVJE1sGgnWwVo2FNrK_1ZP4Ult3B92i17bs4carjS3pT2qU6S27uVFCLFUPaqCq2SQX1ZHEnqWkM997omP6nfmZtNa3UTNhP5cvBtt3w3xS5eDxOjtlrBEfqhZFCkcQrH"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/54/Den_Bach_Ma.jpg"
               />
             </div>
             {/* Decorative Element */}
@@ -53,7 +53,7 @@ export default function Home() {
                 <img 
                   className="w-full h-full object-contain" 
                   alt="A detailed black and white pen and ink sketch of a traditional Vietnamese lantern" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2Ypu661IucxYc7v-nnwSeGo1gT9DFkFa59sLrUwqFdE0fbH4t0RFjbEiOjxIsaugG5njw7ygCN7cqVlzJBZIbsIVSkzCIlhDKsmtk7kEF36PXFFAD9xfnriTjA1mXqT5A5io1uBJcwKIJ07VbOq3YXGiesgV_03FyMepdmMj0vroN-HAretJScB2nOrnXE3ONxmuJn2hB4HoBTZN4IWaedN9Dqy3jYy51mkiFwVkbC6pdBVb4G-1N"
+                  src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Hanoi_le_marche_aux_bronzes.jpg"
                 />
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Silk merchants on Hang Dao street" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWIycMjPDvAs7qtFap1Xz87kwKgWXsdvOmaYkssLtkiOGt5FiTgpUUPBxRTSqTYLMaU_rzuIc2IXhmG0UOGefGrLI5ZzuV-XVXhT0BFqwD54yxO_7Znd64oMtEv8FQNqHiHqzS2T0ut2MlYSVNSDUPRADGQvcFbVPEDc3Dmg6YpqiBjC_ScjVNJ3iqJfFTplEPamLps0V8nwvBxB8yozh5ryx9LhvasJybPa6rdmg_OX4zpYblAfZd"
+              src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Hanoi_old_quarter_shophouse.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">01</span>
@@ -106,7 +106,7 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Panoramic view of Hoan Kiem Lake" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuChs_tBMYdX_i20ak6pGGN_GEyJytx-U5Pvj4C5MDwzeIRdiw5W1ex370Q6TK7VcGnXqhaQdyaK0lwt3pQNd1230ZUmQkA5C1VnTYrcWnor0a89den9aLpCcT-3xvcA8o1mGzQSZb7UvLclHDlYNVTbkeRptq7FQFklwy3tVRnhhkyXraMW0YxjpEU06qdA00B0FHBn6HkB55EKDvtk7HLnY1x0p4QCiy3Jtvs_71x-nZqCG6cAVk28"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hanoi_shophouse_2.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">02</span>
@@ -121,7 +121,7 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="O Quan Chuong city gate" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUgKRhLFSOd3gDFvQ2BO6o-VNfW8b4oRFFtfaIEO6XRWYbFWlwxHbbVpUrrWpFzrQBFI7zCRYdh8jXKqTACFXu5srDTRQei79GeJgx6XYgnAXkCM9SF9AN4NT3yuCV5J8RCctalgTjx1xVpr1Qzw9vnmN92FqILkaPucO3zLnZIUvGaXnD6PTtUY5QSnHlXAQdTw9KOdvQw4inEjTJ8vQOkqHckwJYjVYYRT7YY8maqlBDb74fb6Lt"
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Hano%C3%AF_-_Les_Halles.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">03</span>
@@ -136,11 +136,11 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Lively scene inside Dong Xuan market" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx2F0TzcsS_eDFSuz4I0bPo6RwcP4C4epE_sDptvH59bTu60sGr4aeT3phTqAIsFCvJLNpamYJGtfwru6Zx2cM46d759CWx13DFcsskPWUMjS5wd_djv3XzkBtg5mg3SkzG3OatE_9ykuIsC3duBAhiiE2gelXAWXHZ4LuqqMzpH-InoQ4dxrwejsNJ_14z8dxyOQkj70f0e9UdezQCIlxxfz6rAS3eqZndbypS-f-PybRtZfCZcvu"
+              src="https://upload.wikimedia.org/wikipedia/commons/0/02/Hano%C3%AF_-_Promenade_du_Dragon%2C_rue_des_%C3%89ventails.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">04</span>
-              <h4 className="font-headline-lg text-2xl mb-2">Chợ Đồng Xuân / Hàng Gai</h4>
+              <h4 className="font-headline-lg text-2xl mb-2">Hàng Gai</h4>
               <p className="font-label-sm text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Tiếng rao đời thường</p>
             </div>
           </Link>
@@ -151,7 +151,7 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Silversmith's hands working" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHLsyd4gV0xwqnjmuVOyNRp2wM_-enG1bqlvrdTGy0pWA-QLetJSpjZVpV6dbUVpSa5ilmmZzQHO00W6rwuDS5pTvYvalqVvfo2p4IpaFlu__c93mmRSQnUjxNX77tgiMb5HhUVOe_wfbFXcqRObX9dotSyY8tkc1k6GTmUkyqSqJdAQevJUYi486m4jRmLHmwsTO50MHceeT6NOeySFWwAq1GUeaCkBnlJ89fMNT8rUf26bJQQjSZ"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/57/Hano%C3%AF_-_Rue_des_Chapeaux.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">05</span>
@@ -165,10 +165,10 @@ export default function Home() {
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl text-center mb-10 italic">
             Khám phá mỗi góc phố, mỗi con đường qua những âm thanh đặc trưng đã làm nên bản sắc của Thăng Long - Hà Nội.
           </p>
-          <button className="group flex items-center gap-4 px-12 py-5 bg-primary text-background ink-border-double transition-all hover:scale-105 active:scale-95 vintage-shadow">
+          <Link href="/#hanh-trinh" className="group flex items-center gap-4 px-12 py-5 bg-primary text-background ink-border-double transition-all hover:scale-105 active:scale-95 vintage-shadow">
             <span className="font-label-sm text-label-sm uppercase tracking-[0.4em] font-bold">Khám Phá Bản Đồ Âm Thanh</span>
-            <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-          </button>
+            <span className="material-symbols-outlined group-hover:-translate-y-2 transition-transform">arrow_upward</span>
+          </Link>
         </div>
       </section>
 

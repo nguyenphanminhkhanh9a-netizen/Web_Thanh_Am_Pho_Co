@@ -1,13 +1,18 @@
+"use client";
+
+import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
+import { useAudioPlayer } from '@/hooks/useAudioPlayer';
 
 export default function HangGai() {
+  const { isPlaying, currentTime, duration, progress, togglePlay, seek, formatTime } = useAudioPlayer("https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg");
   return (
     <>
       <main className="pt-0">
         {/* Immersive Header Section */}
         <section className="relative w-full h-[716px] overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJQEKQkiaTaRLz2V0RoouOXF9hJGI15NRF_n4QIeRlOdI1xAGWATzOBoerV0YN4IKMW_LnuSBl_RVzO0Sn6bpvWZLiBlI3IkRy-7iwWAYOqrZbW1Yn0VXIaFZ7wIimAA9Erz5xbK8WWPPIZj452MRPLSiZ7ylc27FWfnE1AAn9RwfpipxfQXzGdAPeMazJX1Cc8Riy1YtNqkHgq4I9EdcjQD3rSxiqI0b5PejHA77QrDLMmrfF7xjY')" }}></div>
+            <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/c/c6/Old_Quarter%2C_Hanoi_%285678877743%29.jpg')" }}></div>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
           </div>
           <div className="relative z-10 h-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col justify-end pb-16">
@@ -40,8 +45,8 @@ export default function HangGai() {
                 <div className="ink-bleed-border p-8 bg-background relative overflow-hidden group">
                   <div className="flex flex-col gap-6">
                     <div className="flex items-center gap-6">
-                      <button id="master-play" className="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all shadow-lg btn-active">
-                        <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                      <button onClick={togglePlay} id="master-play" className="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all shadow-lg btn-active z-20">
+                        <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>{isPlaying ? 'pause' : 'play_arrow'}</span>
                       </button>
                       <div>
                         <h3 id="current-track-title" className="font-headline-lg text-primary text-xl">Tiếng khung cửi &amp; Tiếng rao trưa</h3>
@@ -56,12 +61,20 @@ export default function HangGai() {
                     </div>
                     <div className="space-y-2">
                       <div className="flex-grow h-1.5 bg-outline-variant relative cursor-pointer" id="progress-bar">
-                        <div className="absolute top-0 left-0 h-full w-[15%] bg-primary transition-all duration-300" id="progress-fill"></div>
-                        <div className="absolute top-1/2 left-[15%] -translate-y-1/2 w-4 h-4 bg-primary rounded-full border-2 border-background shadow-md" id="progress-knob"></div>
+                        <div className="absolute top-0 left-0 h-full bg-primary transition-all duration-300 pointer-events-none" id="progress-fill" style={{ width: `${progress}%` }}></div>
+                        <input 
+                          type="range" 
+                          min="0" 
+                          max="100" 
+                          value={duration ? (currentTime / duration) * 100 : 0}
+                          onChange={(e) => seek(Number(e.target.value) / 100 * duration)} 
+                          className="absolute inset-0 opacity-0 cursor-pointer w-full z-10" 
+                        />
+                        <div className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full border-2 border-background shadow-md pointer-events-none transition-all duration-300" id="progress-knob" style={{ left: `${progress}%` }}></div>
                       </div>
                       <div className="flex justify-between font-label-sm text-on-surface-variant text-[10px]">
-                        <span id="time-current">00:45</span>
-                        <span id="time-total">04:20</span>
+                        <span id="time-current">{formatTime(currentTime)}</span>
+                        <span id="time-total">{formatTime(duration)}</span>
                       </div>
                     </div>
                   </div>
@@ -80,7 +93,7 @@ export default function HangGai() {
                 <div id="heritage-stage" className="relative aspect-[4/3] decorative-frame bg-surface-dim overflow-hidden shadow-2xl">
                   {/* Image Layers */}
                   <div className="stage-image active" data-time="0" data-caption="Khung cảnh nhộn nhịp của phố Hàng Gai những năm 1920, nơi tơ lụa phủ kín các cửa hàng.">
-                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsl1VgcUhi2i4-mOptgFg6lR8tf4wGYqtC-sb5avGmAexH2yjmfQ7Q6OujIXONwEaM07lMBbX7hcqnHoSCi1Nd6-ZiAyCHVquPA94W0Eo0Cgx2dwIPrDvsEwDGGZN8w2dMwuFLz22gL2aS6MSonn_7D09GDpwTBCELRDuvtmxhqnfoeadE1tLZpiqrWYcDzGuR0WNTW_tYI8XNbv2z7Vvuk8UZQy5xP6xnLpCZ__m9Kzge9ohNNdbc')" }}></div>
+                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/d/da/Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg')" }}></div>
                     <div className="reveal-sweep"></div>
                   </div>
                   
@@ -152,7 +165,7 @@ export default function HangGai() {
                 Bạn có câu chuyện hay kỷ niệm nào về con phố này không? Hãy chia sẻ cùng chúng tôi để di sản này mãi luôn sống động.
               </p>
             </div>
-            <MemoryForm />
+            <MemoryForm locationId="hang-gai" showPhotoUpload={true} />
           </div>
         </section>
 

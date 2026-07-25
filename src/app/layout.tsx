@@ -44,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={`${ebGaramond.variable} ${literata.variable} ${workSans.variable}`}>
-      <body className="parchment-texture min-h-screen overflow-x-hidden selection:bg-[#ffdad4] selection:text-[#410000] flex flex-col">
+      <body className="parchment-texture min-h-screen overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed flex flex-col bg-background text-on-surface">
         <div className="grain-overlay"></div>
         <Header />
         <main className="flex-grow">
