@@ -12,14 +12,15 @@ export default function HangMa() {
         <section className="relative w-full h-[716px] overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/7/75/Ph%E1%BB%91_H%C3%A0ng_M%C3%A3%2C_H%C3%A0_N%E1%BB%99i_001.JPG')" }}></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-primary/40"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
           </div>
           <div className="relative z-10 h-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col justify-end pb-16">
-            <span className="font-label-sm text-primary mb-2 tracking-[0.2em] uppercase">Không gian lễ hội</span>
-            <h1 className="font-display-lg text-display-lg md:text-[64px] text-primary max-w-2xl leading-tight mb-4 italic">
+            <span className="font-label-sm text-on-primary mb-2 tracking-[0.2em] uppercase">Không gian lễ hội</span>
+            <h1 className="font-display-lg text-display-lg md:text-[64px] text-on-primary max-w-2xl leading-tight mb-4 italic">
               Phố Hàng Mã: <br/>Không gian lễ hội & Đồ chơi dân gian
             </h1>
-            <p className="font-body-md text-on-surface-variant max-w-xl text-lg italic">
+            <p className="font-body-md text-on-primary/80 max-w-xl text-lg italic">
               &quot;Festive & Paper Sound - Nơi tuổi thơ lưu giữ qua những thanh âm rộn ràng.&quot;
             </p>
           </div>
