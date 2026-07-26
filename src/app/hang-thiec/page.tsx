@@ -10,12 +10,11 @@ export default function HangThiec() {
       <main className="pt-0">
         <section className="relative w-full h-[716px] overflow-hidden">
           <div id="hero-img" className="w-full h-full bg-cover bg-center transition-transform duration-[10000ms]" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Hang_Thiec_Street_-_L%C3%A9on_Busy_%281874-1951%29.jpg')" }}></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
           <div className="absolute bottom-12 left-margin-desktop right-margin-desktop max-w-container-max mx-auto">
-            <div className="bg-background/90 backdrop-blur-md p-8 md:p-10 border-l-4 border-primary shadow-2xl max-w-3xl transform transition-transform hover:scale-[1.02] duration-500">
-              <h1 className="font-display-lg text-display-lg text-primary mb-2 drop-shadow-sm">Phố Hàng Thiếc</h1>
-              <p className="font-headline-lg text-headline-lg text-secondary italic">Nhịp điệu dồn dập & Cơ khí - Rhythm & Hammering</p>
-            </div>
+            <h1 className="font-display-lg text-display-lg text-on-primary mb-2 drop-shadow-md">Phố Hàng Thiếc</h1>
+            <p className="font-headline-lg text-headline-lg text-on-primary/90 italic drop-shadow-md">Nhịp điệu dồn dập & Cơ khí - Rhythm & Hammering</p>
           </div>
         </section>
 
