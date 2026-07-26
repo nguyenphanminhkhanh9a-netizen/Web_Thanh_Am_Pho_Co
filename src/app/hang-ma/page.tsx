@@ -17,10 +17,9 @@ export default function HangMa() {
           </div>
           <div className="relative z-10 h-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col justify-end pb-16">
             <span className="font-label-sm text-on-primary mb-2 tracking-[0.2em] uppercase">Không gian lễ hội</span>
-            <h1 className="font-display-lg text-display-lg md:text-[64px] text-on-primary max-w-2xl leading-tight mb-4 italic drop-shadow-md">
-              Phố Hàng Mã: <br/>Không gian lễ hội & Đồ chơi dân gian
-            </h1>
-            <p className="font-body-md text-on-primary/90 max-w-xl text-lg italic drop-shadow-md">
+            <h1 className="font-display-lg text-4xl md:text-5xl text-on-primary mb-3 italic drop-shadow-md">Phố Hàng Mã</h1>
+            <p className="font-body-md text-xl md:text-2xl text-on-primary/90 italic drop-shadow-md mb-4 max-w-2xl">Không gian lễ hội & Đồ chơi dân gian</p>
+            <p className="font-body-md text-on-primary/80 max-w-xl text-base md:text-lg italic drop-shadow-md">
               &quot;Festive & Paper Sound - Nơi tuổi thơ lưu giữ qua những thanh âm rộn ràng.&quot;
             </p>
           </div>

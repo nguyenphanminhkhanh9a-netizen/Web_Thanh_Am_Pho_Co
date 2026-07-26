@@ -13,8 +13,8 @@ export default function HangThiec() {
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
           <div className="absolute bottom-12 left-margin-desktop right-margin-desktop max-w-container-max mx-auto">
-            <h1 className="font-display-lg text-display-lg text-on-primary mb-2 drop-shadow-md">Phố Hàng Thiếc</h1>
-            <p className="font-headline-lg text-headline-lg text-on-primary/90 italic drop-shadow-md">Nhịp điệu dồn dập & Cơ khí - Rhythm & Hammering</p>
+            <h1 className="font-display-lg text-4xl md:text-5xl text-on-primary mb-3 drop-shadow-md">Phố Hàng Thiếc</h1>
+            <p className="font-body-md text-xl md:text-2xl text-on-primary/90 italic drop-shadow-md">Nhịp điệu dồn dập & Cơ khí - Rhythm & Hammering</p>
           </div>
         </section>
 

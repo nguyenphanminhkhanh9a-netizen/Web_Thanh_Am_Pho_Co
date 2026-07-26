@@ -58,7 +58,7 @@ export default function DuongTau() {
         <section className="mb-24 grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="font-label-sm text-secondary uppercase tracking-[0.2em]">Khám phá di sản</span>
-            <h1 className="font-display-lg text-display-lg text-primary leading-none">Nhịp Đập Đường Tàu</h1>
+            <h1 className="text-4xl md:text-5xl text-primary leading-none">Nhịp Đập Đường Tàu</h1>
             <p className="font-body-md text-on-surface leading-relaxed">
               Tiếng chuông cảnh báo xóm đường tàu kêu liên hồi (keng... keng... keng...) hòa cùng tiếng người dân vội vã dọn dẹp hàng quán thu gọn vào sát tường, tạo nên một nét sinh hoạt độc nhất vô nhị giữa lòng Hà Nội.
             </p>

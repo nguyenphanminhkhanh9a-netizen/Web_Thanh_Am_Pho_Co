@@ -20,7 +20,7 @@ export default function ChoDongXuan() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
           <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-margin-desktop max-w-container-max mx-auto pb-20">
             <span className="font-label-sm text-primary uppercase tracking-widest mb-4 bg-surface-container/60 px-3 py-1 backdrop-blur-md">Sinh hoạt cộng đồng</span>
-            <h1 className="font-display-lg text-display-lg text-primary mb-4 italic">Chợ Đồng Xuân</h1>
+            <h1 className="font-display-lg text-4xl md:text-5xl text-primary mb-4 italic">Chợ Đồng Xuân</h1>
             <p className="max-w-2xl text-on-surface-variant font-body-md text-lg leading-relaxed italic">
               &quot;Không gian sinh hoạt cộng đồng & Ồn ào náo nhiệt - Ambient & Crowded Market.&quot;
             </p>
