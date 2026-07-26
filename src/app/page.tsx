@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import NewsletterForm from '@/components/ui/NewsletterForm';
 import HeroSection from '@/components/ui/HeroSection';
 import MemoryForm from '@/components/ui/MemoryForm';
 
@@ -137,15 +136,12 @@ export default function Home() {
       </section>
 
       {/* User Form: Story Submission */}
-      <section className="py-24 px-margin-desktop max-w-2xl mx-auto text-center">
+      <section id="luu-tru" className="py-24 px-margin-desktop max-w-2xl mx-auto text-center">
         <span className="material-symbols-outlined text-primary text-5xl mb-4" style={{ fontVariationSettings: "'FILL' 0" }}>edit_note</span>
         <h2 className="font-display-lg text-display-lg text-primary mb-2 italic">Viết câu chuyện của bạn</h2>
         <p className="text-on-surface-variant mb-12 italic">Chia sẻ những ký ức hoặc cảm nhận chung của bạn về Hà Nội xưa.</p>
         <MemoryForm locationId="home" showPhotoUpload={true} />
       </section>
-
-      {/* Newsletter / Contact Callout */}
-      <NewsletterForm />
     </>
   );
 }

@@ -10,9 +10,9 @@ interface MemoryFormProps {
 }
 
 export default function MemoryForm({
-  title = "Gửi Lại Một Mảnh Ký Ức",
+  title = "Gửi Gắm Ký Ức",
   subtitle = "Có những câu chuyện chỉ còn đọng lại trong trí nhớ. Hãy kể cho chúng tôi nghe...",
-  fields = ['name', 'timePeriod', 'story'],
+  fields = ['name', 'email', 'timePeriod', 'story'],
   showPhotoUpload = false,
   locationId = 'general'
 }: MemoryFormProps) {
