@@ -23,7 +23,7 @@ export default function DuongTau() {
               <img 
                 id="stage-image" 
                 className="w-full h-full object-cover grayscale brightness-90 transition-all duration-1000 reveal-active" 
-                src="https://upload.wikimedia.org/wikipedia/commons/8/87/Train_street_in_Hanoi.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/7/70/Train_street_in_Hanoi.jpg" 
                 alt="Phố Đường Tàu" 
               />
               
@@ -48,7 +48,7 @@ export default function DuongTau() {
                 trackTitle="Thanh Âm Đường Tàu: Tiếng còi tàu và bánh sắt"
                 subtitle="Đang trình chiếu • Điểm nhấn cao trào"
                 description="Tiếng còi tàu hỏa vang dội, kéo dài vọng qua các vòm đá. Tiếng bánh xe sắt rầm rập nghiến trên đường ray (xình xịch... kít...). (Từ khóa Youtube: Hanoi train street audio ambiance)"
-                albumArt="https://upload.wikimedia.org/wikipedia/commons/8/87/Train_street_in_Hanoi.jpg"
+                albumArt="https://upload.wikimedia.org/wikipedia/commons/7/70/Train_street_in_Hanoi.jpg"
               />
             </div>
           </div>

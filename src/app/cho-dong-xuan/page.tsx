@@ -14,7 +14,7 @@ export default function ChoDongXuan() {
             <div 
               className="w-full h-full bg-cover bg-center grayscale-[30%] brightness-[85%] transition-transform duration-[20s] ease-linear" 
               id="hero-image" 
-              style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/2/2c/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n%2C_Le_grand_march%C3%A9%2C_H%C3%A0_N%E1%BB%99i%2C_1926.jpg')" }}
+              style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/3/3b/Dong_Xuan_market.jpg')" }}
             ></div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
@@ -41,7 +41,7 @@ export default function ChoDongXuan() {
                   audioSrc="" /* TODO: Chèn âm thanh: Tiếng rao chợ Đồng Xuân xưa */
                   trackTitle="Thanh âm Chợ Cổ"
                   description="Tiếng xô xát mua bán, mặc cả xôn xao của hàng trăm tiểu thương và khách mua hàng (tiếng nói chuyện râm ran). (Từ khóa Youtube: Hanoi market soundscape ASMR)"
-                  albumArt="https://upload.wikimedia.org/wikipedia/commons/2/2c/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n%2C_Le_grand_march%C3%A9%2C_H%C3%A0_N%E1%BB%99i%2C_1926.jpg"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/3/3b/Dong_Xuan_market.jpg"
                 />
               </div>
               <div className="italic text-on-surface-variant text-sm border-l-2 border-primary pl-4 py-2 bg-background/50">
@@ -57,7 +57,7 @@ export default function ChoDongXuan() {
                   {/* Placeholder for dynamic images */}
                   <div className="relative w-full h-full" id="stage-content">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className="stage-image active absolute inset-0 w-full h-full object-cover reveal-sweep" id="img-0" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n%2C_Le_grand_march%C3%A9%2C_H%C3%A0_N%E1%BB%99i%2C_1926.jpg" alt="Image 0"/>
+                    <img className="stage-image active absolute inset-0 w-full h-full object-cover reveal-sweep" id="img-0" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Dong_Xuan_market.jpg" alt="Image 0"/>
                   </div>
                   {/* Feedback overlay */}
                   <div className="absolute inset-0 pointer-events-none border-[12px] border-primary/5 opacity-0 group-[.active]:opacity-100 transition-opacity duration-1000"></div>

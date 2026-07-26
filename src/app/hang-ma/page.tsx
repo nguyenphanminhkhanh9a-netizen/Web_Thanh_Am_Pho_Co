@@ -11,7 +11,7 @@ export default function HangMa() {
         {/* Immersive Header Section */}
         <section className="relative w-full h-[716px] overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/1/1b/Hanoi_Street.jpg')" }}></div>
+            <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/7/75/Ph%E1%BB%91_H%C3%A0ng_M%C3%A3%2C_H%C3%A0_N%E1%BB%99i_001.JPG')" }}></div>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
           </div>
           <div className="relative z-10 h-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col justify-end pb-16">
@@ -45,7 +45,7 @@ export default function HangMa() {
                   audioSrc="" /* TODO: Chèn âm thanh: Tiếng trống trung thu phố Hàng Mã */
                   trackTitle="Đồ chơi dân gian"
                   description="Tiếng sột soạt của giấy bổi, tiếng gõ trống tết Trung thu (tùng... xèng...), tiếng còi bóp tít tít của đồ chơi bằng sắt Tây. (Từ khóa Youtube: Hanoi Hang Ma street traditional toys sounds)"
-                  albumArt="https://upload.wikimedia.org/wikipedia/commons/1/1b/Hanoi_Street.jpg"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/7/75/Ph%E1%BB%91_H%C3%A0ng_M%C3%A3%2C_H%C3%A0_N%E1%BB%99i_001.JPG"
                 />
 
                 <div className="decorative-frame p-6 bg-surface-container-low">
@@ -61,7 +61,7 @@ export default function HangMa() {
                 <div id="heritage-stage" className="relative aspect-[4/3] decorative-frame bg-surface-dim overflow-hidden shadow-2xl">
                   {/* Image Layers */}
                   <div className="stage-image active" data-time="0" data-caption="Không gian lễ hội nhộn nhịp rực rỡ sắc đỏ tại phố Hàng Mã.">
-                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/1/1b/Hanoi_Street.jpg')" }}></div>
+                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/7/75/Ph%E1%BB%91_H%C3%A0ng_M%C3%A3%2C_H%C3%A0_N%E1%BB%99i_001.JPG')" }}></div>
                     <div className="reveal-sweep"></div>
                   </div>
                   

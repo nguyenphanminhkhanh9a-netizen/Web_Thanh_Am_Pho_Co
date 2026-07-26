@@ -13,7 +13,7 @@ export default function HangBac() {
           <div className="absolute inset-0 bg-primary/40 z-10"></div>
           <div 
             className="w-full h-full bg-cover bg-center scale-105 transform hover:scale-100 transition-transform duration-[10s]" 
-            style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/5/57/Hano%C3%AF_-_Rue_des_Chapeaux.jpg')" }}
+            style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/e/e3/H%C3%A0ng_B%E1%BA%A1c.jpg')" }}
           ></div>
           <div className="absolute inset-0 z-20 flex flex-col justify-end items-center pb-24 px-margin-mobile text-center">
             <span className="font-label-sm text-on-primary tracking-[0.3em] uppercase mb-4 opacity-80">Giai điệu tinh xảo - Artisanal Metal</span>
@@ -48,7 +48,7 @@ export default function HangBac() {
                   audioSrc="" /* TODO: Chèn âm thanh: Tiếng gõ chạm khắc bạc Hàng Bạc ASMR */
                   trackTitle="Giai điệu tinh xảo"
                   description="Hãy nhắm mắt và lắng nghe nhịp điệu của lịch sử. Tiếng búa gõ nhỏ giọt trên đe đồng, tiếng mũi ve lướt nhẹ trên mặt bạc, tạo nên những đường vân mây, sóng nước tinh xảo. (Từ khóa Youtube: Nghề kim hoàn truyền thống Phố cổ Hà Nội sound)"
-                  albumArt="https://upload.wikimedia.org/wikipedia/commons/5/57/Hano%C3%AF_-_Rue_des_Chapeaux.jpg"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/e/e3/H%C3%A0ng_B%E1%BA%A1c.jpg"
                 />
               </div>
 
@@ -58,7 +58,7 @@ export default function HangBac() {
                   {/* Image Layers (Synchronized via JS) */}
                   <div id="stage-viewport" className="relative w-full h-full">
                     {/* Image 1 */}
-                    <div className="stage-image absolute inset-0 opacity-100 scale-100 stage-image-transition" style={{ background: "url('https://upload.wikimedia.org/wikipedia/commons/5/57/Hano%C3%AF_-_Rue_des_Chapeaux.jpg') center/cover no-repeat" }}>
+                    <div className="stage-image absolute inset-0 opacity-100 scale-100 stage-image-transition" style={{ background: "url('https://upload.wikimedia.org/wikipedia/commons/e/e3/H%C3%A0ng_B%E1%BA%A1c.jpg') center/cover no-repeat" }}>
                       <div className="absolute inset-0 revealed-glow bg-primary/5"></div>
                     </div>
                   </div>

@@ -65,7 +65,7 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Hàng Bạc" 
-              src="https://upload.wikimedia.org/wikipedia/commons/5/57/Hano%C3%AF_-_Rue_des_Chapeaux.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/e/e3/H%C3%A0ng_B%E1%BA%A1c.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">01</span>
@@ -80,7 +80,7 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Hàng Thiếc" 
-              src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Hanoi_old_quarter_shophouse.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Hang_Thiec_Street_-_L%C3%A9on_Busy_%281874-1951%29.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">02</span>
@@ -95,7 +95,7 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Hàng Mã" 
-              src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Hanoi_Street.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/7/75/Ph%E1%BB%91_H%C3%A0ng_M%C3%A3%2C_H%C3%A0_N%E1%BB%99i_001.JPG"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">03</span>
@@ -110,7 +110,7 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Đường Tàu" 
-              src="https://upload.wikimedia.org/wikipedia/commons/8/87/Train_street_in_Hanoi.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/7/70/Train_street_in_Hanoi.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">04</span>
@@ -125,7 +125,7 @@ export default function Home() {
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Chợ Đồng Xuân" 
-              src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n%2C_Le_grand_march%C3%A9%2C_H%C3%A0_N%E1%BB%99i%2C_1926.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Dong_Xuan_market.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
               <span className="font-label-sm text-xs opacity-80 mb-1">05</span>
