@@ -8,7 +8,7 @@ export default function Home() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop py-12">
         <div className="absolute inset-0 z-0">
           <div 
-            className="w-full h-full bg-cover bg-center grayscale contrast-125 opacity-40 mix-blend-multiply" 
+            className="w-full h-full bg-cover bg-center grayscale contrast-125 opacity-15" 
             style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/9/99/Chi%E1%BA%BFc_c%E1%BB%95ng_c%E1%BB%95_k%C3%ADnh_c%E1%BB%A7a_ng%C3%B4i_nh%C3%A0_s%E1%BB%91_29_ph%E1%BB%91_L%C3%AA_Ng%E1%BB%8Dc_H%C3%A2n_%28tr%C6%B0%E1%BB%9Bc_kia_l%C3%A0_ph%E1%BB%91_L%E1%BB%AF_Gia%29%2C_qu%E1%BA%ADn_Hai_B%C3%A0_Tr%C6%B0ng%2C_H%C3%A0_N%E1%BB%99i_%2802%29.jpg')" }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
