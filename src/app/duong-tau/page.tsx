@@ -22,7 +22,7 @@ export default function DuongTau() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 id="stage-image" 
-                className="w-full h-full object-cover grayscale brightness-90 transition-all duration-1000 reveal-active" 
+                className="w-full h-full object-cover brightness-90 transition-all duration-1000 reveal-active" 
                 src="/images/duong-tau-hero.jpg" 
                 alt="Phố Đường Tàu" 
               />
