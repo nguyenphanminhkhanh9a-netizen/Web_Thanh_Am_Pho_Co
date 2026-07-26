@@ -27,11 +27,11 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 w-full border-b border-outline-variant bg-background/95 backdrop-blur-sm z-50">
-      <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto relative">
+    <header className="sticky top-0 w-full border-b border-primary-container bg-primary z-50 shadow-lg">
+      <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto relative text-on-primary">
         <div className="flex items-center gap-gutter">
           <Link href="/">
-            <h1 className="font-display-lg text-[32px] md:text-[40px] text-primary tracking-tighter cursor-pointer">
+            <h1 className="font-display-lg text-[32px] md:text-[40px] text-on-primary tracking-tighter cursor-pointer">
               Thanh Âm Phố Cổ
             </h1>
           </Link>
@@ -42,7 +42,7 @@ export default function Header() {
           <div className="relative" ref={dropdownRef}>
             <button 
               onClick={() => setIsJourneyDropdownOpen(!isJourneyDropdownOpen)}
-              className={`font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors pb-1 flex items-center gap-1 ${isJourneyDropdownOpen ? 'text-primary' : ''}`}
+              className={`font-label-sm text-label-sm uppercase text-on-primary/80 hover:text-on-primary transition-colors pb-1 flex items-center gap-1 ${isJourneyDropdownOpen ? 'text-on-primary' : ''}`}
             >
               Hành Trình
               <span className={`material-symbols-outlined text-sm transition-transform duration-200 ${isJourneyDropdownOpen ? 'rotate-180' : ''}`}>
@@ -87,17 +87,17 @@ export default function Header() {
           </div>
 
 
-          <Link href="/#ky-uc" className="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors pb-1">
+          <Link href="/#ky-uc" className="font-label-sm text-label-sm uppercase text-on-primary/80 hover:text-on-primary transition-colors pb-1">
             Ký Ức
           </Link>
-          <Link href="/#luu-tru" className="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors pb-1">
+          <Link href="/#luu-tru" className="font-label-sm text-label-sm uppercase text-on-primary/80 hover:text-on-primary transition-colors pb-1">
             Lưu Trữ
           </Link>
         </div>
 
         <div className="flex items-center gap-4">
           <button 
-            className="p-2 hover:bg-surface-variant/50 transition-colors rounded-full text-on-surface-variant flex items-center justify-center md:hidden" 
+            className="p-2 hover:bg-primary-container transition-colors rounded-full text-on-primary flex items-center justify-center md:hidden" 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <span className="material-symbols-outlined">{isMobileMenuOpen ? 'close' : 'menu'}</span>
