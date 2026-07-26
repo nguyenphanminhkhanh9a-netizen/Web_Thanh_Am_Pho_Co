@@ -17,7 +17,7 @@ export default function HangBac() {
           ></div>
           <div className="absolute inset-0 z-20 flex flex-col justify-end items-center pb-24 px-margin-mobile text-center">
             <span className="font-label-sm text-on-primary tracking-[0.3em] uppercase mb-4 opacity-80">Giai điệu tinh xảo - Artisanal Metal</span>
-            <h1 className="font-display-lg text-display-lg text-on-primary italic mb-6">Phố Hàng Bạc</h1>
+            <h1 className="font-display-lg text-4xl md:text-5xl text-on-primary italic mb-6 drop-shadow-md">Phố Hàng Bạc</h1>
             <div className="w-24 h-[1px] bg-on-primary/40"></div>
           </div>
         </section>
