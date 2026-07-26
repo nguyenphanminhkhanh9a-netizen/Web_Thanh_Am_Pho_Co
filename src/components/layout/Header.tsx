@@ -79,7 +79,7 @@ export default function Header() {
               <div className="relative bg-background py-2">
                 {/* Link to section on homepage */}
                 <Link 
-                  href="/#hanh-trinh" 
+                  href={isHomePage ? "#hanh-trinh" : "/#hanh-trinh"}
                   onClick={() => setIsJourneyDropdownOpen(false)}
                   className="flex items-center gap-3 px-4 py-2.5 hover:bg-surface-container transition-colors group"
                 >
@@ -108,10 +108,10 @@ export default function Header() {
           </div>
 
 
-          <Link href="/#ky-uc" className="font-label-sm text-label-sm uppercase text-on-primary/80 hover:text-on-primary transition-colors pb-1">
+          <Link href={isHomePage ? "#ky-uc" : "/#ky-uc"} className="font-label-sm text-label-sm uppercase text-on-primary/80 hover:text-on-primary transition-colors pb-1">
             Ký Ức
           </Link>
-          <Link href="/#luu-tru" className="font-label-sm text-label-sm uppercase text-on-primary/80 hover:text-on-primary transition-colors pb-1">
+          <Link href={isHomePage ? "#luu-tru" : "/#luu-tru"} className="font-label-sm text-label-sm uppercase text-on-primary/80 hover:text-on-primary transition-colors pb-1">
             Lưu Trữ
           </Link>
         </div>
@@ -143,8 +143,8 @@ export default function Header() {
                </div>
             </div>
 
-            <Link href="/#ky-uc" className="font-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors">Ký Ức</Link>
-            <Link href="/#luu-tru" className="font-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors">Lưu Trữ</Link>
+            <Link href={isHomePage ? "#ky-uc" : "/#ky-uc"} onClick={() => setIsMobileMenuOpen(false)} className="font-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors">Ký Ức</Link>
+            <Link href={isHomePage ? "#luu-tru" : "/#luu-tru"} onClick={() => setIsMobileMenuOpen(false)} className="font-label-sm uppercase text-on-surface-variant hover:text-primary transition-colors">Lưu Trữ</Link>
          </div>
       </div>
     </header>
