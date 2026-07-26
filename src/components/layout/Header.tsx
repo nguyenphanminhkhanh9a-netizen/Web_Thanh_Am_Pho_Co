@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import SoundWave from '@/components/ui/SoundWave';
 
 export default function Header() {
@@ -8,6 +9,8 @@ export default function Header() {
   const [isJourneyDropdownOpen, setIsJourneyDropdownOpen] = useState(false);
   const [isGlobalAudioPlaying, setIsGlobalAudioPlaying] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   const locations = [
     { name: "Bờ Hồ", path: "/bo-ho", desc: "Hồ Gươm & Tháp Rùa" },
@@ -48,9 +51,11 @@ export default function Header() {
               Thanh Âm Phố Cổ
             </h1>
           </Link>
-          <div className="hidden sm:block">
-            <SoundWave isPlaying={isGlobalAudioPlaying} />
-          </div>
+          {!isHomePage && (
+            <div className="hidden sm:block">
+              <SoundWave isPlaying={isGlobalAudioPlaying} />
+            </div>
+          )}
         </div>
         
         <div className="hidden md:flex items-center gap-8">
