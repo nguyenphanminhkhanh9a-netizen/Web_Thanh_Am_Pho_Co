@@ -23,7 +23,7 @@ export default function DuongTau() {
               <img 
                 id="stage-image" 
                 className="w-full h-full object-cover grayscale brightness-90 transition-all duration-1000 reveal-active" 
-                src="https://i1-dulich.vnecdn.net/2024/11/27/2-1732715834-3277-1732715875.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/8/85/Hanoi_railroad_tracks.jpg" 
                 alt="Phố Đường Tàu" 
               />
               
