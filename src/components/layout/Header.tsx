@@ -1,10 +1,12 @@
 "use client";
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
+import SoundWave from '@/components/ui/SoundWave';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isJourneyDropdownOpen, setIsJourneyDropdownOpen] = useState(false);
+  const [isGlobalAudioPlaying, setIsGlobalAudioPlaying] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const locations = [
@@ -26,15 +28,29 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Listen to global audio state
+  useEffect(() => {
+    const handleAudioState = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      setIsGlobalAudioPlaying(customEvent.detail.isPlaying);
+    };
+
+    window.addEventListener('globalAudioState', handleAudioState);
+    return () => window.removeEventListener('globalAudioState', handleAudioState);
+  }, []);
+
   return (
     <header className="sticky top-0 w-full border-b border-primary-container bg-primary z-50 shadow-lg">
       <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto relative text-on-primary">
-        <div className="flex items-center gap-gutter">
+        <div className="flex items-center gap-6">
           <Link href="/">
             <h1 className="font-display-lg text-[32px] md:text-[40px] text-on-primary tracking-tighter cursor-pointer">
               Thanh Âm Phố Cổ
             </h1>
           </Link>
+          <div className="hidden sm:block">
+            <SoundWave isPlaying={isGlobalAudioPlaying} />
+          </div>
         </div>
         
         <div className="hidden md:flex items-center gap-8">

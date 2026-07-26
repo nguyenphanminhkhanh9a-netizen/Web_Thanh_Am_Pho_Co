@@ -21,16 +21,43 @@ export function useAudioPlayer(src: string) {
     const onEnd = () => {
       setIsPlaying(false);
       setCurrentTime(0);
+      window.dispatchEvent(new CustomEvent('globalAudioState', { detail: { isPlaying: false } }));
     };
+
+    const onPlay = () => {
+      setIsPlaying(true);
+      window.dispatchEvent(new CustomEvent('globalAudioPlay', { detail: { src } }));
+      window.dispatchEvent(new CustomEvent('globalAudioState', { detail: { isPlaying: true } }));
+    };
+
+    const onPause = () => {
+      setIsPlaying(false);
+      window.dispatchEvent(new CustomEvent('globalAudioState', { detail: { isPlaying: false } }));
+    };
+
+    // Lắng nghe sự kiện từ các player khác
+    const handleGlobalPlay = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail.src !== src) {
+        audio.pause();
+      }
+    };
+
+    window.addEventListener('globalAudioPlay', handleGlobalPlay);
 
     audio.addEventListener('loadedmetadata', setAudioData);
     audio.addEventListener('timeupdate', setAudioTime);
     audio.addEventListener('ended', onEnd);
+    audio.addEventListener('play', onPlay);
+    audio.addEventListener('pause', onPause);
 
     return () => {
       audio.removeEventListener('loadedmetadata', setAudioData);
       audio.removeEventListener('timeupdate', setAudioTime);
       audio.removeEventListener('ended', onEnd);
+      audio.removeEventListener('play', onPlay);
+      audio.removeEventListener('pause', onPause);
+      window.removeEventListener('globalAudioPlay', handleGlobalPlay);
       audio.pause();
     };
   }, [src]);
@@ -42,7 +69,6 @@ export function useAudioPlayer(src: string) {
     } else {
       audioRef.current.play();
     }
-    setIsPlaying(!isPlaying);
   }, [isPlaying]);
 
   const seek = useCallback((time: number) => {
