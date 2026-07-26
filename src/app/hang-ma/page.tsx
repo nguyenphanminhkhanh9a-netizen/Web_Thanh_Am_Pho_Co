@@ -4,23 +4,23 @@ import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
 import AudioPlayer from '@/components/ui/AudioPlayer';
 
-export default function HangGai() {
+export default function HangMa() {
   return (
     <>
       <main className="pt-0">
         {/* Immersive Header Section */}
         <section className="relative w-full h-[716px] overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/c/c6/Old_Quarter%2C_Hanoi_%285678877743%29.jpg')" }}></div>
+            <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/1/1b/Hanoi_Street.jpg')" }}></div>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
           </div>
           <div className="relative z-10 h-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col justify-end pb-16">
-            <span className="font-label-sm text-primary mb-2 tracking-[0.2em] uppercase">Di Sản Thăng Long</span>
+            <span className="font-label-sm text-primary mb-2 tracking-[0.2em] uppercase">Không gian lễ hội</span>
             <h1 className="font-display-lg text-display-lg md:text-[64px] text-primary max-w-2xl leading-tight mb-4 italic">
-              Phố Hàng Gai: <br/>Nơi Dệt Tình Hà Nội
+              Phố Hàng Mã: <br/>Không gian lễ hội & Đồ chơi dân gian
             </h1>
             <p className="font-body-md text-on-surface-variant max-w-xl text-lg italic">
-              &quot;Tiếng thoi đưa lách cách đêm trường, đánh thức những ký ức rực rỡ của kinh kỳ xưa cũ.&quot;
+              &quot;Festive & Paper Sound - Nơi tuổi thơ lưu giữ qua những thanh âm rộn ràng.&quot;
             </p>
           </div>
         </section>
@@ -34,24 +34,24 @@ export default function HangGai() {
               <div className="lg:col-span-5 space-y-8">
                 <div className="space-y-4">
                   <span className="font-label-sm text-primary tracking-widest uppercase">Thanh Âm Đang Phát</span>
-                  <h2 className="font-headline-lg text-primary leading-tight">Giai Điệu Của Lụa</h2>
+                  <h2 className="font-headline-lg text-primary leading-tight">Âm Vang Lễ Hội</h2>
                   <p className="font-body-md text-on-surface-variant italic">
-                    Lắng nghe nhịp điệu của lịch sử. Các hình ảnh bên cạnh sẽ tự động hiện diện theo từng chương hồi của âm thanh.
+                    Lắng nghe nhịp điệu của lịch sử. Tiếng trống trung thu, tiếng chuông lắc hòa cùng nụ cười con trẻ.
                   </p>
                 </div>
 
                 {/* Synchronized Audio Player */}
                 <AudioPlayer 
-                  audioSrc="https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg"
-                  trackTitle="Tiếng khung cửi & Tiếng rao trưa"
-                  description="Giai điệu của lụa - âm thanh làm nên thương hiệu của phố Hàng Gai"
-                  albumArt="https://upload.wikimedia.org/wikipedia/commons/d/da/Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg"
+                  audioSrc="" /* TODO: Chèn âm thanh: Tiếng trống trung thu phố Hàng Mã */
+                  trackTitle="Đồ chơi dân gian"
+                  description="Tiếng sột soạt của giấy bổi, tiếng gõ trống tết Trung thu (tùng... xèng...), tiếng còi bóp tít tít của đồ chơi bằng sắt Tây. (Từ khóa Youtube: Hanoi Hang Ma street traditional toys sounds)"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/1/1b/Hanoi_Street.jpg"
                 />
 
                 <div className="decorative-frame p-6 bg-surface-container-low">
                   <h4 className="font-label-sm text-primary mb-4 border-b border-outline-variant pb-2">CHÚ THÍCH HIỆN TẠI</h4>
                   <p id="image-caption" className="font-body-md text-on-surface-variant italic text-sm transition-all duration-500">
-                    &quot;Khung cảnh nhộn nhịp của phố Hàng Gai những năm 1920, nơi tơ lụa phủ kín các cửa hàng.&quot;
+                    &quot;Không gian lễ hội nhộn nhịp rực rỡ sắc đỏ tại phố Hàng Mã.&quot;
                   </p>
                 </div>
               </div>
@@ -60,8 +60,8 @@ export default function HangGai() {
               <div className="lg:col-span-7">
                 <div id="heritage-stage" className="relative aspect-[4/3] decorative-frame bg-surface-dim overflow-hidden shadow-2xl">
                   {/* Image Layers */}
-                  <div className="stage-image active" data-time="0" data-caption="Khung cảnh nhộn nhịp của phố Hàng Gai những năm 1920, nơi tơ lụa phủ kín các cửa hàng.">
-                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/d/da/Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg')" }}></div>
+                  <div className="stage-image active" data-time="0" data-caption="Không gian lễ hội nhộn nhịp rực rỡ sắc đỏ tại phố Hàng Mã.">
+                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/1/1b/Hanoi_Street.jpg')" }}></div>
                     <div className="reveal-sweep"></div>
                   </div>
                   
@@ -85,10 +85,10 @@ export default function HangGai() {
           <div className="md:col-span-7 space-y-8">
             <div className="prose prose-stone prose-lg text-on-surface-variant italic leading-relaxed">
               <p>
-                Nằm giữa lòng phố cổ, Hàng Gai không chỉ là trung tâm của tơ lụa và gấm vóc, mà còn là bản giao hưởng của những thanh âm lao động bình dị. Từ thuở xưa, nơi đây vang vọng tiếng khung cửi lách cách từ những xưởng dệt gia đình, hòa quyện với tiếng rao trưa ngọt ngào của những gánh hàng rong len lỏi qua từng con ngõ nhỏ.
+                Tiếng sột soạt của giấy bổi, giấy gấp, tiếng cắt dán đồ mã và lồng đèn rộn ràng cả con phố nhỏ. Mỗi độ thu về, Hàng Mã lại khoác lên mình một màu sắc rực rỡ, nhưng điều lưu lại sâu nhất có lẽ là những thanh âm đặc trưng của các món đồ chơi truyền thống.
               </p>
               <p>
-                Mỗi mét lụa Hàng Gai không chỉ mang sắc màu của thiên nhiên, mà còn chứa đựng cả hơi thở của thời gian và tâm hồn người thợ dệt Hà thành hào hoa, tinh tế.
+                Đó là tiếng gõ trống tết Trung thu (tùng... tùng... xèng... xèng...), tiếng trống quân, tiếng còi bóp tít tít của đồ chơi bằng sắt Tây thời xưa. Không chỉ vậy, tiếng chuông lắc lanh canh hòa lẫn với tiếng cười nói rộn rã của người đi sắm lễ làm cho không gian nơi đây lúc nào cũng đầy sức sống.
               </p>
             </div>
           </div>
@@ -100,15 +100,15 @@ export default function HangGai() {
               <dl className="space-y-4">
                 <div>
                   <dt className="font-label-sm text-on-surface-variant uppercase text-[10px]">Tên gọi khác</dt>
-                  <dd className="font-body-md text-primary">Phố Tơ Lụa (Silk Street)</dd>
+                  <dd className="font-body-md text-primary">Phố Hàng Mã (Paper Street)</dd>
                 </div>
                 <div>
                   <dt className="font-label-sm text-on-surface-variant uppercase text-[10px]">Thời kỳ hưng thịnh</dt>
-                  <dd className="font-body-md text-primary">Cuối thế kỷ XIX - Đầu thế kỷ XX</dd>
+                  <dd className="font-body-md text-primary">Các dịp lễ Tết, Trung Thu</dd>
                 </div>
                 <div>
                   <dt className="font-label-sm text-on-surface-variant uppercase text-[10px]">Sản vật đặc trưng</dt>
-                  <dd className="font-body-md text-primary">Lụa tơ tằm, Gấm hoa, Đồ thêu tay</dd>
+                  <dd className="font-body-md text-primary">Đồ chơi dân gian, Đồ hàng mã, Lồng đèn</dd>
                 </div>
                 <div>
                   <dt className="font-label-sm text-on-surface-variant uppercase text-[10px]">Vị trí</dt>
@@ -133,7 +133,7 @@ export default function HangGai() {
                 Bạn có câu chuyện hay kỷ niệm nào về con phố này không? Hãy chia sẻ cùng chúng tôi để di sản này mãi luôn sống động.
               </p>
             </div>
-            <MemoryForm locationId="hang-gai" showPhotoUpload={true} />
+            <MemoryForm locationId="hang-ma" showPhotoUpload={true} />
           </div>
         </section>
 
@@ -145,7 +145,7 @@ export default function HangGai() {
               <span className="font-label-sm uppercase tracking-[0.2em]">Vị trí di sản</span>
             </div>
             <h3 className="font-display-lg text-3xl md:text-4xl text-on-surface italic">
-              Phố Hàng Gai, Quận Hoàn Kiếm, Hà Nội
+              Phố Hàng Mã, Quận Hoàn Kiếm, Hà Nội
             </h3>
             <div className="w-24 h-px bg-outline-variant mt-4"></div>
           </div>

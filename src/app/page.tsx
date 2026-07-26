@@ -59,78 +59,78 @@ export default function Home() {
         
         {/* Bento-style Grid for Streets */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[800px]">
-          {/* Street 1: Hàng Đào */}
-          <Link href="/hang-dao" className="md:col-span-4 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
+          {/* Street 1: Hàng Bạc */}
+          <Link href="/hang-bac" className="md:col-span-4 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              alt="Silk merchants on Hang Dao street" 
-              src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Hanoi_old_quarter_shophouse.jpg"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
-              <span className="font-label-sm text-xs opacity-80 mb-1">01</span>
-              <h4 className="font-headline-lg text-2xl mb-2">Hàng Đào</h4>
-              <p className="font-label-sm text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Tiếng lụa là vóc vạc</p>
-            </div>
-          </Link>
-          
-          {/* Street 2: Bờ Hồ */}
-          <Link href="/bo-ho" className="md:col-span-8 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              alt="Panoramic view of Hoan Kiem Lake" 
-              src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hanoi_shophouse_2.jpg"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8 text-background">
-              <span className="font-label-sm text-xs opacity-80 mb-1">02</span>
-              <h4 className="font-headline-lg text-4xl mb-2">Bờ Hồ</h4>
-              <p className="font-label-sm text-[12px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Tiếng tàu điện leng keng</p>
-            </div>
-          </Link>
-          
-          {/* Street 3: Ô Quan Chưởng */}
-          <Link href="/o-quan-chuong" className="md:col-span-5 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              alt="O Quan Chuong city gate" 
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Hano%C3%AF_-_Les_Halles.jpg"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
-              <span className="font-label-sm text-xs opacity-80 mb-1">03</span>
-              <h4 className="font-headline-lg text-2xl mb-2">Ô Quan Chưởng</h4>
-              <p className="font-label-sm text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Tiếng bước chân lịch sử</p>
-            </div>
-          </Link>
-          
-          {/* Street 4: Chợ Đồng Xuân (Currently links to Hang Gai) */}
-          <Link href="/hang-gai" className="md:col-span-4 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              alt="Lively scene inside Dong Xuan market" 
-              src="https://upload.wikimedia.org/wikipedia/commons/0/02/Hano%C3%AF_-_Promenade_du_Dragon%2C_rue_des_%C3%89ventails.jpg"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
-              <span className="font-label-sm text-xs opacity-80 mb-1">04</span>
-              <h4 className="font-headline-lg text-2xl mb-2">Hàng Gai</h4>
-              <p className="font-label-sm text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Tiếng rao đời thường</p>
-            </div>
-          </Link>
-          
-          {/* Street 5: Hàng Bạc */}
-          <Link href="/hang-bac" className="md:col-span-3 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              alt="Silversmith's hands working" 
+              alt="Hàng Bạc" 
               src="https://upload.wikimedia.org/wikipedia/commons/5/57/Hano%C3%AF_-_Rue_des_Chapeaux.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
-              <span className="font-label-sm text-xs opacity-80 mb-1">05</span>
+              <span className="font-label-sm text-xs opacity-80 mb-1">01</span>
               <h4 className="font-headline-lg text-2xl mb-2">Hàng Bạc</h4>
-              <p className="font-label-sm text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Tiếng đục chạm bạc tỉ mỉ</p>
+              <p className="font-label-sm text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Giai điệu tinh xảo - Artisanal Metal</p>
+            </div>
+          </Link>
+          
+          {/* Street 2: Hàng Thiếc */}
+          <Link href="/hang-thiec" className="md:col-span-8 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              alt="Hàng Thiếc" 
+              src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Hanoi_old_quarter_shophouse.jpg"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8 text-background">
+              <span className="font-label-sm text-xs opacity-80 mb-1">02</span>
+              <h4 className="font-headline-lg text-4xl mb-2">Hàng Thiếc</h4>
+              <p className="font-label-sm text-[12px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Nhịp điệu dồn dập & Cơ khí - Rhythm & Hammering</p>
+            </div>
+          </Link>
+          
+          {/* Street 3: Hàng Mã */}
+          <Link href="/hang-ma" className="md:col-span-5 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              alt="Hàng Mã" 
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Hanoi_Street.jpg"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
+              <span className="font-label-sm text-xs opacity-80 mb-1">03</span>
+              <h4 className="font-headline-lg text-2xl mb-2">Hàng Mã</h4>
+              <p className="font-label-sm text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Không gian lễ hội - Festive & Paper</p>
+            </div>
+          </Link>
+          
+          {/* Street 4: Đường Tàu */}
+          <Link href="/duong-tau" className="md:col-span-4 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              alt="Đường Tàu" 
+              src="https://upload.wikimedia.org/wikipedia/commons/8/87/Train_street_in_Hanoi.jpg"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
+              <span className="font-label-sm text-xs opacity-80 mb-1">04</span>
+              <h4 className="font-headline-lg text-2xl mb-2">Đường Tàu</h4>
+              <p className="font-label-sm text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Điểm nhấn cao trào - Climax & Transit</p>
+            </div>
+          </Link>
+          
+          {/* Street 5: Chợ Đồng Xuân */}
+          <Link href="/cho-dong-xuan" className="md:col-span-3 group relative overflow-hidden ink-border cursor-pointer h-[300px] md:h-auto">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              alt="Chợ Đồng Xuân" 
+              src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n%2C_Le_grand_march%C3%A9%2C_H%C3%A0_N%E1%BB%99i%2C_1926.jpg"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 text-background">
+              <span className="font-label-sm text-xs opacity-80 mb-1">05</span>
+              <h4 className="font-headline-lg text-2xl mb-2">Chợ Đồng Xuân</h4>
+              <p className="font-label-sm text-[10px] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Sinh hoạt cộng đồng - Ambient</p>
             </div>
           </Link>
         </div>

@@ -4,7 +4,7 @@ import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
 import AudioPlayer from '@/components/ui/AudioPlayer';
 
-export default function BoHo() {
+export default function DuongTau() {
   return (
     <>
       <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
@@ -23,13 +23,13 @@ export default function BoHo() {
               <img 
                 id="stage-image" 
                 className="w-full h-full object-cover grayscale brightness-90 transition-all duration-1000 reveal-active" 
-                src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hano%C3%AF_-_Rue_des_Pavillons_Noirs.jpg" 
-                alt="Hồ Gươm sương sớm" 
+                src="https://upload.wikimedia.org/wikipedia/commons/8/87/Train_street_in_Hanoi.jpg" 
+                alt="Phố Đường Tàu" 
               />
               
               <div id="stage-caption" className="absolute bottom-8 left-8 right-8 md:right-auto md:max-w-md bg-surface/90 p-6 ink-border shadow-2xl backdrop-blur-sm transform transition-all duration-700">
-                <span className="font-label-sm text-secondary uppercase tracking-[0.2em] mb-2 block" id="caption-label">Cảnh 1: Khởi đầu</span>
-                <p className="font-body-md italic text-on-surface" id="caption-text">&quot;Bờ Hồ buổi sớm, sương giăng phủ lối cũ, nơi thời gian như ngừng lại bên Tháp Rùa cổ kính.&quot;</p>
+                <span className="font-label-sm text-secondary uppercase tracking-[0.2em] mb-2 block" id="caption-label">Phố Đường Tàu</span>
+                <p className="font-body-md italic text-on-surface" id="caption-text">&quot;Điểm nhấn cao trào - Climax & Transit. Nơi cuộc sống sinh hoạt áp sát những thanh ray xình xịch rầm rập mỗi chuyến tàu qua.&quot;</p>
               </div>
             </div>
 
@@ -44,10 +44,11 @@ export default function BoHo() {
           <div className="relative -mt-20 mx-4 md:mx-12 z-10 flex justify-center">
             <div className="max-w-3xl w-full">
               <AudioPlayer 
-                audioSrc="https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg"
-                trackTitle="Thanh Âm Bờ Hồ: Tiếng chuông xe điện"
-                subtitle="Đang trình chiếu • Ký ức 1925"
-                albumArt="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hano%C3%AF_-_Rue_des_Pavillons_Noirs.jpg"
+                audioSrc="" /* TODO: Chèn âm thanh: Tiếng tàu hỏa qua phố cổ Hà Nội sound */
+                trackTitle="Thanh Âm Đường Tàu: Tiếng còi tàu và bánh sắt"
+                subtitle="Đang trình chiếu • Điểm nhấn cao trào"
+                description="Tiếng còi tàu hỏa vang dội, kéo dài vọng qua các vòm đá. Tiếng bánh xe sắt rầm rập nghiến trên đường ray (xình xịch... kít...). (Từ khóa Youtube: Hanoi train street audio ambiance)"
+                albumArt="https://upload.wikimedia.org/wikipedia/commons/8/87/Train_street_in_Hanoi.jpg"
               />
             </div>
           </div>
@@ -57,9 +58,9 @@ export default function BoHo() {
         <section className="mb-24 grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="font-label-sm text-secondary uppercase tracking-[0.2em]">Khám phá di sản</span>
-            <h1 className="font-display-lg text-display-lg text-primary leading-none">Nhịp Đập Hoàn Kiếm</h1>
+            <h1 className="font-display-lg text-display-lg text-primary leading-none">Nhịp Đập Đường Tàu</h1>
             <p className="font-body-md text-on-surface leading-relaxed">
-              Không chỉ là một hồ nước, Hoàn Kiếm là điểm hội tụ của dòng chảy lịch sử. Qua âm thanh và hình ảnh, chúng tôi mời bạn ngược dòng thời gian, cảm nhận hơi thở của Hà Nội những năm đầu thế kỷ.
+              Tiếng chuông cảnh báo xóm đường tàu kêu liên hồi (keng... keng... keng...) hòa cùng tiếng người dân vội vã dọn dẹp hàng quán thu gọn vào sát tường, tạo nên một nét sinh hoạt độc nhất vô nhị giữa lòng Hà Nội.
             </p>
             <div className="flex items-center gap-4 py-4 border-y border-outline-variant">
               <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>history_edu</span>
@@ -86,7 +87,7 @@ export default function BoHo() {
             <h2 className="font-headline-lg text-headline-lg text-primary">Gửi lại một mảnh ký ức</h2>
             <p className="font-body-md text-on-surface-variant mt-4 italic">&quot;Mỗi câu chuyện bạn chia sẻ là một viên gạch xây nên ngôi đền di sản của chúng ta.&quot;</p>
           </div>
-          <MemoryForm locationId="bo-ho" showPhotoUpload={true} />
+          <MemoryForm locationId="duong-tau" showPhotoUpload={true} />
         </section>
       </main>
       
@@ -97,7 +98,7 @@ export default function BoHo() {
             <span className="material-symbols-outlined text-2xl">location_on</span>
             <span className="font-label-sm uppercase tracking-[0.3em]">Địa điểm di sản</span>
           </div>
-          <h2 className="font-display-lg text-4xl md:text-5xl text-on-surface italic">Hoàn Kiếm, Hà Nội</h2>
+          <h2 className="font-display-lg text-4xl md:text-5xl text-on-surface italic">Phố Đường Tàu, Hà Nội</h2>
           <div className="w-12 h-[1px] bg-primary/30 mt-2"></div>
         </div>
       </section>

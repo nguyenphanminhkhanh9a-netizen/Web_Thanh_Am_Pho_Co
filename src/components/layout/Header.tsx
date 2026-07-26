@@ -13,11 +13,11 @@ export default function Header() {
   const isHomePage = pathname === '/';
 
   const locations = [
-    { name: "Bờ Hồ", path: "/bo-ho", desc: "Hồ Gươm & Tháp Rùa" },
-    { name: "Hàng Bạc", path: "/hang-bac", desc: "Phố nghề kim hoàn" },
-    { name: "Hàng Gai", path: "/hang-gai", desc: "Con đường tơ lụa" },
-    { name: "Hàng Đào", path: "/hang-dao", desc: "Phố nhuộm lụa hồng" },
-    { name: "Ô Quan Chưởng", path: "/o-quan-chuong", desc: "Cửa ô cuối cùng" }
+    { name: "Hàng Bạc", path: "/hang-bac", desc: "Giai điệu tinh xảo" },
+    { name: "Hàng Thiếc", path: "/hang-thiec", desc: "Nhịp điệu dồn dập & Cơ khí" },
+    { name: "Hàng Mã", path: "/hang-ma", desc: "Không gian lễ hội" },
+    { name: "Đường Tàu", path: "/duong-tau", desc: "Điểm nhấn cao trào" },
+    { name: "Chợ Đồng Xuân", path: "/cho-dong-xuan", desc: "Sinh hoạt cộng đồng" }
   ];
 
   // Close dropdown when clicking outside

@@ -10,13 +10,13 @@ export default function HangBac() {
       <main className="pt-0 md:pt-0">
         {/* Hero Section */}
         <section className="relative h-[819px] w-full overflow-hidden">
-          <div className="absolute inset-0 bg-primary/20 z-10"></div>
+          <div className="absolute inset-0 bg-primary/40 z-10"></div>
           <div 
             className="w-full h-full bg-cover bg-center scale-105 transform hover:scale-100 transition-transform duration-[10s]" 
-            style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/5/50/Hano%C3%AF_-_Rue_des_Radeaux.jpg')" }}
+            style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/5/57/Hano%C3%AF_-_Rue_des_Chapeaux.jpg')" }}
           ></div>
           <div className="absolute inset-0 z-20 flex flex-col justify-end items-center pb-24 px-margin-mobile text-center">
-            <span className="font-label-sm text-on-primary tracking-[0.3em] uppercase mb-4 opacity-80">Phố Nghề Ngàn Năm</span>
+            <span className="font-label-sm text-on-primary tracking-[0.3em] uppercase mb-4 opacity-80">Giai điệu tinh xảo - Artisanal Metal</span>
             <h1 className="font-display-lg text-display-lg text-on-primary italic mb-6">Phố Hàng Bạc</h1>
             <div className="w-24 h-[1px] bg-on-primary/40"></div>
           </div>
@@ -26,7 +26,7 @@ export default function HangBac() {
         <section className="max-w-container-max mx-auto px-margin-desktop py-20 grid grid-cols-1 md:grid-cols-12 gap-gutter">
           <div className="md:col-start-3 md:col-span-8 text-center">
             <p className="text-xl md:text-2xl italic leading-relaxed text-on-surface-variant">
-              &quot;Giữa lòng Hà Nội băm sáu phố phường, Hàng Bạc như một nốt trầm sâu lắng, nơi tiếng búa gõ nhịp nhàng lên những thỏi bạc nguyên chất đã vang vọng suốt nhiều thế kỷ.&quot;
+              &quot;Tiếng gõ chạm khắc bạc lách cách, nhịp nhàng từ các đe nhỏ của thợ kim hoàn (lách cách... chát...). Kèm theo đó là tiếng quạt lò thổi than hồng xè xè và tiếng dội kim loại vào nước làm nguội. Đôi khi lại vẳng lên tiếng rao của các gánh hàng rong luồn lách qua ngõ nhỏ.&quot;
             </p>
             <div className="mt-12 flex justify-center opacity-30">
               <span className="material-symbols-outlined text-4xl">flare</span>
@@ -45,10 +45,10 @@ export default function HangBac() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-5 order-2 lg:order-1 flex items-center">
                 <AudioPlayer 
-                  audioSrc="https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg"
-                  trackTitle="Tiếng chạm khắc kim hoàn"
-                  description="Hãy nhắm mắt và lắng nghe nhịp điệu của lịch sử. Tiếng búa gõ nhỏ giọt trên đe đồng, tiếng mũi ve lướt nhẹ trên mặt bạc, tạo nên những đường vân mây, sóng nước tinh xảo."
-                  albumArt="https://upload.wikimedia.org/wikipedia/commons/b/bf/H%C3%A0ng_%C4%90%C3%A0o%2C_one_of_36_streets_of_HaNoi.jpg"
+                  audioSrc="" /* TODO: Chèn âm thanh: Tiếng gõ chạm khắc bạc Hàng Bạc ASMR */
+                  trackTitle="Giai điệu tinh xảo"
+                  description="Hãy nhắm mắt và lắng nghe nhịp điệu của lịch sử. Tiếng búa gõ nhỏ giọt trên đe đồng, tiếng mũi ve lướt nhẹ trên mặt bạc, tạo nên những đường vân mây, sóng nước tinh xảo. (Từ khóa Youtube: Nghề kim hoàn truyền thống Phố cổ Hà Nội sound)"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/5/57/Hano%C3%AF_-_Rue_des_Chapeaux.jpg"
                 />
               </div>
 
@@ -58,14 +58,14 @@ export default function HangBac() {
                   {/* Image Layers (Synchronized via JS) */}
                   <div id="stage-viewport" className="relative w-full h-full">
                     {/* Image 1 */}
-                    <div className="stage-image absolute inset-0 opacity-100 scale-100 stage-image-transition" style={{ background: "url('https://upload.wikimedia.org/wikipedia/commons/b/bf/H%C3%A0ng_%C4%90%C3%A0o%2C_one_of_36_streets_of_HaNoi.jpg') center/cover no-repeat" }}>
+                    <div className="stage-image absolute inset-0 opacity-100 scale-100 stage-image-transition" style={{ background: "url('https://upload.wikimedia.org/wikipedia/commons/5/57/Hano%C3%AF_-_Rue_des_Chapeaux.jpg') center/cover no-repeat" }}>
                       <div className="absolute inset-0 revealed-glow bg-primary/5"></div>
                     </div>
                   </div>
                   
                   {/* Caption overlay that appears with each image */}
                   <div className="absolute bottom-6 left-6 right-6 bg-primary/80 backdrop-blur-md p-4 translate-y-4 opacity-0 transition-all duration-700" id="stage-caption">
-                    <p className="text-on-primary font-label-sm italic" id="caption-text">Nghệ nhân chạm bạc năm 1932</p>
+                    <p className="text-on-primary font-label-sm italic" id="caption-text">Hàng Bạc - Nghề kim hoàn truyền thống</p>
                   </div>
 
                   {/* Reveal Overlay (Light Sweep) */}

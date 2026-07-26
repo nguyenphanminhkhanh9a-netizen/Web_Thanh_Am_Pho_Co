@@ -4,7 +4,7 @@ import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
 import AudioPlayer from '@/components/ui/AudioPlayer';
 
-export default function OQuanChuong() {
+export default function ChoDongXuan() {
   return (
     <>
       <main className="pt-0">
@@ -14,15 +14,15 @@ export default function OQuanChuong() {
             <div 
               className="w-full h-full bg-cover bg-center grayscale-[30%] brightness-[85%] transition-transform duration-[20s] ease-linear" 
               id="hero-image" 
-              style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/2/27/Tonkin_-_Hano%C3%AF_-_Ph%E1%BB%91_H%C3%A0ng_M%E1%BA%AFm.jpg')" }}
+              style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/2/2c/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n%2C_Le_grand_march%C3%A9%2C_H%C3%A0_N%E1%BB%99i%2C_1926.jpg')" }}
             ></div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
           <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-margin-desktop max-w-container-max mx-auto pb-20">
-            <span className="font-label-sm text-primary uppercase tracking-widest mb-4 bg-surface-container/60 px-3 py-1 backdrop-blur-md">Di tích lịch sử</span>
-            <h1 className="font-display-lg text-display-lg text-primary mb-4 italic">Ô Quan Chưởng</h1>
+            <span className="font-label-sm text-primary uppercase tracking-widest mb-4 bg-surface-container/60 px-3 py-1 backdrop-blur-md">Sinh hoạt cộng đồng</span>
+            <h1 className="font-display-lg text-display-lg text-primary mb-4 italic">Chợ Đồng Xuân</h1>
             <p className="max-w-2xl text-on-surface-variant font-body-md text-lg leading-relaxed italic">
-              &quot;Tiếng vọng từ cửa ô duy nhất còn sót lại của kinh thành xưa...&quot;
+              &quot;Không gian sinh hoạt cộng đồng & Ồn ào náo nhiệt - Ambient & Crowded Market.&quot;
             </p>
           </div>
         </section>
@@ -38,14 +38,14 @@ export default function OQuanChuong() {
               </div>
               <div className="flex-1 w-full">
                 <AudioPlayer 
-                  audioSrc="https://upload.wikimedia.org/wikipedia/commons/1/15/Bicycle_bell.ogg"
-                  trackTitle="Hà Nội nghìn năm văn vật"
-                  description="Bản Ghi Di Sản"
-                  albumArt="https://upload.wikimedia.org/wikipedia/commons/a/aa/%C3%94_Quan_Ch%C6%B0%E1%BB%9Fng.jpg"
+                  audioSrc="" /* TODO: Chèn âm thanh: Tiếng rao chợ Đồng Xuân xưa */
+                  trackTitle="Thanh âm Chợ Cổ"
+                  description="Tiếng xô xát mua bán, mặc cả xôn xao của hàng trăm tiểu thương và khách mua hàng (tiếng nói chuyện râm ran). (Từ khóa Youtube: Hanoi market soundscape ASMR)"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/2/2c/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n%2C_Le_grand_march%C3%A9%2C_H%C3%A0_N%E1%BB%99i%2C_1926.jpg"
                 />
               </div>
               <div className="italic text-on-surface-variant text-sm border-l-2 border-primary pl-4 py-2 bg-background/50">
-                &quot;Mỗi đoạn âm thanh mở ra một góc nhìn mới về Ô Quan Chưởng...&quot;
+                &quot;Mỗi đoạn âm thanh mở ra một góc nhìn mới về cuộc sống nhộn nhịp nơi Chợ Đồng Xuân...&quot;
               </div>
             </div>
             
@@ -57,7 +57,7 @@ export default function OQuanChuong() {
                   {/* Placeholder for dynamic images */}
                   <div className="relative w-full h-full" id="stage-content">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className="stage-image active absolute inset-0 w-full h-full object-cover reveal-sweep" id="img-0" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Chi%E1%BA%BFc_c%E1%BB%95ng_c%E1%BB%95_k%C3%ADnh_c%E1%BB%A7a_ng%C3%B4i_nh%C3%A0_s%E1%BB%91_29_ph%E1%BB%91_L%C3%AA_Ng%E1%BB%8Dc_H%C3%A2n_%28tr%C6%B0%E1%BB%9Bc_kia_l%C3%A0_ph%E1%BB%91_L%E1%BB%AF_Gia%29%2C_qu%E1%BA%ADn_Hai_B%C3%A0_Tr%C6%B0ng%2C_H%C3%A0_N%E1%BB%99i_%2802%29.jpg" alt="Image 0"/>
+                    <img className="stage-image active absolute inset-0 w-full h-full object-cover reveal-sweep" id="img-0" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n%2C_Le_grand_march%C3%A9%2C_H%C3%A0_N%E1%BB%99i%2C_1926.jpg" alt="Image 0"/>
                   </div>
                   {/* Feedback overlay */}
                   <div className="absolute inset-0 pointer-events-none border-[12px] border-primary/5 opacity-0 group-[.active]:opacity-100 transition-opacity duration-1000"></div>
@@ -85,19 +85,19 @@ export default function OQuanChuong() {
               <h2 className="font-headline-lg text-headline-lg text-primary border-b border-outline-variant pb-4">Vết Tích Thời Gian</h2>
               <div className="prose prose-stone max-w-none">
                 <p className="text-on-surface-variant leading-relaxed text-lg first-letter:text-6xl first-letter:font-headline-lg first-letter:mr-3 first-letter:float-left first-letter:text-primary">
-                  Ô Quan Chưởng hay còn gọi là cửa Đông Hà, là một cửa ô của Hà Nội xưa, nằm ở phía Đông của kinh thành Thăng Long. Đây là cửa ô duy nhất còn sót lại nguyên vẹn cho đến ngày nay. Được xây dựng vào năm Cảnh Hưng thứ 10 (1749), công trình mang đậm dấu ấn kiến trúc thời Lê với vọng lâu và mái vòm cuốn đặc trưng.
+                  Tiếng xô xát mua bán, mặc cả xôn xao của hàng trăm tiểu thương và khách mua hàng. Tiếng rao chợ cổ đặc trưng ("Ai bánh chưng, bánh rợm nào...", "Táo tầu, kẹo lạc...").
                 </p>
                 <p className="text-on-surface-variant leading-relaxed mt-4">
-                  Tên gọi &quot;Quan Chưởng&quot; được đặt để tưởng nhớ một viên quan Chưởng vệ cùng các binh sĩ đã anh dũng hy sinh tại đây trong cuộc chiến đấu chống quân Pháp vào năm 1873. Sự hy sinh đó không chỉ bảo vệ cửa ngõ thủ đô mà còn khắc sâu vào lòng người dân Hà Nội một biểu tượng của lòng yêu nước.
+                  Không chỉ vậy, tiếng đòn gánh gõ nhịp "sột soạt", tiếng chén đĩa va chạm tại các dãy hàng ăn uống cổng chợ cùng làm nên một không gian sinh hoạt cộng đồng ồn ào và đầy sức sống từ những ngày đầu.
                 </p>
               </div>
             </div>
             <div className="md:col-span-4 bg-surface-container p-8 border-l-4 border-primary">
               <h3 className="font-headline-lg text-2xl text-primary mb-4 italic">Bạn có biết?</h3>
               <ul className="space-y-4 text-sm text-on-surface-variant">
-                <li className="flex gap-3"><span className="text-primary font-bold">01.</span> Cửa ô này từng là nơi kiểm soát hàng hóa từ sông Hồng vào chợ Đồng Xuân.</li>
-                <li className="flex gap-3"><span className="text-primary font-bold">02.</span> Một tấm bia đá năm 1881 vẫn còn gắn trên tường cổng, cấm quân lính không được nhũng nhiễu dân.</li>
-                <li className="flex gap-3"><span className="text-primary font-bold">03.</span> Kiến trúc vọng lâu phía trên từng là nơi lính canh quan sát toàn bộ khu vực phía Đông.</li>
+                <li className="flex gap-3"><span className="text-primary font-bold">01.</span> Chợ Đồng Xuân là một trong những chợ lớn nhất tại Hà Nội.</li>
+                <li className="flex gap-3"><span className="text-primary font-bold">02.</span> Nơi đây từng là điểm giao thương sầm uất bậc nhất của kẻ chợ, nơi tập trung đủ mọi món hàng, từ sản vật địa phương đến hàng hóa nhập khẩu.</li>
+                <li className="flex gap-3"><span className="text-primary font-bold">03.</span> Không gian âm thanh tại đây luôn náo nhiệt từ tờ mờ sáng cho đến tận đêm khuya.</li>
               </ul>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function OQuanChuong() {
               <div className="space-y-4">
                 <div className="flex items-center gap-4 text-primary">
                   <span className="material-symbols-outlined">location_on</span>
-                  <span className="font-label-sm uppercase">Phố Hàng Chiếu, Hoàn Kiếm, Hà Nội</span>
+                  <span className="font-label-sm uppercase">Đồng Xuân, Hoàn Kiếm, Hà Nội</span>
                 </div>
                 <div className="flex items-center gap-4 text-secondary">
                   <span className="material-symbols-outlined">schedule</span>
@@ -136,7 +136,7 @@ export default function OQuanChuong() {
           <span className="material-symbols-outlined text-primary text-5xl mb-4" style={{ fontVariationSettings: "'FILL' 0" }}>edit_note</span>
           <h2 className="font-display-lg text-display-lg text-primary mb-2 italic">Viết câu chuyện của bạn</h2>
           <p className="text-on-surface-variant mb-12 italic">Chia sẻ những ký ức hoặc cảm nhận của bạn khi đứng dưới vòm cổng này.</p>
-          <MemoryForm locationId="o-quan-chuong" showPhotoUpload={true} />
+          <MemoryForm locationId="cho-dong-xuan" showPhotoUpload={true} />
         </section>
       </main>
     </>

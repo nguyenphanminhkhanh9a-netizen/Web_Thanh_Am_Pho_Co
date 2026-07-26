@@ -4,16 +4,16 @@ import React from 'react';
 import MemoryForm from '@/components/ui/MemoryForm';
 import AudioPlayer from '@/components/ui/AudioPlayer';
 
-export default function HangDao() {
+export default function HangThiec() {
   return (
     <>
       <main className="pt-0">
         <section className="relative w-full h-[716px] overflow-hidden">
-          <div id="hero-img" className="w-full h-full bg-cover bg-center transition-transform duration-[10000ms]" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/0/0d/H%C3%B4tel_de_la_Paix%2C_Hanoi.jpg')" }}></div>
+          <div id="hero-img" className="w-full h-full bg-cover bg-center transition-transform duration-[10000ms]" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Hanoi_old_quarter_shophouse.jpg')" }}></div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
           <div className="absolute bottom-12 left-margin-desktop right-margin-desktop max-w-container-max mx-auto">
-            <h1 className="font-display-lg text-display-lg text-primary mb-2 drop-shadow-sm">Phố Hàng Đào</h1>
-            <p className="font-headline-lg text-headline-lg text-secondary italic">Nơi tơ lụa dệt nên hồn phố</p>
+            <h1 className="font-display-lg text-display-lg text-primary mb-2 drop-shadow-sm">Phố Hàng Thiếc</h1>
+            <p className="font-headline-lg text-headline-lg text-secondary italic">Nhịp điệu dồn dập & Cơ khí - Rhythm & Hammering</p>
           </div>
         </section>
 
@@ -30,9 +30,9 @@ export default function HangDao() {
                 {/* Dynamic Illustrations (Stage) */}
                 <div id="stage-images" className="absolute inset-0">
                   {/* Image 1: Default/Start */}
-                  <div className="stage-reveal active absolute inset-0 bg-cover bg-center flex items-end p-8" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/6/65/Khu_pho_co_Ha_Noi.png')" }}>
+                  <div className="stage-reveal active absolute inset-0 bg-cover bg-center flex items-end p-8" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Hanoi_old_quarter_shophouse.jpg')" }}>
                     <div className="bg-black/40 backdrop-blur-sm p-4 border-l-4 border-primary">
-                      <p className="text-white font-label-sm uppercase tracking-widest">Tiếng guốc mộc và lụa hồng</p>
+                      <p className="text-white font-label-sm uppercase tracking-widest">Tiếng búa nện gò tôn</p>
                     </div>
                   </div>
                 </div>
@@ -45,10 +45,10 @@ export default function HangDao() {
               <div className="flex justify-center mt-8">
                 <div className="w-full max-w-3xl">
                   <AudioPlayer 
-                    audioSrc="https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg"
-                    trackTitle="Tiếng vọng Hàng Đào"
-                    description="Kéo thanh trượt để du hành qua các mốc thời gian của con phố."
-                    albumArt="https://upload.wikimedia.org/wikipedia/commons/6/65/Khu_pho_co_Ha_Noi.png"
+                    audioSrc="" /* TODO: Chèn âm thanh: Tiếng gò tôn Hàng Thiếc ASMR */
+                    trackTitle="Nhịp điệu cơ khí"
+                    description="Tiếng búa nện đều đặn, chói tai nhưng đầy tiết tấu trên các lá tôn, kẽm, sắt (coong... coong... chát...). (Từ khóa Youtube: Hanoi tin smith street soundscape)"
+                    albumArt="https://upload.wikimedia.org/wikipedia/commons/4/4e/Hanoi_old_quarter_shophouse.jpg"
                   />
                 </div>
               </div>
@@ -63,18 +63,18 @@ export default function HangDao() {
                 <div className="absolute -bottom-2 left-0 w-16 h-0.5 bg-primary"></div>
               </h3>
               <p className="mb-6 leading-relaxed text-on-surface-variant">
-                Hàng Đào - con phố tấp nập bậc nhất đất Hà Thành xưa, nơi từng là cái nôi của nghề nhuộm điều, tơ lụa. Những tiếng rao trầm bổng hòa cùng tiếng guốc mộc khua trên vỉa hè lát gạch Bát Tràng đã tạo nên một bản hòa âm đặc trưng không thể nhầm lẫn. 
+                Tiếng búa nện đều đặn, chói tai nhưng đầy tiết tấu trên các lá tôn, kẽm, sắt (coong... coong... chát...). Tiếng kéo cắt tôn rên rít xéo xắt (sột soạt... xoạt). Tiếng mài gọt kim loại và va chạm của các đồ dùng gò hàn (thùng tôn, gáo múc nước).
               </p>
               <div className="p-6 border-l-4 border-primary bg-surface-container-low italic text-on-surface-variant">
-                &quot;Qua Hàng Đào ngắm lụa hồng,<br />
-                Tiếng guốc khua vang một góc lòng...&quot;
+                &quot;Ai về Hàng Thiếc mà xem,<br />
+                Nghe râm ran tiếng gò hàn sớm hôm...&quot;
               </div>
             </div>
             <div className="md:col-span-7 flex items-center justify-center">
               <div className="relative w-full max-w-lg decorative-frame p-2 bg-surface-container-high shadow-lg">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Old_Quarter%2C_Hanoi_%2814%29_%2838464498712%29.jpg" alt="Tram tracks" className="grayscale hover:grayscale-0 transition-all duration-1000 w-full h-auto" />
-                <p className="mt-2 text-center font-label-sm text-[10px] uppercase tracking-tighter opacity-60">Tiếng tàu điện vang bóng một thời</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Hanoi_old_quarter_shophouse.jpg" alt="Hang Thiec" className="grayscale hover:grayscale-0 transition-all duration-1000 w-full h-auto" />
+                <p className="mt-2 text-center font-label-sm text-[10px] uppercase tracking-tighter opacity-60">Xưởng gò tôn truyền thống</p>
               </div>
             </div>
           </section>
@@ -86,9 +86,9 @@ export default function HangDao() {
             </div>
             <div className="text-center mb-10">
               <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Viết câu chuyện của bạn</h2>
-              <p className="text-on-surface-variant italic">Gửi gắm những mảnh ký ức còn sót lại về tiếng guốc, về phố cũ trong tim bạn.</p>
+              <p className="text-on-surface-variant italic">Gửi gắm những mảnh ký ức còn sót lại về tiếng búa nện gò tôn trong tim bạn.</p>
             </div>
-            <MemoryForm locationId="hang-dao" showPhotoUpload={true} />
+            <MemoryForm locationId="hang-thiec" showPhotoUpload={true} />
           </section>
         </div>
       </main>
