@@ -43,9 +43,7 @@ export default function Home() {
             <p className="font-body-md text-body-md text-on-surface-variant italic mb-8">
               Đây không chỉ là một hành trình nghe, mà là một hành trình cảm nhận sự tiếp nối của dòng chảy văn hóa ngàn năm văn hiến giữa lòng phố cổ.
             </p>
-            <button className="w-fit px-8 py-3 bg-primary text-background font-label-sm text-label-sm uppercase tracking-widest hover:opacity-90 transition-all ink-border shadow-md active:translate-y-1">
-              Xem Thêm Về Dự Án
-            </button>
+
           </div>
         </div>
       </section>
