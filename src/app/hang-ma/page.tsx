@@ -61,7 +61,7 @@ export default function HangMa() {
                 <div id="heritage-stage" className="relative aspect-[4/3] decorative-frame bg-surface-dim overflow-hidden shadow-2xl">
                   {/* Image Layers */}
                   <div className="stage-image active absolute inset-0 w-full h-full" data-time="0" data-caption="Không gian lễ hội nhộn nhịp rực rỡ sắc đỏ tại phố Hàng Mã.">
-                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('/images/hang-ma-audio-new.jpg')" }}></div>
+                    <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('/images/hang-ma-audio-new.jpg')" }}></div>
                     <div className="reveal-sweep"></div>
                   </div>
                   
