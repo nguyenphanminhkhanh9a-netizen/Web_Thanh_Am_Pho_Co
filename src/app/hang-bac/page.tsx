@@ -58,7 +58,7 @@ export default function HangBac() {
                   {/* Image Layers (Synchronized via JS) */}
                   <div id="stage-viewport" className="relative w-full h-full">
                     {/* Image 1 */}
-                    <div className="stage-image active absolute inset-0 w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/e/e9/Hanoi_1212-0497.jpg')" }}>
+                    <div className="stage-image active absolute inset-0 w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://longvietarch.wordpress.com/wp-content/uploads/2024/04/2-6.jpg')" }}>
                       <div className="absolute inset-0 revealed-glow bg-primary/5"></div>
                     </div>
                   </div>
