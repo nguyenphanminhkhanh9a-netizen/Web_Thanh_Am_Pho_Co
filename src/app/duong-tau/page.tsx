@@ -23,7 +23,7 @@ export default function DuongTau() {
               <img 
                 id="stage-image" 
                 className="w-full h-full object-cover grayscale brightness-90 transition-all duration-1000 reveal-active" 
-                src="https://upload.wikimedia.org/wikipedia/commons/8/85/Hanoi_railroad_tracks.jpg" 
+                src="/images/duong-tau-hero.jpg" 
                 alt="Phố Đường Tàu" 
               />
               
