@@ -23,11 +23,11 @@ export default function DuongTau() {
               <img 
                 id="stage-image" 
                 className="w-full h-full object-cover grayscale brightness-90 transition-all duration-1000 reveal-active" 
-                src="https://upload.wikimedia.org/wikipedia/commons/7/70/Train_street_in_Hanoi.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/8/85/Hanoi_railroad_tracks.jpg" 
                 alt="Phố Đường Tàu" 
               />
               
-              <div id="stage-caption" className="absolute bottom-8 left-8 right-8 md:right-auto md:max-w-md bg-surface/90 p-6 ink-border shadow-2xl backdrop-blur-sm transform transition-all duration-700">
+              <div id="stage-caption" className="absolute bottom-8 left-8 right-8 md:right-auto md:max-w-md bg-surface p-6 ink-border shadow-2xl transform transition-all duration-700">
                 <span className="font-label-sm text-secondary uppercase tracking-[0.2em] mb-2 block" id="caption-label">Phố Đường Tàu</span>
                 <p className="font-body-md italic text-on-surface" id="caption-text">&quot;Điểm nhấn cao trào - Climax & Transit. Nơi cuộc sống sinh hoạt áp sát những thanh ray xình xịch rầm rập mỗi chuyến tàu qua.&quot;</p>
               </div>
@@ -48,7 +48,7 @@ export default function DuongTau() {
                 trackTitle="Thanh Âm Đường Tàu: Tiếng còi tàu và bánh sắt"
                 subtitle="Đang trình chiếu • Điểm nhấn cao trào"
                 description="Tiếng còi tàu hỏa vang dội, kéo dài vọng qua các vòm đá. Tiếng bánh xe sắt rầm rập nghiến trên đường ray (xình xịch... kít...). (Từ khóa Youtube: Hanoi train street audio ambiance)"
-                albumArt="https://upload.wikimedia.org/wikipedia/commons/7/70/Train_street_in_Hanoi.jpg"
+                albumArt="https://upload.wikimedia.org/wikipedia/commons/c/c8/Hanoi_-_Bahngleis_0002.JPG"
               />
             </div>
           </div>

@@ -45,7 +45,7 @@ export default function HangMa() {
                   audioSrc="" /* TODO: Chèn âm thanh: Tiếng trống trung thu phố Hàng Mã */
                   trackTitle="Đồ chơi dân gian"
                   description="Tiếng sột soạt của giấy bổi, tiếng gõ trống tết Trung thu (tùng... xèng...), tiếng còi bóp tít tít của đồ chơi bằng sắt Tây. (Từ khóa Youtube: Hanoi Hang Ma street traditional toys sounds)"
-                  albumArt="https://upload.wikimedia.org/wikipedia/commons/7/75/Ph%E1%BB%91_H%C3%A0ng_M%C3%A3%2C_H%C3%A0_N%E1%BB%99i_001.JPG"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/2/2e/H%C3%A0ng_M%C3%A3_Street%2C_Hanoi.jpg"
                 />
 
                 <div className="decorative-frame p-6 bg-surface-container-low">
@@ -61,7 +61,7 @@ export default function HangMa() {
                 <div id="heritage-stage" className="relative aspect-[4/3] decorative-frame bg-surface-dim overflow-hidden shadow-2xl">
                   {/* Image Layers */}
                   <div className="stage-image active absolute inset-0 w-full h-full" data-time="0" data-caption="Không gian lễ hội nhộn nhịp rực rỡ sắc đỏ tại phố Hàng Mã.">
-                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/7/75/Ph%E1%BB%91_H%C3%A0ng_M%C3%A3%2C_H%C3%A0_N%E1%BB%99i_001.JPG')" }}></div>
+                    <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/9/99/%27Christmas_%26_New_Year_shopping_in_%27Hang_Ma_Street%27..JPG')" }}></div>
                     <div className="reveal-sweep"></div>
                   </div>
                   

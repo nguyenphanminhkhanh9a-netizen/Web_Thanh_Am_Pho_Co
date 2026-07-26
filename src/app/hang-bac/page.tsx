@@ -48,7 +48,7 @@ export default function HangBac() {
                   audioSrc="" /* TODO: Chèn âm thanh: Tiếng gõ chạm khắc bạc Hàng Bạc ASMR */
                   trackTitle="Giai điệu tinh xảo"
                   description="Hãy nhắm mắt và lắng nghe nhịp điệu của lịch sử. Tiếng búa gõ nhỏ giọt trên đe đồng, tiếng mũi ve lướt nhẹ trên mặt bạc, tạo nên những đường vân mây, sóng nước tinh xảo. (Từ khóa Youtube: Nghề kim hoàn truyền thống Phố cổ Hà Nội sound)"
-                  albumArt="https://upload.wikimedia.org/wikipedia/commons/e/e3/H%C3%A0ng_B%E1%BA%A1c.jpg"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/8/81/Hanoi_-_H%C3%A0ng_B%E1%BA%A1c_Street_-_1.jpg"
                 />
               </div>
 
@@ -58,13 +58,13 @@ export default function HangBac() {
                   {/* Image Layers (Synchronized via JS) */}
                   <div id="stage-viewport" className="relative w-full h-full">
                     {/* Image 1 */}
-                    <div className="stage-image active absolute inset-0 w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/e/e3/H%C3%A0ng_B%E1%BA%A1c.jpg')" }}>
+                    <div className="stage-image active absolute inset-0 w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/e/e9/Hanoi_1212-0497.jpg')" }}>
                       <div className="absolute inset-0 revealed-glow bg-primary/5"></div>
                     </div>
                   </div>
                   
                   {/* Caption overlay that appears with each image */}
-                  <div className="absolute bottom-6 left-6 right-6 bg-primary/80 backdrop-blur-md p-4 translate-y-4 opacity-0 transition-all duration-700" id="stage-caption">
+                  <div className="absolute bottom-6 left-6 right-6 bg-primary/95 p-4 translate-y-4 opacity-0 transition-all duration-700" id="stage-caption">
                     <p className="text-on-primary font-label-sm italic" id="caption-text">Hàng Bạc - Nghề kim hoàn truyền thống</p>
                   </div>
 

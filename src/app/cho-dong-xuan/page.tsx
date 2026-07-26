@@ -14,12 +14,12 @@ export default function ChoDongXuan() {
             <div 
               className="w-full h-full bg-cover bg-center grayscale-[30%] brightness-[85%] transition-transform duration-[20s] ease-linear" 
               id="hero-image" 
-              style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/3/3b/Dong_Xuan_market.jpg')" }}
+              style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/a/a1/Cho_Dong_Xuan_ban_dem.jpg')" }}
             ></div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
           <div className="relative z-10 h-full flex flex-col justify-end items-center text-center px-margin-desktop max-w-container-max mx-auto pb-20">
-            <span className="font-label-sm text-primary uppercase tracking-widest mb-4 bg-surface-container/60 px-3 py-1 backdrop-blur-md">Sinh hoạt cộng đồng</span>
+            <span className="font-label-sm text-on-surface-variant uppercase tracking-widest mb-4 bg-surface px-3 py-1 shadow-sm">Sinh hoạt cộng đồng</span>
             <h1 className="font-display-lg text-4xl md:text-5xl text-primary mb-4 italic">Chợ Đồng Xuân</h1>
             <p className="max-w-2xl text-on-surface-variant font-body-md text-lg leading-relaxed italic">
               &quot;Không gian sinh hoạt cộng đồng & Ồn ào náo nhiệt - Ambient & Crowded Market.&quot;
@@ -41,7 +41,7 @@ export default function ChoDongXuan() {
                   audioSrc="" /* TODO: Chèn âm thanh: Tiếng rao chợ Đồng Xuân xưa */
                   trackTitle="Thanh âm Chợ Cổ"
                   description="Tiếng xô xát mua bán, mặc cả xôn xao của hàng trăm tiểu thương và khách mua hàng (tiếng nói chuyện râm ran). (Từ khóa Youtube: Hanoi market soundscape ASMR)"
-                  albumArt="https://upload.wikimedia.org/wikipedia/commons/3/3b/Dong_Xuan_market.jpg"
+                  albumArt="https://upload.wikimedia.org/wikipedia/commons/6/6b/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n_-_NKS.jpg"
                 />
               </div>
               <div className="italic text-on-surface-variant text-sm border-l-2 border-primary pl-4 py-2 bg-background/50">
@@ -62,9 +62,9 @@ export default function ChoDongXuan() {
                   {/* Feedback overlay */}
                   <div className="absolute inset-0 pointer-events-none border-[12px] border-primary/5 opacity-0 group-[.active]:opacity-100 transition-opacity duration-1000"></div>
                   {/* Caption area */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <p className="font-label-sm uppercase tracking-widest text-secondary-fixed mb-1" id="image-label">Tư liệu 1920</p>
-                    <p className="font-body-md text-sm italic" id="image-caption">Hình ảnh hiếm hoi về cổng thành xưa với nhịp sống bình dị của người dân.</p>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    <p className="font-label-sm uppercase tracking-widest text-secondary-fixed mb-1" id="image-label">Tư liệu lịch sử</p>
+                    <p className="font-body-md text-sm italic" id="image-caption">Hình ảnh khu chợ sầm uất bậc nhất Hà Thành xưa với nhịp sống bình dị của người dân.</p>
                   </div>
                 </div>
                 {/* Stage Base/Shadow */}
@@ -122,7 +122,7 @@ export default function ChoDongXuan() {
             </div>
             <div className="h-80 ink-bleed-border overflow-hidden bg-surface-dim relative">
               <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/pinstriped-suit.png')]"></div>
-              <div className="w-full h-full bg-cover bg-center grayscale-[20%]" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/5/54/Den_Bach_Ma.jpg')" }}></div>
+              <div className="w-full h-full bg-cover bg-center grayscale-[20%]" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/6/68/Cho_Dong_Xuan.jpg')" }}></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-12 h-12 bg-primary/20 rounded-full animate-ping"></div>
                 <div className="absolute w-4 h-4 bg-primary rounded-full border-2 border-white shadow-lg"></div>

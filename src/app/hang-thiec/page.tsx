@@ -9,7 +9,7 @@ export default function HangThiec() {
     <>
       <main className="pt-0">
         <section className="relative w-full h-[716px] overflow-hidden">
-          <div id="hero-img" className="w-full h-full bg-cover bg-center transition-transform duration-[10000ms]" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Hang_Thiec_Street_-_L%C3%A9on_Busy_%281874-1951%29.jpg')" }}></div>
+          <div id="hero-img" className="w-full h-full bg-cover bg-center transition-transform duration-[10000ms]" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/7/7b/Vietnam_1999.Hanoi_%2817%29.jpg')" }}></div>
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
           <div className="absolute bottom-12 left-margin-desktop right-margin-desktop max-w-container-max mx-auto">
@@ -32,7 +32,7 @@ export default function HangThiec() {
                 <div id="stage-images" className="absolute inset-0">
                   {/* Image 1: Default/Start */}
                   <div className="stage-reveal active absolute inset-0 bg-cover bg-center flex items-end p-8" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Hang_Thiec_Street_-_L%C3%A9on_Busy_%281874-1951%29.jpg')" }}>
-                    <div className="bg-black/40 backdrop-blur-sm p-4 border-l-4 border-primary">
+                    <div className="bg-black/80 p-4 border-l-4 border-primary">
                       <p className="text-white font-label-sm uppercase tracking-widest">Tiếng búa nện gò tôn</p>
                     </div>
                   </div>
@@ -49,7 +49,7 @@ export default function HangThiec() {
                     audioSrc="" /* TODO: Chèn âm thanh: Tiếng gò tôn Hàng Thiếc ASMR */
                     trackTitle="Nhịp điệu cơ khí"
                     description="Tiếng búa nện đều đặn, chói tai nhưng đầy tiết tấu trên các lá tôn, kẽm, sắt (coong... coong... chát...). (Từ khóa Youtube: Hanoi tin smith street soundscape)"
-                    albumArt="https://upload.wikimedia.org/wikipedia/commons/3/3d/Hang_Thiec_Street_-_L%C3%A9on_Busy_%281874-1951%29.jpg"
+                    albumArt="https://upload.wikimedia.org/wikipedia/commons/d/d7/Des_porteurs_d%27eau_dans_la_%22_rue_des_Ferblantiers_%22_-_A5570.jpg"
                   />
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function HangThiec() {
             <div className="md:col-span-7 flex items-center justify-center">
               <div className="relative w-full max-w-lg decorative-frame p-2 bg-surface-container-high shadow-lg">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Hang_Thiec_Street_-_L%C3%A9on_Busy_%281874-1951%29.jpg" alt="Hang Thiec" className="grayscale hover:grayscale-0 transition-all duration-1000 w-full h-auto" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Un_pousse-pousse_devant_des_boutiques%2C_surplomb%C3%A9es_de_flambloyants_en_fleurs_%28Albizia%29%2C_dans_la_%22_rue_des_Ferblantiers_%22_-_A5569.jpg" alt="Hang Thiec" className="grayscale hover:grayscale-0 transition-all duration-1000 w-full h-auto" />
                 <p className="mt-2 text-center font-label-sm text-[10px] uppercase tracking-tighter opacity-60">Xưởng gò tôn truyền thống</p>
               </div>
             </div>
