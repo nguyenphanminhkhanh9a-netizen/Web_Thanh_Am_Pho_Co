@@ -60,7 +60,7 @@ export default function HangMa() {
               <div className="lg:col-span-7">
                 <div id="heritage-stage" className="relative aspect-[4/3] decorative-frame bg-surface-dim overflow-hidden shadow-2xl">
                   {/* Image Layers */}
-                  <div className="stage-image active" data-time="0" data-caption="Không gian lễ hội nhộn nhịp rực rỡ sắc đỏ tại phố Hàng Mã.">
+                  <div className="stage-image active absolute inset-0 w-full h-full" data-time="0" data-caption="Không gian lễ hội nhộn nhịp rực rỡ sắc đỏ tại phố Hàng Mã.">
                     <div className="w-full h-full bg-cover bg-center grayscale" style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/7/75/Ph%E1%BB%91_H%C3%A0ng_M%C3%A3%2C_H%C3%A0_N%E1%BB%99i_001.JPG')" }}></div>
                     <div className="reveal-sweep"></div>
                   </div>
