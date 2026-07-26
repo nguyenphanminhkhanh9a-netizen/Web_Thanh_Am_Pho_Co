@@ -2,7 +2,8 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   try {
-    const data = await request.json();
+    const formData = await request.formData();
+    const data = Object.fromEntries(formData.entries());
     
     // In a real app, save this to a database (e.g. MongoDB, PostgreSQL)
     console.log("Memory received:", data);
