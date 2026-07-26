@@ -67,12 +67,7 @@ export default function ChoDongXuan() {
                     <p className="font-body-md text-sm italic" id="image-caption">Hình ảnh khu chợ sầm uất bậc nhất Hà Thành xưa với nhịp sống bình dị của người dân.</p>
                   </div>
                 </div>
-                {/* Stage Base/Shadow */}
-                <div className="mt-8 flex justify-center gap-4">
-                  <div className="h-1 w-8 bg-primary rounded-full indicator active" data-index="0"></div>
-                  <div className="h-1 w-8 bg-outline-variant rounded-full indicator" data-index="1"></div>
-                  <div className="h-1 w-8 bg-outline-variant rounded-full indicator" data-index="2"></div>
-                </div>
+
               </div>
             </div>
           </div>

@@ -67,13 +67,7 @@ export default function HangMa() {
                   
                   <div className="stage-overlay absolute inset-0 z-30"></div>
                   
-                  {/* Navigation dots */}
-                  <div className="absolute bottom-6 left-6 z-40 flex gap-2">
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    <div className="w-2 h-2 rounded-full bg-white/30"></div>
-                    <div className="w-2 h-2 rounded-full bg-white/30"></div>
-                    <div className="w-2 h-2 rounded-full bg-white/30"></div>
-                  </div>
+
                 </div>
               </div>
             </div>

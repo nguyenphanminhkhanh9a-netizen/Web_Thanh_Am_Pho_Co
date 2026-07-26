@@ -71,13 +71,7 @@ export default function HangBac() {
                   {/* Reveal Overlay (Light Sweep) */}
                   <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent via-on-primary/10 to-transparent -translate-x-full" id="reveal-sweep"></div>
                 </div>
-                {/* Navigation Dots */}
-                <div className="flex justify-center mt-8 gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary stage-dot"></div>
-                  <div className="w-2 h-2 rounded-full bg-outline-variant stage-dot"></div>
-                  <div className="w-2 h-2 rounded-full bg-outline-variant stage-dot"></div>
-                  <div className="w-2 h-2 rounded-full bg-outline-variant stage-dot"></div>
-                </div>
+
               </div>
             </div>
           </div>
