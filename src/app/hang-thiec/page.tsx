@@ -9,7 +9,7 @@ export default function HangThiec() {
     <>
       <main className="pt-0">
         <section className="relative w-full h-[716px] overflow-hidden">
-          <div id="hero-img" className="w-full h-full bg-cover bg-center transition-transform duration-[10000ms]" style={{ backgroundImage: "url('http://redsvn.net/wp-content/uploads/2019/11/Pho-Hang-Thiec-01.jpg')" }}></div>
+          <div id="hero-img" className="w-full h-full bg-cover bg-center transition-transform duration-[10000ms]" style={{ backgroundImage: "url('/images/hang-thiec-hero.jpg')" }}></div>
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
           <div className="absolute bottom-12 left-margin-desktop right-margin-desktop max-w-container-max mx-auto">
@@ -31,7 +31,7 @@ export default function HangThiec() {
                 {/* Dynamic Illustrations (Stage) */}
                 <div id="stage-images" className="absolute inset-0">
                   {/* Image 1: Default/Start */}
-                  <div className="stage-reveal active absolute inset-0 bg-cover bg-center flex items-end p-8" style={{ backgroundImage: "url('http://redsvn.net/wp-content/uploads/2019/11/Pho-Hang-Thiec-02.jpg')" }}>
+                  <div className="stage-reveal active absolute inset-0 bg-cover bg-center flex items-end p-8" style={{ backgroundImage: "url('/images/hang-thiec-stage.jpg')" }}>
                     <div className="bg-black/80 p-4 border-l-4 border-primary">
                       <p className="text-white font-label-sm uppercase tracking-widest">Tiếng búa nện gò tôn</p>
                     </div>

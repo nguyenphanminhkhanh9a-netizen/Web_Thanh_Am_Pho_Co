@@ -45,7 +45,7 @@ export default function HangMa() {
                   audioSrc="" /* TODO: Chèn âm thanh: Tiếng trống trung thu phố Hàng Mã */
                   trackTitle="Đồ chơi dân gian"
                   description="Tiếng sột soạt của giấy bổi, tiếng gõ trống tết Trung thu (tùng... xèng...), tiếng còi bóp tít tít của đồ chơi bằng sắt Tây. (Từ khóa Youtube: Hanoi Hang Ma street traditional toys sounds)"
-                  albumArt="https://nld.mediacdn.vn/291774122806476800/2023/8/23/1z1a5591-1692763871648253669921.jpg"
+                  albumArt="/images/hang-ma-audio.jpg"
                 />
 
                 <div className="decorative-frame p-6 bg-surface-container-low">
