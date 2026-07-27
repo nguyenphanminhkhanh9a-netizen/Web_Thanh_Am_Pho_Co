@@ -38,7 +38,7 @@ export default function ChoDongXuan() {
               </div>
               <div className="flex-1 w-full">
                 <AudioPlayer 
-                  audioSrc="/audio/demo-1.mp3"
+                  audioSrc="/audio/cho-dong-xuan.wav"
                   trackTitle="Thanh âm Chợ Cổ"
                   description="Tiếng xô xát mua bán, mặc cả xôn xao của hàng trăm tiểu thương và khách mua hàng (tiếng nói chuyện râm ran). (Từ khóa Youtube: Hanoi market soundscape ASMR)"
                   albumArt="https://upload.wikimedia.org/wikipedia/commons/6/6b/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n_-_NKS.jpg"
