@@ -61,10 +61,6 @@ export default function AudioPlayer({ audioSrc, trackTitle, subtitle = "Bản Gh
         {/* Player Controls & Info Area */}
         <div className="flex-1 w-full flex flex-col justify-center">
           <p className="font-headline-lg text-2xl text-primary italic mb-2 text-center sm:text-left">{trackTitle}</p>
-          
-          {description && (
-            <p className="text-on-surface-variant font-label-sm mb-6 italic text-center sm:text-left">{description}</p>
-          )}
 
           <div className="flex items-center gap-4 text-on-surface-variant font-label-sm mb-6 mt-auto pt-4">
             <span className="w-10 text-right">{formatTime(currentTime)}</span>
@@ -99,6 +95,15 @@ export default function AudioPlayer({ audioSrc, trackTitle, subtitle = "Bản Gh
         </div>
 
       </div>
+
+      {/* Description Area (Full Width) */}
+      {description && (
+        <div className="mt-8 pt-6 border-t border-outline-variant/30">
+          <p className="text-on-surface-variant text-justify leading-relaxed italic">
+            {description}
+          </p>
+        </div>
+      )}
     </div>
   );
 }
