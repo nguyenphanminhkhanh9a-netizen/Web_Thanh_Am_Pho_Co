@@ -42,7 +42,7 @@ export default function HangMa() {
 
                 {/* Synchronized Audio Player */}
                 <AudioPlayer 
-                  audioSrc="/audio/demo-3.mp3"
+                  audioSrc="/audio/hang-ma.wav"
                   trackTitle="Đồ chơi dân gian"
                   description="Tiếng sột soạt của giấy bổi, tiếng gõ trống tết Trung thu (tùng... xèng...), tiếng còi bóp tít tít của đồ chơi bằng sắt Tây. (Từ khóa Youtube: Hanoi Hang Ma street traditional toys sounds)"
                   albumArt="/images/hang-ma-audio-new.jpg"

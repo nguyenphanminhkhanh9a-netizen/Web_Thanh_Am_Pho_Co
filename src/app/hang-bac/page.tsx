@@ -45,7 +45,7 @@ export default function HangBac() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-5 order-2 lg:order-1 flex items-center">
                 <AudioPlayer 
-                  audioSrc="/audio/demo-1.mp3"
+                  audioSrc="/audio/hang-bac.wav"
                   trackTitle="Giai điệu tinh xảo"
                   description="Hãy nhắm mắt và lắng nghe nhịp điệu của lịch sử. Tiếng búa gõ nhỏ giọt trên đe đồng, tiếng mũi ve lướt nhẹ trên mặt bạc, tạo nên những đường vân mây, sóng nước tinh xảo. (Từ khóa Youtube: Nghề kim hoàn truyền thống Phố cổ Hà Nội sound)"
                   albumArt="https://upload.wikimedia.org/wikipedia/commons/8/81/Hanoi_-_H%C3%A0ng_B%E1%BA%A1c_Street_-_1.jpg"

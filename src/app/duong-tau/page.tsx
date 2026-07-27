@@ -44,7 +44,7 @@ export default function DuongTau() {
           <div className="relative -mt-20 mx-4 md:mx-12 z-10 flex justify-center">
             <div className="max-w-3xl w-full">
               <AudioPlayer 
-                audioSrc="/audio/demo-4.mp3"
+                audioSrc="/audio/duong-tau.wav"
                 trackTitle="Thanh Âm Đường Tàu: Tiếng còi tàu và bánh sắt"
                 subtitle="Đang trình chiếu • Điểm nhấn cao trào"
                 description="Tiếng còi tàu hỏa vang dội, kéo dài vọng qua các vòm đá. Tiếng bánh xe sắt rầm rập nghiến trên đường ray (xình xịch... kít...). (Từ khóa Youtube: Hanoi train street audio ambiance)"

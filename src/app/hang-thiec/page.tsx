@@ -46,7 +46,7 @@ export default function HangThiec() {
               <div className="flex justify-center mt-8">
                 <div className="w-full max-w-3xl">
                   <AudioPlayer 
-                    audioSrc="/audio/demo-2.mp3"
+                    audioSrc="/audio/hang-thiec.wav"
                     trackTitle="Nhịp điệu cơ khí"
                     description="Tiếng búa nện đều đặn, chói tai nhưng đầy tiết tấu trên các lá tôn, kẽm, sắt (coong... coong... chát...). (Từ khóa Youtube: Hanoi tin smith street soundscape)"
                     albumArt="https://upload.wikimedia.org/wikipedia/commons/d/d7/Des_porteurs_d%27eau_dans_la_%22_rue_des_Ferblantiers_%22_-_A5570.jpg"
