@@ -99,7 +99,7 @@ export default function AudioPlayer({ audioSrc, trackTitle, subtitle = "Bản Gh
       {/* Description Area (Full Width) */}
       {description && (
         <div className="mt-8 pt-6 border-t border-outline-variant/30">
-          <p className="text-on-surface-variant text-justify leading-relaxed italic">
+          <p className="text-on-surface-variant text-justify leading-relaxed italic whitespace-pre-line">
             {description}
           </p>
         </div>

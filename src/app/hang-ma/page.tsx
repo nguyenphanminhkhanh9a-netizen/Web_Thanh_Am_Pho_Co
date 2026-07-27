@@ -44,7 +44,7 @@ export default function HangMa() {
                 <AudioPlayer 
                   audioSrc="/audio/hang-ma.wav"
                   trackTitle="Đồ chơi dân gian"
-                  description="Tiếng sột soạt của giấy bổi, tiếng gõ trống tết Trung thu (tùng... xèng...), tiếng còi bóp tít tít của đồ chơi bằng sắt Tây. (Từ khóa Youtube: Hanoi Hang Ma street traditional toys sounds)"
+                  description={`Ngay từ sáng sớm, những xấp giấy màu đã được mở ra. Người bán khéo léo cắt, gấp và buộc từng món đồ trang trí. Tiếng giấy sột soạt xen lẫn tiếng kéo cắt tạo nên nhịp điệu nhẹ nhàng của phố.\n\nKhách ghé qua chọn vài chiếc đèn lồng, vài món đồ trang trí. Trẻ nhỏ háo hức ngắm nhìn những sắc màu rực rỡ. Mỗi món đồ được mang đi không chỉ là một sản phẩm, mà còn mang theo không khí của những dịp lễ và ký ức tuổi thơ.`}
                   albumArt="/images/hang-ma-audio-new.jpg"
                 />
 

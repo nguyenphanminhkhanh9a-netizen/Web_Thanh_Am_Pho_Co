@@ -47,7 +47,7 @@ export default function DuongTau() {
                 audioSrc="/audio/duong-tau.wav"
                 trackTitle="Thanh Âm Đường Tàu: Tiếng còi tàu và bánh sắt"
                 subtitle="Đang trình chiếu • Điểm nhấn cao trào"
-                description="Tiếng còi tàu hỏa vang dội, kéo dài vọng qua các vòm đá. Tiếng bánh xe sắt rầm rập nghiến trên đường ray (xình xịch... kít...). (Từ khóa Youtube: Hanoi train street audio ambiance)"
+                description={`Một buổi chiều yên bình, con ngõ nhỏ vẫn rộn ràng như bao ngày. Tiếng trò chuyện của khách trong quán cà phê hòa cùng tiếng cốc chén va nhẹ. Trẻ nhỏ chơi trước hiên nhà, người dân ngồi trước cửa trò chuyện.\n\nBỗng từ xa, tiếng còi tàu vang lên.\n\nMọi người đã quá quen với âm thanh ấy. Chủ quán nhanh chóng thu gọn bàn ghế, người dân gọi nhau tránh vào trong. Chỉ ít phút sau, đoàn tàu lướt qua, mang theo tiếng bánh sắt nghiến trên đường ray và luồng gió mạnh quét dọc con phố.\n\nKhi đoàn tàu khuất dần, nhịp sống lập tức trở lại. Bàn ghế được bày ra, khách tiếp tục câu chuyện còn dang dở, tiếng cười lại vang lên như chưa từng có sự gián đoạn.\n\nỞ phố Tàu, mỗi chuyến tàu không chỉ là phương tiện giao thông, mà đã trở thành một phần trong nhịp sống của những con người nơi đây.`}
                 albumArt="https://upload.wikimedia.org/wikipedia/commons/c/c8/Hanoi_-_Bahngleis_0002.JPG"
               />
             </div>

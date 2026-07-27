@@ -40,7 +40,7 @@ export default function ChoDongXuan() {
                 <AudioPlayer 
                   audioSrc="/audio/cho-dong-xuan.wav"
                   trackTitle="Thanh âm Chợ Cổ"
-                  description="Tiếng xô xát mua bán, mặc cả xôn xao của hàng trăm tiểu thương và khách mua hàng (tiếng nói chuyện râm ran). (Từ khóa Youtube: Hanoi market soundscape ASMR)"
+                  description={`Khi cánh cổng chợ mở, dòng người bắt đầu đổ về. Tiếng chào mời, tiếng hỏi giá và tiếng mặc cả vang lên khắp các gian hàng. Những chiếc túi được mở ra, hàng hóa liên tục được trao tay.\n\nNgoài cổng, chuông xích lô leng keng hòa cùng tiếng rao quen thuộc của người bán bánh. Giữa sự tấp nập ấy, mỗi người đều đang mưu sinh bằng công việc của mình: người bán, người mua, người vận chuyển, người bán rong.\n\nĐồng Xuân không chỉ là nơi trao đổi hàng hóa, mà còn là nơi những cuộc gặp gỡ, những câu chuyện và nhịp sống thường ngày của Hà Nội diễn ra không ngừng.`}
                   albumArt="https://upload.wikimedia.org/wikipedia/commons/6/6b/Ch%E1%BB%A3_%C4%90%E1%BB%93ng_Xu%C3%A2n_-_NKS.jpg"
                 />
               </div>

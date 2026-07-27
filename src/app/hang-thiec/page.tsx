@@ -48,7 +48,7 @@ export default function HangThiec() {
                   <AudioPlayer 
                     audioSrc="/audio/hang-thiec.wav"
                     trackTitle="Nhịp điệu cơ khí"
-                    description="Tiếng búa nện đều đặn, chói tai nhưng đầy tiết tấu trên các lá tôn, kẽm, sắt (coong... coong... chát...). (Từ khóa Youtube: Hanoi tin smith street soundscape)"
+                    description={`Tiếng búa vang lên từ đầu phố báo hiệu một ngày làm việc bắt đầu. Người thợ nâng tấm thiếc lên bàn, cắt, uốn rồi gò từng nhịp để biến một tấm kim loại phẳng thành chiếc phễu, chiếc khay hay chiếc hộp.\n\nTrong xưởng nhỏ, hơi nóng từ mỏ hàn hòa cùng tiếng kim loại va nhau tạo nên bản nhạc đặc trưng của phố nghề. Thành phẩm được xếp gọn bên cửa, chờ theo chân khách hàng đến những mái nhà khác.`}
                     albumArt="https://upload.wikimedia.org/wikipedia/commons/d/d7/Des_porteurs_d%27eau_dans_la_%22_rue_des_Ferblantiers_%22_-_A5570.jpg"
                   />
                 </div>

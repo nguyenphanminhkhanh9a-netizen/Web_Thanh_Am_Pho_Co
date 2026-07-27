@@ -47,7 +47,7 @@ export default function HangBac() {
                 <AudioPlayer 
                   audioSrc="/audio/hang-bac.wav"
                   trackTitle="Giai điệu tinh xảo"
-                  description="Hãy nhắm mắt và lắng nghe nhịp điệu của lịch sử. Tiếng búa gõ nhỏ giọt trên đe đồng, tiếng mũi ve lướt nhẹ trên mặt bạc, tạo nên những đường vân mây, sóng nước tinh xảo. (Từ khóa Youtube: Nghề kim hoàn truyền thống Phố cổ Hà Nội sound)"
+                  description={`Buổi sáng, khi phố vừa thức giấc, người thợ kim hoàn đã ngồi trước chiếc bàn gỗ quen thuộc. Mỗi nhát búa nhỏ vang lên đều đặn như nhịp thở của người làm nghề. Đôi bàn tay chăm chú giũa từng chi tiết, chạm từng đường nét lên miếng bạc còn thô.\n\nĐến trưa, ánh sáng phản chiếu trên những chiếc nhẫn và dây chuyền mới hoàn thiện. Một vị khách bước vào, thử chiếc nhẫn vừa được đánh bóng. Tiếng cười và lời cảm ơn khép lại một ngày lao động tỉ mỉ, nơi giá trị của mỗi món trang sức được tạo nên từ sự kiên nhẫn và khéo léo của con người.`}
                   albumArt="https://upload.wikimedia.org/wikipedia/commons/8/81/Hanoi_-_H%C3%A0ng_B%E1%BA%A1c_Street_-_1.jpg"
                 />
               </div>
