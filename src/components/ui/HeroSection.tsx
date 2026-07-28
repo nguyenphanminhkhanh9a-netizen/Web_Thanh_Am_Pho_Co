@@ -18,10 +18,16 @@ export default function HeroSection() {
           </button>
           
           {/* Placeholder cho Video */}
-          <div className="w-full max-w-5xl aspect-video bg-surface-container-high border-2 border-outline-variant flex flex-col items-center justify-center text-on-surface-variant relative shadow-xl">
-            <span className="material-symbols-outlined text-6xl mb-4 opacity-50">movie</span>
-            <p className="font-headline-lg text-2xl">Khung chứa Video Trailer</p>
-            <p className="font-body-md mt-2 opacity-70">Thay thế thẻ div này bằng thẻ &lt;iframe&gt; YouTube hoặc &lt;video&gt; mp4</p>
+          {/* Video Player */}
+          <div className="w-full max-w-5xl aspect-video bg-black shadow-xl relative overflow-hidden flex items-center justify-center">
+            <video 
+              src="/videos/trailer.mp4" 
+              controls 
+              autoPlay 
+              className="w-full h-full object-contain"
+            >
+              Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
           </div>
         </div>
       ) : (
