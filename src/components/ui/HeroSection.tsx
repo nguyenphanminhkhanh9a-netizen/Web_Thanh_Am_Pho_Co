@@ -23,7 +23,6 @@ export default function HeroSection() {
             <video 
               src="/videos/trailer.mp4" 
               controls 
-              autoPlay 
               className="w-full h-full object-contain"
             >
               Trình duyệt của bạn không hỗ trợ thẻ video.
